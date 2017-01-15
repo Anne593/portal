@@ -1,0 +1,229 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2016-12-30 17:11+0100\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+msgid "auth.not_allowed"
+msgstr ""
+
+msgid "login.login_retries_lock"
+msgstr ""
+
+msgid "login.wrong_credentials"
+msgstr ""
+
+msgid "login.you_have_been_logged_out"
+msgstr ""
+
+msgid "login.restore_password_email_sent"
+msgstr ""
+
+msgid "login.email_required"
+msgstr ""
+
+msgid "login.restore_password_link_invalid"
+msgstr ""
+
+msgid "login.new_password_saved"
+msgstr ""
+
+msgid "login.invalid_password"
+msgstr ""
+
+msgid "profile.password_change_success"
+msgstr ""
+
+msgid "profile.password_change_failure"
+msgstr ""
+
+msgid "user.role"
+msgstr ""
+
+msgid "user.status"
+msgstr ""
+
+msgid "forms.data_saved"
+msgstr ""
+
+msgid "forms.data_not_saved"
+msgstr ""
+
+msgid "forms.data_deleted"
+msgstr ""
+
+msgid "forms.data_not_deleted"
+msgstr ""
+
+msgid "status.active"
+msgstr ""
+
+msgid "status.deleted"
+msgstr ""
+
+msgid "status.suspended"
+msgstr ""
+
+msgid "user.role.admin"
+msgstr ""
+
+msgid "user.role.user"
+msgstr ""
+
+msgid "validation.user.old_password_wrong"
+msgstr ""
+
+msgid "validation.user.enter_new_password"
+msgstr ""
+
+msgid "validation.user.repeat_new_password"
+msgstr ""
+
+msgid "validation.user.password_min_length"
+msgstr ""
+
+msgid "validation.user.password_confirmation_must_match"
+msgstr ""
+
+msgid "email.subject.forgot_password"
+msgstr ""
+
+msgid "dashboard"
+msgstr ""
+
+msgid "my_profile"
+msgstr ""
+
+msgid "logout"
+msgstr ""
+
+msgid "forgot_password.salutation {0}"
+msgstr ""
+
+msgid "forgot_password.new_password_requested"
+msgstr ""
+
+msgid "forgot_password.click_on_link_below"
+msgstr ""
+
+msgid "forgot_password.click_here"
+msgstr ""
+
+msgid "error.404"
+msgstr ""
+
+msgid "error.404.not_found"
+msgstr ""
+
+msgid "error.404.message"
+msgstr ""
+
+msgid "error.505.internal_server_error"
+msgstr ""
+
+msgid "error.505.message"
+msgstr ""
+
+msgid "login.forgot_password"
+msgstr ""
+
+msgid "restore_password_text"
+msgstr ""
+
+msgid "login.email"
+msgstr ""
+
+msgid "login.restore_password"
+msgstr ""
+
+msgid "login.or"
+msgstr ""
+
+msgid "login.login"
+msgstr ""
+
+msgid "login.please_login"
+msgstr ""
+
+msgid "user.email"
+msgstr ""
+
+msgid "user.password"
+msgstr ""
+
+msgid "login.login_for_two_weeks"
+msgstr ""
+
+msgid "login.new_password"
+msgstr ""
+
+msgid "login.confirm_new_password"
+msgstr ""
+
+msgid "login.set_password"
+msgstr ""
+
+msgid "profile.index.title"
+msgstr ""
+
+msgid "user.firstname"
+msgstr ""
+
+msgid "user.lastname"
+msgstr ""
+
+msgid "profile.change_password"
+msgstr ""
+
+msgid "profile.current_password"
+msgstr ""
+
+msgid "profile.new_password"
+msgstr ""
+
+msgid "profile.repeat_password"
+msgstr ""
+
+msgid "profile.save"
+msgstr ""
+
+msgid "users.add.title"
+msgstr ""
+
+msgid "users.edit.title"
+msgstr ""
+
+msgid "user.attachments"
+msgstr ""
+
+msgid "users.index.title"
+msgstr ""
+
+msgid "users.add"
+msgstr ""
+
+msgid "lists.actions"
+msgstr ""
+
+msgid "users.view.title"
+msgstr ""
+
+msgid "user.failed_login_count"
+msgstr ""
+
+msgid "dashboard.index.title"
+msgstr ""
+
+msgid "user.index.title"
+msgstr ""
+

@@ -1,0 +1,13 @@
+.DS_Store
+.tags
+.tags1
+.sass-cache/*
+composer.lock
+/node_modules/*
+/vendor/*
+/tmp/*
+/logs/*
+/.env
+
+/config/app.php
+/webroot/vendors/bower_components
