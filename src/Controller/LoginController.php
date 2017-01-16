@@ -36,6 +36,9 @@ class LoginController extends AppController
             $this->request->session()->write('Auth.redirect', $this->request->query('redirectUrl'));
         }
         $person = $this->People->newEntity();
+        // Expose virtual property
+        $person->virtualProperties(['full_name', 'role']);
+
         if ($this->request->is('post')) {
             $personData = $this->Auth->identify();
             if ($personData) {
@@ -43,7 +46,6 @@ class LoginController extends AppController
                     $this->AuthUtils->addRememberMeCookie($personData['id']);
                 }
                 $this->Auth->setUser($personData);
-
                 return $this->redirect($this->Auth->redirectUrl());
             } elseif ($this->People->hasLoginRetriesLock($this->request->data)) {
                 $this->Flash->error(__('login.login_retries_lock'));

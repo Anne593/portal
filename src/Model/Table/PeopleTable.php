@@ -6,6 +6,14 @@ use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
+use App\Lib\Status;
+use Cake\Auth\DefaultPasswordHasher;
+use Cake\Core\Configure;
+use Cake\Database\Expression\QueryExpression;
+use Cake\Datasource\EntityInterface;
+use Cake\Event\Event;
+use Cake\I18n\Time;
+use Notifications\Notification\EmailNotification;
 
 /**
  * People Model

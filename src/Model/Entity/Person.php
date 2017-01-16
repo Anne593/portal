@@ -38,6 +38,7 @@ class Person extends Entity
 {
     use TypeAwareTrait;
 
+    protected $_virtual = ['full_name', 'role'];
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().
      *
@@ -116,7 +117,17 @@ class Person extends Entity
      */
     protected function _getFullName()
     {
-        return $this->firstname . ' ' . $this->lastname;
+        return $this->forename . ' ' . $this->surname;
+    }
+
+    /**
+     * Getter for all roles
+     *
+     * @return string
+     */
+    protected function _getRole()
+    {
+        return 'admin';
     }
 
     /**
