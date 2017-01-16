@@ -25,6 +25,9 @@ $config = [
         'Users' => [
             '*' => [User::ROLE_ADMIN]
         ],
+        'People' => [
+            '*' => [User::ROLE_ADMIN]
+        ],
         'Profile' => [
             '*' => [User::ROLE_ADMIN]
         ],

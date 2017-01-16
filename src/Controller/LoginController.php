@@ -17,7 +17,7 @@ class LoginController extends AppController
      */
     public function beforeFilter(\Cake\Event\Event $event)
     {
-        $this->loadModel('Users');
+        $this->loadModel('People');
         parent::beforeFilter($event);
     }
 
@@ -35,24 +35,24 @@ class LoginController extends AppController
         if (!empty($this->request->query('redirectUrl'))) {
             $this->request->session()->write('Auth.redirect', $this->request->query('redirectUrl'));
         }
-        $user = $this->Users->newEntity();
+        $person = $this->People->newEntity();
         if ($this->request->is('post')) {
-            $userData = $this->Auth->identify();
-            if ($userData) {
+            $personData = $this->Auth->identify();
+            if ($personData) {
                 if ($this->request->data['cookie']) {
-                    $this->AuthUtils->addRememberMeCookie($userData['id']);
+                    $this->AuthUtils->addRememberMeCookie($personData['id']);
                 }
-                $this->Auth->setUser($userData);
+                $this->Auth->setUser($personData);
 
                 return $this->redirect($this->Auth->redirectUrl());
-            } elseif ($this->Users->hasLoginRetriesLock($this->request->data)) {
+            } elseif ($this->People->hasLoginRetriesLock($this->request->data)) {
                 $this->Flash->error(__('login.login_retries_lock'));
             } else {
-                $this->Users->increaseLoginRetries($this->request->data);
+                $this->People->increaseLoginRetries($this->request->data);
                 $this->Flash->error(__('login.wrong_credentials'));
             }
         }
-        $this->set('user', $user);
+        $this->set('person', $person);
     }
 
     /**

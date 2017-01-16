@@ -53,8 +53,9 @@ class AppController extends Controller
         $this->loadComponent('Auth', [
             'authenticate' => [
                 'Form' => [
+                    'userModel' => 'People',
                     'fields' => ['username' => 'email'],
-                    'repository' => 'Users',
+                    'repository' => 'People',
                     'finder' => 'auth'
                 ]
             ],
@@ -100,12 +101,12 @@ class AppController extends Controller
     public function beforeFilter(\Cake\Event\Event $event)
     {
         $this->initAuthActions();
-        $this->loadModel('Users');
-        $this->Auth->eventManager()->attach([$this->Users, 'resetLoginRetriesListener'], 'Auth.afterIdentify');
+        $this->loadModel('People');
+        $this->Auth->eventManager()->attach([$this->People, 'resetLoginRetriesListener'], 'Auth.afterIdentify');
 
         if (!$this->AuthUtils->loggedIn() && $userId = $this->AuthUtils->checkRememberMeCookie()) {
-            $this->loadModel('Users');
-            $user = $this->Users->get($userId)->toArray();
+            $this->loadModel('People');
+            $user = $this->People->get($userId)->toArray();
             $this->Auth->setUser($user);
         }
 

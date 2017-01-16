@@ -11,7 +11,7 @@ $this->assign('bodyClasses', 'login-page');
         <?= $this->Flash->render() ?>
         <p class="login-box-msg"><?= __('login.please_login') ?></p>
         <?php
-            echo $this->Form->create($user);
+            echo $this->Form->create($person);
             echo $this->Form->input('email', [
                 'placeholder' => __('user.email'),
                 'class' => 'form-control autofocus',
@@ -38,7 +38,7 @@ $this->assign('bodyClasses', 'login-page');
             <hr>
             <dl>
                 <dt><?= __('user.email') ?></dt>
-                <dd><code>john.doe@example.com</code></dd>
+                <dd><code>lukas.malcher@hilton.rwth-aachen.de, anne.heimes@hilton.rwth-aachen.de, mk@rwth-aachen.de</code></dd>
                 <dt><?= __('user.password') ?></dt>
                 <dd><code>password</code></dd>
             </dl>

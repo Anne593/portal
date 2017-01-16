@@ -109,7 +109,7 @@ class User extends Entity
      */
     protected function _getFullName()
     {
-        return $this->firstname . ' ' . $this->lastname;
+        return $this->forename . ' ' . $this->surname;
     }
 
     /**
