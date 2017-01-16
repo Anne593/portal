@@ -49,6 +49,12 @@ msgstr "Your password hasn't been changed"
 msgid "user.role"
 msgstr "Role"
 
+msgid "user.matriculation_number"
+msgstr "Matriculation Number"
+
+msgid "user.studentenwerk_identification"
+msgstr "Stw ID"
+
 msgid "user.status"
 msgstr "Status"
 

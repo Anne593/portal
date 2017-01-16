@@ -50,6 +50,12 @@ msgstr ""
 msgid "user.role"
 msgstr ""
 
+msgid "user.matriculation_number"
+msgstr ""
+
+msgid "user.studentenwerk_identification"
+msgstr ""
+
 msgid "user.status"
 msgstr ""
 

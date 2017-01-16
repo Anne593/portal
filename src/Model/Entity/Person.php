@@ -38,6 +38,8 @@ class Person extends Entity
 {
     use TypeAwareTrait;
 
+    const ROLE_ADMIN = 'admin';
+    const ROLE_USER = 'user';
     protected $_virtual = ['full_name', 'role'];
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().
