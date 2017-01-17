@@ -82,8 +82,23 @@ msgstr "Suspended"
 msgid "user.role.admin"
 msgstr "Admin"
 
-msgid "user.role.user"
-msgstr "User"
+msgid "user.role.tenant"
+msgstr "Tenant"
+
+msgid "user.role.assignment_committee"
+msgstr "Assignment Committee"
+
+msgid "user.role.network"
+msgstr "Network"
+
+msgid "user.role.house_representative"
+msgstr "House Representative"
+
+msgid "user.role.housekeeper"
+msgstr "Housekeeper"
+
+msgid "working group representative"
+msgstr "Working Group Representative"
 
 msgid "validation.user.old_password_wrong"
 msgstr "Your old password isn't correct"

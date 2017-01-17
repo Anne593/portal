@@ -82,8 +82,23 @@ msgstr "Gesperrt"
 msgid "user.role.admin"
 msgstr "Administrator"
 
-msgid "user.role.user"
-msgstr "Benutzer"
+msgid "user.role.tenant"
+msgstr "Bewohner"
+
+msgid "user.role.assignment_committee"
+msgstr "Belegungsausschuss"
+
+msgid "user.role.network"
+msgstr "Netzwerk"
+
+msgid "user.role.house_representative"
+msgstr "Haussprecher"
+
+msgid "user.role.housekeeper"
+msgstr "Hausmeister"
+
+msgid "working group representative"
+msgstr "AG Sprecher"
 
 msgid "validation.user.old_password_wrong"
 msgstr "Aktuelles Passwort ist nicht korrekt."

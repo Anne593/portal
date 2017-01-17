@@ -39,7 +39,13 @@ class Person extends Entity
     use TypeAwareTrait;
 
     const ROLE_ADMIN = 'admin';
-    const ROLE_USER = 'user';
+    const ROLE_TENANT = 'tenant';
+    const ROLE_ASSIGNMENT_COMMITTEE = 'assignment committee';
+    const ROLE_NETWORK = 'network';
+    const ROLE_HOUSE_REPRESENTATIVE = 'house representative';
+    const ROLE_HOUSEKEEPER = 'housekeeper';
+    const ROLE_WORKING_GROUP_REPRESENTATIVE = 'working group representative';
+
     protected $_virtual = ['full_name', 'role'];
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().
@@ -73,7 +79,7 @@ class Person extends Entity
     {
         return [
             self::ROLE_ADMIN => __('user.role.admin'),
-            self::ROLE_USER => __('user.role.user'),
+            self::ROLE_TENANT => __('user.role.user'),
         ];
     }
 
@@ -84,7 +90,7 @@ class Person extends Entity
      */
     public static function getRoles()
     {
-        return self::getTypeMap(self::ROLE_USER, self::ROLE_ADMIN);
+        return self::getTypeMap(self::ROLE_TENANT, self::ROLE_ADMIN);
     }
 
     /**
