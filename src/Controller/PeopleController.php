@@ -37,15 +37,13 @@ class PeopleController extends AppController
                     ]
                 ],
                 'People.matriculation_number' => [
-                    'searchType' => 'select',
-                    'options' => Person::getMatriculationNumber(),
+                    'searchType' => 'wildcard',
                     'inputOptions' => [
                         'label' => __('user.matriculation_number')
                     ]
                 ],
                 'People.studentenwerk_identification' => [
-                    'searchType' => 'select',
-                    'options' => Person::getStudentenwerkIdentification(),
+                    'searchType' => 'wildcard',
                     'inputOptions' => [
                         'label' => __('user.studentenwerk_identification')
                     ]
@@ -82,6 +80,12 @@ class PeopleController extends AppController
 
         $this->set(compact('people'));
         $this->set('_serialize', ['people']);
+        $user_roles = $this->People
+            ->get(2, ['contain' => ['UserRoles']])
+            ->user_roles;
+        foreach ($user_roles as $role) {
+            debug($role->title);
+        }
     }
 
     /**

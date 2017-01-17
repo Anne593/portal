@@ -97,6 +97,7 @@ class Person extends Entity
         return Status::getMap(Status::ACTIVE, Status::SUSPENDED, Status::DELETED);
     }
 
+
     /**
      * Setter for hashed password
      *
