@@ -27,7 +27,8 @@
         "friendsofcake/bootstrap-ui": "0.5.*",
         "admad/cakephp-glide": "2.0.*",
         "josegonzalez/dotenv": "2.0.*",
-        "beberlei/assert": "2.6."
+        "beberlei/assert": "2.6.",
+        "jeremyharris/cakephp-lazyload": "^2.0"
     },
     "require-dev": {
         "psy/psysh": "@stable",
