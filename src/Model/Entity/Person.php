@@ -5,7 +5,7 @@ use App\Lib\Status;
 use Cake\Auth\DefaultPasswordHasher;
 use Cake\ORM\Entity;
 use CkTools\Utility\TypeAwareTrait;
-
+use JeremyHarris\LazyLoad\ORM\LazyLoadEntityTrait;
 /**
  * Person Entity
  *
@@ -37,6 +37,7 @@ use CkTools\Utility\TypeAwareTrait;
 class Person extends Entity
 {
     use TypeAwareTrait;
+    use LazyLoadEntityTrait;
 
     const ROLE_ADMIN = 1;
     const ROLE_NETWORK = 2;
@@ -80,10 +81,10 @@ class Person extends Entity
         return [
             self::ROLE_ADMIN => __('user.role.admin'),
             self::ROLE_NETWORK => __('user.role.network'),
-            self::ROLE_ASSIGNMENT_COMMITTEE => __('user.role.assignment_committee'),
+            self::ROLE_HOUSE_REPRESENTATIVE => __('user.role.house_representative'),
             self::ROLE_WORKING_GROUP_REPRESENTATIVE => __('user.role.working_group_representative'),
             self::ROLE_TENANT => __('user.role.tenant'),
-            self::ROLE_HOUSE_REPRESENTATIVE => __('user.role.house_representative'),
+            self::ROLE_ASSIGNMENT_COMMITTEE => __('user.role.assignment_committee'),
             self::ROLE_HOUSEKEEPER => __('user.role.housekeeper'),
         ];
     }
@@ -147,16 +148,14 @@ class Person extends Entity
      *
      * @return string
      */
-    protected function _getRole()
+    protected function _getRoles()
     {
-        /*$user_roles = $this->People
-            ->get(2, ['contain' => ['UserRoles']])
-            ->user_roles;
-        foreach ($user_roles as $role) {
-            debug($role->title);
-        }*/
-        debug($this->);
-        return 'admin';
+        $roles = [];
+        foreach($this->user_roles as $role){
+            array_push($roles, $role['title']);
+        }
+        //print_r($roles);
+        return $roles;
     }
 
     /**

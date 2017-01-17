@@ -87,6 +87,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/jakub-onderka/php-console-color" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/jakub-onderka/php-console-highlighter" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/jdorn/sql-formatter" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/jeremyharris/cakephp-lazyload" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/josegonzalez/cakephp-queuesadilla" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/josegonzalez/dotenv" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/josegonzalez/queuesadilla" />
@@ -204,6 +205,7 @@
           <root url="file://$MODULE_DIR$/vendor/jakub-onderka/php-console-color" />
           <root url="file://$MODULE_DIR$/vendor/jakub-onderka/php-console-highlighter" />
           <root url="file://$MODULE_DIR$/vendor/jdorn/sql-formatter" />
+          <root url="file://$MODULE_DIR$/vendor/jeremyharris/cakephp-lazyload" />
           <root url="file://$MODULE_DIR$/vendor/josegonzalez/cakephp-queuesadilla" />
           <root url="file://$MODULE_DIR$/vendor/josegonzalez/dotenv" />
           <root url="file://$MODULE_DIR$/vendor/josegonzalez/queuesadilla" />
@@ -297,6 +299,7 @@
           <root url="file://$MODULE_DIR$/vendor/jakub-onderka/php-console-color" />
           <root url="file://$MODULE_DIR$/vendor/jakub-onderka/php-console-highlighter" />
           <root url="file://$MODULE_DIR$/vendor/jdorn/sql-formatter" />
+          <root url="file://$MODULE_DIR$/vendor/jeremyharris/cakephp-lazyload" />
           <root url="file://$MODULE_DIR$/vendor/josegonzalez/cakephp-queuesadilla" />
           <root url="file://$MODULE_DIR$/vendor/josegonzalez/dotenv" />
           <root url="file://$MODULE_DIR$/vendor/josegonzalez/queuesadilla" />

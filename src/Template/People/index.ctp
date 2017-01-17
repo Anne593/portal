@@ -61,7 +61,11 @@
                         <td><?= h($person->surname) ?></td>
                         <td><?= h($person->email) ?></td>
                         <td><?= $this->Utils->statusLabel($person->status) ?></td>
-                        <td><?= $this->Utils->roleLabel($person->role) ?></td>
+                        <td>
+                            <?php foreach ($person->roles as $role): ?>
+                                <?= $this->Utils->roleLabel($role) ?>
+                            <?php endforeach; ?>
+                        </td>
                         <td class="actions text-right">
                             <?= $this->CkTools->viewButton($person) ?>
                         </td>
