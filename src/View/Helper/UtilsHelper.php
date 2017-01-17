@@ -2,7 +2,7 @@
 namespace App\View\Helper;
 
 use App\Lib\Status;
-use App\Model\Entity\User;
+use App\Model\Entity\Person;
 use Cake\Utility\Hash;
 use Cake\View\Helper;
 
@@ -54,13 +54,19 @@ class UtilsHelper extends Helper
     public function roleLabel($role)
     {
         $classes = ['label'];
-        $caption = User::getTypeDescription($role);
+        $caption = Person::getTypeDescription($role);
         switch ($role) {
-            case User::ROLE_ADMIN:
+            case Person::ROLE_ADMIN:
+                $classes[] = 'label label-danger';
+                break;
+            case Person::ROLE_HOUSE_REPRESENTATIVE:
                 $classes[] = 'label label-primary';
                 break;
-            case User::ROLE_USER:
+            case Person::ROLE_WORKING_GROUP_REPRESENTATIVE:
                 $classes[] = 'label label-warning';
+                break;
+            case Person::ROLE_ASSIGNMENT_COMMITTEE:
+                $classes[] = 'label label-success';
                 break;
             default:
                 $classes[] = 'label-default';

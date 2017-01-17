@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e412def7-99dd-46c1-b1fe-36a61cf97bdb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/bewohnerverwaltung.iml" afterPath="$PROJECT_DIR$/.idea/bewohnerverwaltung.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Locale/default.pot" afterPath="$PROJECT_DIR$/src/Locale/default.pot" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Entity/Person.php" afterPath="$PROJECT_DIR$/src/Model/Entity/Person.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Template/People/index.ctp" afterPath="$PROJECT_DIR$/src/Template/People/index.ctp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/Helper/UtilsHelper.php" afterPath="$PROJECT_DIR$/src/View/Helper/UtilsHelper.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,13 +26,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Person.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Model/Entity/Person.php">
+      <file leaf-file-name="UtilsHelper.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/View/Helper/UtilsHelper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="41" column="23" lean-forward="true" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="24" />
+            <state relative-caret-position="1092">
+              <caret line="62" column="49" lean-forward="false" selection-start-line="62" selection-start-column="49" selection-end-line="62" selection-end-column="49" />
               <folding>
-                <element signature="e#35#54#0#PHP" expanded="true" />
+                <element signature="e#34#53#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -69,6 +69,8 @@
         <option value="$PROJECT_DIR$/src/Template/People/index.ctp" />
         <option value="$PROJECT_DIR$/vendor/codekanzlei/cake-cktools/src/Utility/TypeAwareTrait.php" />
         <option value="$PROJECT_DIR$/src/Model/Entity/Person.php" />
+        <option value="$PROJECT_DIR$/src/Locale/default.pot" />
+        <option value="$PROJECT_DIR$/src/View/Helper/UtilsHelper.php" />
       </list>
     </option>
   </component>
@@ -241,7 +243,29 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Template" />
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bewohnerverwaltung" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bewohnerverwaltung" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Helper" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -262,8 +286,84 @@
               <option name="myItemId" value="Template" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="People" />
+              <option name="myItemId" value="bewohnerverwaltung" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bewohnerverwaltung" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bewohnerverwaltung" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bewohnerverwaltung" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Locale" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bewohnerverwaltung" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bewohnerverwaltung" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Locale" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="en_US" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bewohnerverwaltung" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bewohnerverwaltung" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Locale" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de_DE" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -350,12 +450,12 @@
       <updated>1484512466230</updated>
       <workItem from="1484512467814" duration="7863000" />
       <workItem from="1484569654060" duration="4000" />
-      <workItem from="1484682128637" duration="4421000" />
+      <workItem from="1484682128637" duration="6099000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12288000" />
+    <option name="totallyTimeSpent" value="13966000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="25" width="2566" height="1418" extended-state="0" />
@@ -477,13 +577,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/schema/sessions.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lib/Status.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -865,14 +958,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Locale/de_DE/default.po">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="82" column="13" lean-forward="false" selection-start-line="82" selection-start-column="13" selection-end-line="82" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Locale/en_US/default.po">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1174">
@@ -1090,10 +1175,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/codekanzlei/cake-cktools/src/Utility/TypeAwareTrait.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="771">
+          <caret line="40" column="39" lean-forward="true" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
+          <folding>
+            <marker date="1484686463166" expanded="true" signature="37:109" ph=" Add-in trait for handling type constants and their descriptions ..." />
+            <marker date="1484686463166" expanded="true" signature="132:1026" ph="{...}" />
+            <marker date="1484686463166" expanded="true" signature="143:219" ph=" Should be implemented by the class ..." />
+            <marker date="1484686463166" expanded="true" signature="267:298" ph="{...}" />
+            <marker date="1484686463166" expanded="true" signature="307:442" ph=" Get the description for the given type ..." />
+            <marker date="1484686463166" expanded="true" signature="497:675" ph="{...}" />
+            <marker date="1484686463166" expanded="true" signature="596:646" ph="..." />
+            <marker date="1484686463166" expanded="true" signature="684:790" ph=" Get a map of [type =&gt; typeDescription] from the passed arguments ..." />
+            <marker date="1484686463166" expanded="true" signature="832:1024" ph="{...}" />
+            <marker date="1484686463166" expanded="true" signature="928:996" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lib/Status.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1483114872000" expanded="true" signature="38:1480" ph="{...}" />
+            <marker date="1483114872000" expanded="true" signature="184:255" ph=" Get descriptions for statuses ..." />
+            <marker date="1483114872000" expanded="true" signature="302:496" ph="{...}" />
+            <marker date="1483114872000" expanded="true" signature="325:488" ph="..." />
+            <marker date="1483114872000" expanded="true" signature="505:638" ph=" Get mapping of const to description ..." />
+            <marker date="1483114872000" expanded="true" signature="690:1038" ph="{...}" />
+            <marker date="1483114872000" expanded="true" signature="730:778" ph="..." />
+            <marker date="1483114872000" expanded="true" signature="832:900" ph="..." />
+            <marker date="1483114872000" expanded="true" signature="939:1007" ph="..." />
+            <marker date="1483114872000" expanded="true" signature="1047:1175" ph=" Get single description ..." />
+            <marker date="1483114872000" expanded="true" signature="1228:1478" ph="{...}" />
+            <marker date="1483114872000" expanded="true" signature="1270:1338" ph="..." />
+            <marker date="1483114872000" expanded="true" signature="1391:1449" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Template/People/index.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="888">
-          <caret line="67" column="28" lean-forward="false" selection-start-line="67" selection-start-column="28" selection-end-line="67" selection-end-column="28" />
+        <state relative-caret-position="693">
+          <caret line="65" column="59" lean-forward="true" selection-start-line="65" selection-start-column="59" selection-end-line="65" selection-end-column="59" />
           <folding>
             <marker date="1484686431029" expanded="true" signature="70:2197" ph="..." />
             <marker date="1484686431029" expanded="true" signature="2280:4453" ph="..." />
@@ -1114,31 +1240,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/codekanzlei/cake-cktools/src/Utility/TypeAwareTrait.php">
+    <entry file="file://$PROJECT_DIR$/src/Model/Entity/Person.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="771">
-          <caret line="40" column="39" lean-forward="true" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
+        <state relative-caret-position="676">
+          <caret line="155" column="9" lean-forward="false" selection-start-line="155" selection-start-column="9" selection-end-line="155" selection-end-column="9" />
           <folding>
-            <marker date="1484686463166" expanded="true" signature="37:109" ph=" Add-in trait for handling type constants and their descriptions ..." />
-            <marker date="1484686463166" expanded="true" signature="132:1026" ph="{...}" />
-            <marker date="1484686463166" expanded="true" signature="143:219" ph=" Should be implemented by the class ..." />
-            <marker date="1484686463166" expanded="true" signature="267:298" ph="{...}" />
-            <marker date="1484686463166" expanded="true" signature="307:442" ph=" Get the description for the given type ..." />
-            <marker date="1484686463166" expanded="true" signature="497:675" ph="{...}" />
-            <marker date="1484686463166" expanded="true" signature="596:646" ph="..." />
-            <marker date="1484686463166" expanded="true" signature="684:790" ph=" Get a map of [type =&gt; typeDescription] from the passed arguments ..." />
-            <marker date="1484686463166" expanded="true" signature="832:1024" ph="{...}" />
-            <marker date="1484686463166" expanded="true" signature="928:996" ph="..." />
+            <marker date="1484687590779" expanded="true" signature="39:199" ph="..." />
+            <marker date="1484687590779" expanded="true" signature="203:1218" ph=" Person Entity ..." />
+            <marker date="1484687590779" expanded="true" signature="1248:4817" ph="{...}" />
+            <marker date="1484687590779" expanded="true" signature="1606:1965" ph=" Fields that can be mass assigned using newEntity() or patchEntity(). ..." />
+            <marker date="1484687590779" expanded="true" signature="1998:2046" ph="..." />
+            <marker date="1484687590779" expanded="true" signature="2057:2154" ph=" Fields that are excluded from JSON versions of the entity. ..." />
+            <marker date="1484687590779" expanded="true" signature="2183:2207" ph="..." />
+            <marker date="1484687590779" expanded="true" signature="2218:2284" ph=" Define type descriptions ..." />
+            <marker date="1484687590779" expanded="true" signature="2332:2881" ph="{...}" />
+            <marker date="1484687590779" expanded="true" signature="2355:2873" ph="..." />
+            <marker date="1484687590779" expanded="true" signature="2890:2992" ph=" Returns a map of possible roles for a user with descriptions ..." />
+            <marker date="1484687590779" expanded="true" signature="3032:3359" ph="{...}" />
+            <marker date="1484687590779" expanded="true" signature="3071:3351" ph="..." />
+            <marker date="1484687590779" expanded="true" signature="3368:3473" ph=" Returns a map of possible statuses for a user with descriptions ..." />
+            <marker date="1484687590779" expanded="true" signature="3516:3611" ph="{...}" />
+            <marker date="1484687590779" expanded="true" signature="3621:3741" ph=" Setter for hashed password ..." />
+            <marker date="1484687590779" expanded="true" signature="3790:3942" ph="{...}" />
+            <marker date="1484687590779" expanded="true" signature="3829:3908" ph="..." />
+            <marker date="1484687590779" expanded="true" signature="3951:4018" ph=" Getter for the full name ..." />
+            <marker date="1484687590779" expanded="true" signature="4058:4125" ph="{...}" />
+            <marker date="1484687590779" expanded="true" signature="4134:4197" ph=" Getter for all roles ..." />
+            <marker date="1484687590779" expanded="true" signature="4234:4390" ph="{...}" />
+            <marker date="1484687590779" expanded="true" signature="4306:4360" ph="..." />
+            <marker date="1484687590779" expanded="true" signature="4399:4463" ph=" Api transform for user ..." />
+            <marker date="1484687590779" expanded="true" signature="4500:4815" ph="{...}" />
+            <marker date="1484687590779" expanded="true" signature="4523:4807" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Entity/Person.php">
+    <entry file="file://$PROJECT_DIR$/src/Locale/de_DE/cake.po">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="41" column="23" lean-forward="true" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="24" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Locale/de_DE/default.po">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="100" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Locale/cake.pot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Locale/default.pot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="832">
+          <caret line="134" column="8" lean-forward="false" selection-start-line="134" selection-start-column="8" selection-end-line="134" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/Helper/UtilsHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1092">
+          <caret line="62" column="49" lean-forward="false" selection-start-line="62" selection-start-column="49" selection-end-line="62" selection-end-column="49" />
           <folding>
-            <element signature="e#35#54#0#PHP" expanded="true" />
+            <element signature="e#34#53#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

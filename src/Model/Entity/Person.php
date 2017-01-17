@@ -152,9 +152,8 @@ class Person extends Entity
     {
         $roles = [];
         foreach($this->user_roles as $role){
-            array_push($roles, $role['title']);
+            array_push($roles, $role['id']);
         }
-        //print_r($roles);
         return $roles;
     }
 
