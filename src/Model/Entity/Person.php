@@ -38,13 +38,13 @@ class Person extends Entity
 {
     use TypeAwareTrait;
 
-    const ROLE_ADMIN = 'admin';
-    const ROLE_TENANT = 'tenant';
-    const ROLE_ASSIGNMENT_COMMITTEE = 'assignment committee';
-    const ROLE_NETWORK = 'network';
-    const ROLE_HOUSE_REPRESENTATIVE = 'house representative';
-    const ROLE_HOUSEKEEPER = 'housekeeper';
-    const ROLE_WORKING_GROUP_REPRESENTATIVE = 'working group representative';
+    const ROLE_ADMIN = 1;
+    const ROLE_NETWORK = 2;
+    const ROLE_HOUSE_REPRESENTATIVE = 3;
+    const ROLE_WORKING_GROUP_REPRESENTATIVE = 4;
+    const ROLE_TENANT = 5;
+    const ROLE_ASSIGNMENT_COMMITTEE = 6;
+    const ROLE_HOUSEKEEPER = 7;
 
     protected $_virtual = ['full_name', 'role'];
     /**
@@ -79,7 +79,12 @@ class Person extends Entity
     {
         return [
             self::ROLE_ADMIN => __('user.role.admin'),
-            self::ROLE_TENANT => __('user.role.user'),
+            self::ROLE_NETWORK => __('user.role.network'),
+            self::ROLE_ASSIGNMENT_COMMITTEE => __('user.role.assignment_committee'),
+            self::ROLE_WORKING_GROUP_REPRESENTATIVE => __('user.role.working_group_representative'),
+            self::ROLE_TENANT => __('user.role.tenant'),
+            self::ROLE_HOUSE_REPRESENTATIVE => __('user.role.house_representative'),
+            self::ROLE_HOUSEKEEPER => __('user.role.housekeeper'),
         ];
     }
 
@@ -90,7 +95,15 @@ class Person extends Entity
      */
     public static function getRoles()
     {
-        return self::getTypeMap(self::ROLE_TENANT, self::ROLE_ADMIN);
+        return self::getTypeMap(
+            self::ROLE_ADMIN,
+            self::ROLE_NETWORK,
+            self::ROLE_ASSIGNMENT_COMMITTEE,
+            self::ROLE_WORKING_GROUP_REPRESENTATIVE,
+            self::ROLE_TENANT,
+            self::ROLE_HOUSE_REPRESENTATIVE,
+            self::ROLE_HOUSEKEEPER
+        );
     }
 
     /**
@@ -136,6 +149,13 @@ class Person extends Entity
      */
     protected function _getRole()
     {
+        /*$user_roles = $this->People
+            ->get(2, ['contain' => ['UserRoles']])
+            ->user_roles;
+        foreach ($user_roles as $role) {
+            debug($role->title);
+        }*/
+        debug($this->);
         return 'admin';
     }
 

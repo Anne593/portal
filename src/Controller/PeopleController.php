@@ -80,12 +80,6 @@ class PeopleController extends AppController
 
         $this->set(compact('people'));
         $this->set('_serialize', ['people']);
-        $user_roles = $this->People
-            ->get(2, ['contain' => ['UserRoles']])
-            ->user_roles;
-        foreach ($user_roles as $role) {
-            debug($role->title);
-        }
     }
 
     /**

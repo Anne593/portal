@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e412def7-99dd-46c1-b1fe-36a61cf97bdb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Locale/de_DE/default.po" afterPath="$PROJECT_DIR$/src/Locale/de_DE/default.po" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Locale/en_US/default.po" afterPath="$PROJECT_DIR$/src/Locale/en_US/default.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/PeopleController.php" afterPath="$PROJECT_DIR$/src/Controller/PeopleController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Entity/Person.php" afterPath="$PROJECT_DIR$/src/Model/Entity/Person.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,12 +22,14 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="default.po" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Locale/en_US/default.po">
+      <file leaf-file-name="Person.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Model/Entity/Person.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1174">
-              <caret line="100" column="9" lean-forward="false" selection-start-line="100" selection-start-column="9" selection-end-line="100" selection-end-column="9" />
-              <folding />
+            <state relative-caret-position="494">
+              <caret line="157" column="21" lean-forward="false" selection-start-line="157" selection-start-column="21" selection-end-line="157" selection-end-column="21" />
+              <folding>
+                <element signature="e#35#54#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -58,9 +58,10 @@
         <option value="$PROJECT_DIR$/src/Controller/AppController.php" />
         <option value="$PROJECT_DIR$/src/Template/Login/login.ctp" />
         <option value="$PROJECT_DIR$/src/Controller/LoginController.php" />
-        <option value="$PROJECT_DIR$/src/Model/Entity/Person.php" />
         <option value="$PROJECT_DIR$/src/Locale/de_DE/default.po" />
         <option value="$PROJECT_DIR$/src/Locale/en_US/default.po" />
+        <option value="$PROJECT_DIR$/src/Controller/PeopleController.php" />
+        <option value="$PROJECT_DIR$/src/Model/Entity/Person.php" />
       </list>
     </option>
   </component>
@@ -232,7 +233,11 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Locale" />
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Table" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -250,11 +255,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Locale" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="en_US" />
+              <option name="myItemId" value="Model" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -272,11 +273,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Locale" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="de_DE" />
+              <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -363,12 +360,12 @@
       <updated>1484512466230</updated>
       <workItem from="1484512467814" duration="7863000" />
       <workItem from="1484569654060" duration="4000" />
-      <workItem from="1484682128637" duration="1259000" />
+      <workItem from="1484682128637" duration="2077000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9126000" />
+    <option name="totallyTimeSpent" value="9944000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="25" width="2566" height="1418" extended-state="0" />
@@ -928,39 +925,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Entity/Person.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="728">
-          <caret line="46" column="75" lean-forward="false" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="75" />
-          <folding>
-            <marker date="1484683151843" expanded="false" signature="39:148" ph="..." />
-            <marker date="1484683151843" expanded="true" signature="153:1168" ph=" Person Entity ..." />
-            <marker date="1484683151843" expanded="true" signature="1198:4077" ph="{...}" />
-            <marker date="1484683151843" expanded="true" signature="1631:1990" ph=" Fields that can be mass assigned using newEntity() or patchEntity(). ..." />
-            <marker date="1484683151843" expanded="true" signature="2023:2071" ph="..." />
-            <marker date="1484683151843" expanded="true" signature="2082:2179" ph=" Fields that are excluded from JSON versions of the entity. ..." />
-            <marker date="1484683151843" expanded="true" signature="2208:2232" ph="..." />
-            <marker date="1484683151843" expanded="true" signature="2243:2309" ph=" Define type descriptions ..." />
-            <marker date="1484683151843" expanded="true" signature="2357:2507" ph="{...}" />
-            <marker date="1484683151843" expanded="true" signature="2380:2499" ph="..." />
-            <marker date="1484683151843" expanded="true" signature="2516:2618" ph=" Returns a map of possible roles for a user with descriptions ..." />
-            <marker date="1484683151843" expanded="true" signature="2658:2740" ph="{...}" />
-            <marker date="1484683151843" expanded="true" signature="2749:2854" ph=" Returns a map of possible statuses for a user with descriptions ..." />
-            <marker date="1484683151843" expanded="true" signature="2897:2992" ph="{...}" />
-            <marker date="1484683151843" expanded="true" signature="3002:3122" ph=" Setter for hashed password ..." />
-            <marker date="1484683151843" expanded="true" signature="3171:3323" ph="{...}" />
-            <marker date="1484683151843" expanded="true" signature="3210:3289" ph="..." />
-            <marker date="1484683151843" expanded="true" signature="3332:3399" ph=" Getter for the full name ..." />
-            <marker date="1484683151843" expanded="true" signature="3439:3506" ph="{...}" />
-            <marker date="1484683151843" expanded="true" signature="3515:3578" ph=" Getter for all roles ..." />
-            <marker date="1484683151843" expanded="true" signature="3614:3650" ph="{...}" />
-            <marker date="1484683151843" expanded="true" signature="3659:3723" ph=" Api transform for user ..." />
-            <marker date="1484683151843" expanded="true" signature="3760:4075" ph="{...}" />
-            <marker date="1484683151843" expanded="true" signature="3783:4067" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Locale/de_DE/default.po">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
@@ -974,6 +938,194 @@
         <state relative-caret-position="1174">
           <caret line="100" column="9" lean-forward="false" selection-start-line="100" selection-start-column="9" selection-end-line="100" selection-end-column="9" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/PeopleController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="81" column="45" lean-forward="false" selection-start-line="81" selection-start-column="45" selection-end-line="81" selection-end-column="45" />
+          <folding>
+            <marker date="1484683817546" expanded="false" signature="37:95" ph="..." />
+            <marker date="1484683817546" expanded="true" signature="100:176" ph=" People Controller ..." />
+            <marker date="1484683817546" expanded="true" signature="223:5935" ph="{...}" />
+            <marker date="1484683817546" expanded="true" signature="234:309" ph=" Provides ListFilter configuration ..." />
+            <marker date="1484683817546" expanded="true" signature="348:2131" ph="{...}" />
+            <marker date="1484683817546" expanded="true" signature="426:2098" ph="..." />
+            <marker date="1484683817546" expanded="true" signature="461:2087" ph="..." />
+            <marker date="1484683817546" expanded="true" signature="496:725" ph="..." />
+            <marker date="1484683817546" expanded="true" signature="635:707" ph="..." />
+            <marker date="1484683817546" expanded="true" signature="764:998" ph="..." />
+            <marker date="1484683817546" expanded="true" signature="906:980" ph="..." />
+            <marker date="1484683817546" expanded="true" signature="1051:1245" ph="..." />
+            <marker date="1484683817546" expanded="true" signature="1139:1227" ph="..." />
+            <marker date="1484683817546" expanded="true" signature="1306:1508" ph="..." />
+            <marker date="1484683817546" expanded="true" signature="1394:1490" ph="..." />
+            <marker date="1484683817546" expanded="true" signature="1547:1781" ph="..." />
+            <marker date="1484683817546" expanded="true" signature="1689:1763" ph="..." />
+            <marker date="1484683817546" expanded="true" signature="1822:2073" ph="..." />
+            <marker date="1484683817546" expanded="true" signature="1910:2055" ph="..." />
+            <marker date="1484683817546" expanded="true" signature="2140:2216" ph=" Index method ..." />
+            <marker date="1484683817546" expanded="true" signature="2246:2394" ph="{...}" />
+            <marker date="1484683817546" expanded="true" signature="2403:2608" ph=" View method ..." />
+            <marker date="1484683817546" expanded="true" signature="2647:2944" ph="{...}" />
+            <marker date="1484683817546" expanded="true" signature="2691:2850" ph="..." />
+            <marker date="1484683817546" expanded="true" signature="2697:2849" ph="..." />
+            <marker date="1484683817546" expanded="true" signature="2953:3080" ph=" Add method ..." />
+            <marker date="1484683817546" expanded="true" signature="3108:3983" ph="{...}" />
+            <marker date="1484683817546" expanded="true" signature="3202:3606" ph="..." />
+            <marker date="1484683817546" expanded="true" signature="3331:3481" ph="..." />
+            <marker date="1484683817546" expanded="true" signature="3489:3596" ph="..." />
+            <marker date="1484683817546" expanded="true" signature="3992:4242" ph=" Edit method ..." />
+            <marker date="1484683817546" expanded="true" signature="4281:5252" ph="{...}" />
+            <marker date="1484683817546" expanded="true" signature="4325:4409" ph="..." />
+            <marker date="1484683817546" expanded="true" signature="4331:4408" ph="..." />
+            <marker date="1484683817546" expanded="true" signature="4471:4875" ph="..." />
+            <marker date="1484683817546" expanded="true" signature="4600:4750" ph="..." />
+            <marker date="1484683817546" expanded="true" signature="4758:4865" ph="..." />
+            <marker date="1484683817546" expanded="true" signature="5261:5488" ph=" Delete method ..." />
+            <marker date="1484683817546" expanded="true" signature="5529:5933" ph="{...}" />
+            <marker date="1484683817546" expanded="true" signature="5681:5761" ph="..." />
+            <marker date="1484683817546" expanded="true" signature="5769:5870" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Table/PeopleTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3172">
+          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding>
+            <marker date="1484575925356" expanded="false" signature="38:417" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="422:1616" ph=" People Model ..." />
+            <marker date="1484575925356" expanded="true" signature="1650:15026" ph="{...}" />
+            <marker date="1484575925356" expanded="true" signature="1661:1780" ph=" Initialize method ..." />
+            <marker date="1484575925356" expanded="true" signature="1828:3070" ph="{...}" />
+            <marker date="1484575925356" expanded="true" signature="2039:2109" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="2059:2108" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="2135:2206" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="2156:2205" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="2232:2291" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="2241:2290" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="2317:2385" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="2335:2384" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="2411:2473" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="2423:2472" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="2505:2667" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="2519:2666" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="2699:2856" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="2712:2855" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="2888:3062" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="2906:3061" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="3079:3239" ph=" Default validation rules. ..." />
+            <marker date="1484575925356" expanded="true" signature="3301:5000" ph="{...}" />
+            <marker date="1484575925356" expanded="true" signature="3349:3353" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="3380:3394" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="3447:3466" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="3491:3500" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="3553:3573" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="3598:3608" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="3651:3658" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="3690:3707" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="3732:3739" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="3759:3829" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="3871:3881" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="3913:3933" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="3958:3968" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="4016:4038" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="4083:4113" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="4140:4170" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="4190:4283" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="4336:4356" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="4381:4391" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="4436:4456" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="4483:4503" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="4556:4574" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="4599:4607" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="4652:4672" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="4704:4734" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="4759:4779" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="4825:4849" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="4876:4900" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="4948:4964" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="5009:5238" ph=" Returns a rules checker object that will be used for validating ..." />
+            <marker date="1484575925356" expanded="true" signature="5292:5451" ph="{...}" />
+            <marker date="1484575925356" expanded="true" signature="5460:5593" ph=" Validation for the change password process ..." />
+            <marker date="1484575925356" expanded="true" signature="5662:6410" ph="{...}" />
+            <marker date="1484575925356" expanded="true" signature="5998:6321" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="6029:6320" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="6081:6243" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="6419:6551" ph=" Validation for the reset password process ..." />
+            <marker date="1484575925356" expanded="true" signature="6619:6910" ph="{...}" />
+            <marker date="1484575925356" expanded="true" signature="6919:7110" ph=" Validation for password changes ..." />
+            <marker date="1484575925356" expanded="true" signature="7189:8259" ph="{...}" />
+            <marker date="1484575925356" expanded="true" signature="7256:7417" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="7282:7324" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="7462:7531" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="7556:7634" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="7654:7892" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="7667:7891" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="7700:7876" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="7912:8223" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="7943:8222" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="7999:8123" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="8268:8471" ph=" beforeSave callback ..." />
+            <marker date="1484575925356" expanded="true" signature="8566:8758" ph="{...}" />
+            <marker date="1484575925356" expanded="true" signature="8677:8751" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="8767:8877" ph=" Reset the login retries counter ..." />
+            <marker date="1484575925356" expanded="true" signature="8933:9072" ph="{...}" />
+            <marker date="1484575925356" expanded="true" signature="9081:9315" ph=" check if the user with the email from the reuqestData exists and is locked from ..." />
+            <marker date="1484575925356" expanded="true" signature="9371:9695" ph="{...}" />
+            <marker date="1484575925356" expanded="true" signature="9422:9665" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="9613:9655" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="9704:9916" ph=" Attached to the Auth.afterIdentify event to call the resetLoginRetries method ..." />
+            <marker date="1484575925356" expanded="true" signature="10009:10171" ph="{...}" />
+            <marker date="1484575925356" expanded="true" signature="10055:10164" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="10180:10279" ph=" return User data by Email ..." />
+            <marker date="1484575925356" expanded="true" signature="10326:10505" ph="{...}" />
+            <marker date="1484575925356" expanded="true" signature="10382:10475" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="10383:10474" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="10514:10918" ph=" This should be called after a failed login attempt. If a record with the given user ..." />
+            <marker date="1484575925356" expanded="true" signature="10981:11469" ph="{...}" />
+            <marker date="1484575925356" expanded="true" signature="11032:11439" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="11147:11281" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="11325:11402" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="11339:11401" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="11478:11621" ph=" Finder used for authentications ..." />
+            <marker date="1484575925356" expanded="true" signature="11692:11933" ph="{...}" />
+            <marker date="1484575925356" expanded="true" signature="11734:11901" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="11735:11900" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="11942:12211" ph=" Validates the new_password and password_confirm fields for a user and ..." />
+            <marker date="1484575925356" expanded="true" signature="12280:12635" ph="{...}" />
+            <marker date="1484575925356" expanded="true" signature="12497:12603" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="12644:12913" ph=" Validates the new_password and password_confirm fields for a user and ..." />
+            <marker date="1484575925356" expanded="true" signature="12983:13339" ph="{...}" />
+            <marker date="1484575925356" expanded="true" signature="13201:13307" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="13348:13471" ph=" creates a unique hash for Person ..." />
+            <marker date="1484575925356" expanded="true" signature="13517:13839" ph="{...}" />
+            <marker date="1484575925356" expanded="true" signature="13541:13693" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="13848:13966" ph=" Sends a forgot password email ..." />
+            <marker date="1484575925356" expanded="true" signature="14028:14723" ph="{...}" />
+            <marker date="1484575925356" expanded="true" signature="14156:14328" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="14157:14321" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="14455:14461" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="14480:14494" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="14518:14553" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="14578:14694" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="14579:14693" ph="..." />
+            <marker date="1484575925356" expanded="true" signature="14732:14847" ph=" Softdeletes an person ..." />
+            <marker date="1484575925356" expanded="true" signature="14896:15024" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Entity/Person.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="157" column="21" lean-forward="false" selection-start-line="157" selection-start-column="21" selection-end-line="157" selection-end-column="21" />
+          <folding>
+            <element signature="e#35#54#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
