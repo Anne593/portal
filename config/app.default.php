@@ -426,6 +426,7 @@ return [
             ]
         ],
         'Middleware' => [
+            'model' => 'People',
             'field' => 'language_code',
             'Cookie' => [
                 'domain' => Environment::read('MAIN_DOMAIN')

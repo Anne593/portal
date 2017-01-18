@@ -7,32 +7,10 @@ Pre-Configured Application Template for CakePHP 3
 
 ## Installation
 
-This is just a brief installation guide. A much more detailed version will be available soon:
-
-Use composer to install the package:
-
-`$ composer create-project scherersoftware/cake-app-template <project-name>`
-
 Stuff like MySQL user and password is configured by using PHP Dotenv.
 Be sure to set `SESSION_COOKIE_NAME` and `MAIN_DOMAIN` in the `.env`, as these values are mandatory for a correct session setup.
-
-Next, setup your database. We're using cakephp/migrations for that:
-
-`$ bin/cake migrations migrate`
-
-Also run the migrations from Josegonzalez/CakeQueuesadilla, as we use this plugin to send out the restore password emails.
-
-`$ bin/cake migrations migrate -p Josegonzalez/CakeQueuesadilla`
-
-For the ModelHistory you have to run these migrations:
-
-`$ bin/cake migrations migrate -p ModelHistory`
-
-Now seed the database with a default user
-
-`$ bin/cake migrations seed`
-
-Default email: `john.doe@example.com`, default password: `password`
+Also, rename `app.default.php` to `app.php` and change the settings fitting your needs.
+Install plugins with `$ composer install`
 
 Be sure to have `npm` installed and make sure afterwards `bower` is installed globally:
 
@@ -49,6 +27,16 @@ $ npm install
 Install the bower dependencies:
 
 `$ bower install`
+
+
+Next, setup your database. We're using cakephp/migrations for that:
+
+`$ bin/cake migrations migrate`
+
+Now seed the database with a default user
+
+`$ bin/cake migrations seed`
+
 
 ## Credits
 
