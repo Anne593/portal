@@ -28,6 +28,27 @@ $config = [
         'People' => [
             '*' => [User::ROLE_ADMIN]
         ],
+        'Roomkeys' => [
+            '*' => [User::ROLE_ADMIN]
+        ],
+        'Ips' => [
+            '*' => [User::ROLE_ADMIN]
+        ],
+        'Macs' => [
+            '*' => [User::ROLE_ADMIN]
+        ],
+        'Memberships' => [
+            '*' => [User::ROLE_ADMIN]
+        ],
+        'PeopleUserRoles' => [
+            '*' => [User::ROLE_ADMIN]
+        ],
+        'UserRolesPermissionsController' => [
+            '*' => [User::ROLE_ADMIN]
+        ],
+        'WorkingGroups' => [
+            '*' => [User::ROLE_ADMIN]
+        ],
         'Profile' => [
             '*' => [User::ROLE_ADMIN]
         ],

@@ -10,12 +10,12 @@ $config = [
                 'action' => 'index'
             ]
         ],
-        'user' => [
-            'title' => __('user.index.title'),
+        'people' => [
+            'title' => __('people.index.title'),
             'icon' => 'users',
             'url' => [
                 'plugin' => null,
-                'controller' => 'Users',
+                'controller' => 'People',
                 'action' => 'index'
             ]
         ]
