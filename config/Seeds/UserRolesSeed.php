@@ -25,27 +25,27 @@ class UserRolesSeed extends AbstractSeed
             ],
             [
                 'id' => '2',
-                'title' => 'netzwerk',
+                'title' => 'network',
             ],
             [
                 'id' => '3',
-                'title' => 'haussprecher',
+                'title' => 'house_representative',
             ],
             [
                 'id' => '4',
-                'title' => 'ag-sprecher',
+                'title' => 'working_group_representative',
             ],
             [
                 'id' => '5',
-                'title' => 'bewohner',
+                'title' => 'tenant',
             ],
             [
                 'id' => '6',
-                'title' => 'belegungsausschluss',
+                'title' => 'assignment_committee',
             ],
             [
                 'id' => '7',
-                'title' => 'hausmeister',
+                'title' => 'housekeeper',
             ],
         ];
 
