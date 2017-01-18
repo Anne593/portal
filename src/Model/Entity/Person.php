@@ -39,15 +39,15 @@ class Person extends Entity
     use TypeAwareTrait;
     use LazyLoadEntityTrait;
 
-    const ROLE_ADMIN = 1;
-    const ROLE_NETWORK = 2;
-    const ROLE_HOUSE_REPRESENTATIVE = 3;
-    const ROLE_WORKING_GROUP_REPRESENTATIVE = 4;
-    const ROLE_TENANT = 5;
-    const ROLE_ASSIGNMENT_COMMITTEE = 6;
-    const ROLE_HOUSEKEEPER = 7;
+    const ROLE_ADMIN = '1';
+    const ROLE_NETWORK = '2';
+    const ROLE_HOUSE_REPRESENTATIVE = '3';
+    const ROLE_WORKING_GROUP_REPRESENTATIVE = '4';
+    const ROLE_TENANT = '5';
+    const ROLE_ASSIGNMENT_COMMITTEE = '6';
+    const ROLE_HOUSEKEEPER = '7';
 
-    protected $_virtual = ['full_name', 'role'];
+    protected $_virtual = ['full_name', 'role', 'roles'];
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().
      *
@@ -143,6 +143,7 @@ class Person extends Entity
         return $this->forename . ' ' . $this->surname;
     }
 
+
     /**
      * Getter for all roles
      *
@@ -155,6 +156,12 @@ class Person extends Entity
             array_push($roles, $role['id']);
         }
         return $roles;
+    }
+
+    //TODO this is a hack to bypass the authentication in a simple way. Should be replaced with multi-role support
+    protected function _getRole()
+    {
+        return Person::ROLE_ADMIN;
     }
 
     /**
