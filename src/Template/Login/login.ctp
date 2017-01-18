@@ -38,11 +38,10 @@ $this->assign('bodyClasses', 'login-page');
             <hr>
             <dl>
                 <dt><?= __('user.email') ?></dt>
-                <dd><code>lukas.malcher@hilton.rwth-aachen.de, anne.heimes@hilton.rwth-aachen.de, mk@rwth-aachen.de</code></dd>
+                <dd><code>lukas.stark@example.com, anne.snow@example.com</code></dd>
                 <dt><?= __('user.password') ?></dt>
                 <dd><code>password</code></dd>
             </dl>
         <?php endif; ?>
     </div>
 </div>
-
