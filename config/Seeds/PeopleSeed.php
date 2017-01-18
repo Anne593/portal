@@ -2,7 +2,7 @@
 use Migrations\AbstractSeed;
 
 /**
- * Users seed.
+ * People seed.
  */
 class PeopleSeed extends AbstractSeed
 {
@@ -11,7 +11,7 @@ class PeopleSeed extends AbstractSeed
      *
      * Write your database seeder using this method.
      *
-     * More information on writing seeders is available here:
+     * More information on writing seeds is available here:
      * http://docs.phinx.org/en/latest/seeding.html
      *
      * @return void
@@ -20,124 +20,59 @@ class PeopleSeed extends AbstractSeed
     {
         $data = [
             [
-                'id' => '1',
+                'id' => '3',
+                'surname' => 'Müller',
+                'forename' => 'Franz',
+                'email' => 'mk@example.com',
+                'birthday' => '1994-03-03',
+                'matriculation_number' => '331102',
+                'studentenwerk_identification' => '1234569',
+                'password' => '$2y$10$kFqg10Qxa3m.GiU8niklGOq4yIe7lhrYCf1IKUOMf2/Rz2SQLOJSy',
+                'password_retrieval' => NULL,
                 'status' => 'active',
-                'forename' => 'Anne',
-                'surname' => 'Heimes',
-                'email' => 'anne.heimes@hilton.rwth-aachen.de',
-                'password' => $this->_getDefaultPassword(),
-                'last_passwords' => null,
-                'password_retrieval' => null,
-                'failed_login_count' => 0,
-                'matriculation_number' => 331100,
-                'studentenwerk_identification' => 1234567,
-                'failed_login_timestamp' => null,
-                'birthday' => '1994-11-29 00:00:00',
+                'failed_login_count' => '0',
+                'failed_login_timestamp' => NULL,
                 'created' => '2017-01-15 11:11:11',
-                'modified' => '2017-01-15 11:11:11'
+                'modified' => '2017-01-15 11:11:11',
+                'last_passwords' => NULL,
             ],
             [
                 'id' => '2',
-                'status' => 'active',
+                'surname' => 'Stark',
                 'forename' => 'Lukas',
-                'surname' => 'Malcher',
-                'email' => 'lukas.malcher@hilton.rwth-aachen.de',
-                'password' => $this->_getDefaultPassword(),
-                'last_passwords' => null,
-                'password_retrieval' => null,
-                'failed_login_count' => 0,
-                'matriculation_number' => 331101,
-                'studentenwerk_identification' => 1234568,
-                'failed_login_timestamp' => null,
-                'birthday' => '1994-03-03 00:00:00',
+                'email' => 'lukas.stark@example.com',
+                'birthday' => '1994-03-03',
+                'matriculation_number' => '331101',
+                'studentenwerk_identification' => '1234568',
+                'password' => '$2y$10$UvuzcXN55Q2mT.dllGu2DeIonCj/dCJR7kEXM./vEVnjrH7RtNo8q',
+                'password_retrieval' => NULL,
+                'status' => 'active',
+                'failed_login_count' => '0',
+                'failed_login_timestamp' => NULL,
                 'created' => '2017-01-15 11:11:11',
-                'modified' => '2017-01-15 11:11:11'
+                'modified' => '2017-01-17 23:51:08',
+                'last_passwords' => NULL,
             ],
             [
-                'id' => '3',
+                'id' => '1',
+                'surname' => 'Snow',
+                'forename' => 'Anne',
+                'email' => 'anne.snow@example.com',
+                'birthday' => '1994-11-29',
+                'matriculation_number' => '331100',
+                'studentenwerk_identification' => '1234567',
+                'password' => '$2y$10$PBXMgv3AOoDk2zGzK/8n0.VKyA9PA4Dxg0ynMMM4tVDwRFxauHN2m',
+                'password_retrieval' => NULL,
                 'status' => 'active',
-                'forename' => 'Matthias',
-                'surname' => 'Klein',
-                'email' => 'mk@hilton.rwth-aachen.de',
-                'password' => $this->_getDefaultPassword(),
-                'last_passwords' => null,
-                'password_retrieval' => null,
-                'failed_login_count' => 0,
-                'matriculation_number' => 331102,
-                'studentenwerk_identification' => 1234569,
-                'failed_login_timestamp' => null,
-                'birthday' => '1994-03-03 00:00:00',
+                'failed_login_count' => '0',
+                'failed_login_timestamp' => NULL,
                 'created' => '2017-01-15 11:11:11',
-                'modified' => '2017-01-15 11:11:11'
-            ]
+                'modified' => '2017-01-15 11:11:11',
+                'last_passwords' => NULL,
+            ],
         ];
 
         $table = $this->table('people');
         $table->insert($data)->save();
-
-        $data = [
-            [
-                'id' => '1',
-                'title' => 'admin'
-            ],
-            [
-                'id' => '2',
-                'title' => 'netzwerk'
-            ],
-            [
-                'id' => '3',
-                'title' => 'haussprecher'
-            ],
-            [
-                'id' => '4',
-                'title' => 'ag-sprecher'
-            ],
-            [
-                'id' => '5',
-                'title' => 'bewohner'
-            ],
-            [
-                'id' => '6',
-                'title' => 'belegungsausschluss'
-            ],
-            [
-                'id' => '7',
-                'title' => 'hausmeister'
-            ],
-        ];
-
-        $table = $this->table('user_roles');
-        $table->insert($data)->save();
-
-        $data = [
-            [
-                'id' => '1',
-                'person_id' => '1',
-                'user_role_id' => '1'
-            ],
-            [
-                'id' => '2',
-                'person_id' => '2',
-                'user_role_id' => '1'
-            ],
-            [
-                'id' => '3',
-                'person_id' => '3',
-                'user_role_id' => '5'
-            ],
-        ];
-
-        $table = $this->table('people_user_roles');
-        $table->insert($data)->save();
-    }
-
-    /**
-     * Get the default password
-     *
-     * @return string
-     */
-    protected function _getDefaultPassword()
-    {
-        return (new \Cake\Auth\DefaultPasswordHasher())->hash('password');
     }
 }
