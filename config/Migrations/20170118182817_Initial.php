@@ -547,9 +547,9 @@ class Initial extends AbstractMigration
                 'null' => false,
             ])
             ->addColumn('eth_unlocked_primary', 'text', [
-                'default' => 'egal',
+                'default' => null,
                 'limit' => null,
-                'null' => false,
+                'null' => true,
             ])
             ->addColumn('comment', 'string', [
                 'default' => null,
@@ -875,9 +875,9 @@ class Initial extends AbstractMigration
                 'null' => true,
             ])
             ->addColumn('type', 'text', [
-                'default' => 'Normal',
+                'default' => null,
                 'limit' => null,
-                'null' => false,
+                'null' => true,
             ])
             ->addColumn('comment', 'text', [
                 'default' => null,

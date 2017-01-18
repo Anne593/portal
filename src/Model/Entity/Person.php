@@ -39,7 +39,7 @@ class Person extends Entity
     use TypeAwareTrait;
     use LazyLoadEntityTrait;
 
-    const ROLE_ADMIN = '1';
+    const ROLE_ADMIN = 'admin';
     const ROLE_NETWORK = '2';
     const ROLE_HOUSE_REPRESENTATIVE = '3';
     const ROLE_WORKING_GROUP_REPRESENTATIVE = '4';

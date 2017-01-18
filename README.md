@@ -10,6 +10,7 @@ Pre-Configured Application Template for CakePHP 3
 Stuff like MySQL user and password is configured by using PHP Dotenv.
 Be sure to set `SESSION_COOKIE_NAME` and `MAIN_DOMAIN` in the `.env`, as these values are mandatory for a correct session setup.
 Also, rename `app.default.php` to `app.php` and change the settings fitting your needs.
+
 Install plugins with `$ composer install`
 
 Be sure to have `npm` installed and make sure afterwards `bower` is installed globally:
