@@ -14,16 +14,20 @@
         <fieldset>
             <dl class="dl-horizontal">
                 <dt><?= __('user.firstname') ?></dt>
-                <dd><?= h($user->firstname) ?></dd>
+                <dd><?= h($user->forename) ?></dd>
 
                 <dt><?= __('user.lastname') ?></dt>
-                <dd><?= h($user->lastname) ?></dd>
+                <dd><?= h($user->surname) ?></dd>
 
                 <dt><?= __('user.email') ?></dt>
                 <dd><?= h($user->email) ?></dd>
 
                 <dt><?= __('user.role') ?></dt>
-                <dd><?= $this->Utils->roleLabel($user->role) ?></dd>
+                <dd>
+                    <?php foreach($user->roles as $role) {
+                        echo $this->Utils->roleLabel($role) . "&nbsp;";
+                    }?>
+                </dd>
 
                 <dt><?= __('user.status') ?></dt>
                 <dd><?= $this->Utils->statusLabel($user->status) ?></dd>

@@ -56,16 +56,16 @@ class UtilsHelper extends Helper
         $classes = ['label'];
         $caption = Person::getTypeDescription($role);
         switch ($role) {
-            case Person::ROLE_ADMIN:
+            case ROLE_ADMIN:
                 $classes[] = 'label label-danger';
                 break;
-            case Person::ROLE_HOUSE_REPRESENTATIVE:
+            case ROLE_HOUSE_REPRESENTATIVE:
                 $classes[] = 'label label-primary';
                 break;
-            case Person::ROLE_WORKING_GROUP_REPRESENTATIVE:
+            case ROLE_WORKING_GROUP_REPRESENTATIVE:
                 $classes[] = 'label label-warning';
                 break;
-            case Person::ROLE_ASSIGNMENT_COMMITTEE:
+            case ROLE_ASSIGNMENT_COMMITTEE:
                 $classes[] = 'label label-success';
                 break;
             default:

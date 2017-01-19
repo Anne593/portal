@@ -12,11 +12,11 @@ class ProfileController extends AppController
      */
     public function index()
     {
-        $this->loadModel('Users');
-        $user = $this->Users->get($this->Auth->user('id'));
+        $this->loadModel('People');
+        $user = $this->People->get($this->Auth->user('id'));
         unset($user->password);
         if ($this->request->is('put')) {
-            $this->Users->changePassword($user, $this->request->data);
+            $this->People->changePassword($user, $this->request->data);
             if (empty($user->errors())) {
                 $this->Flash->success(__('profile.password_change_success'));
 

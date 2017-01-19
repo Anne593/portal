@@ -136,7 +136,7 @@ class Person extends Entity {
     protected function _getRoles() {
         $roles = [];
         foreach ($this->user_roles as $role) {
-            array_push($roles, $role['id']);
+            array_push($roles, $role['title']);
         }
         return $roles;
     }
