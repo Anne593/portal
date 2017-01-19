@@ -1,8 +1,11 @@
 <?php
 
 namespace App\Model\Entity;
-
+use App\Lib\Status; 
+use Cake\Auth\DefaultPasswordHasher; 
 use Cake\ORM\Entity;
+use CkTools\Utility\TypeAwareTrait; 
+use JeremyHarris\LazyLoad\ORM\LazyLoadEntityTrait; 
 
 /**
  * Person Entity
@@ -36,7 +39,20 @@ use Cake\ORM\Entity;
  * @property \App\Model\Entity\WorkingGroup[] $working_groups
  */
 class Person extends Entity {
-
+    
+    use TypeAwareTrait; 
+    use LazyLoadEntityTrait; 
+ 
+    const ROLE_ADMIN = 'admin'; 
+    const ROLE_NETWORK = '2'; 
+    const ROLE_HOUSE_REPRESENTATIVE = '3'; 
+    const ROLE_WORKING_GROUP_REPRESENTATIVE = '4'; 
+    const ROLE_TENANT = '5'; 
+    const ROLE_ASSIGNMENT_COMMITTEE = '6'; 
+    const ROLE_HOUSEKEEPER = '7'; 
+ 
+    protected $_virtual = ['full_name', 'role', 'roles']; 
+ 
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().
      *
