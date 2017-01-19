@@ -15,28 +15,28 @@ use App\Model\Entity\Person;
         </form>
 
         <ul class="sidebar-menu">
-            <li><?php print $this->Html->link('EmailtextGroups', array('controller' => 'EmailtextGroups')); ?></li>
-            <li><?php print $this->Html->link('EmailtextUsers', array('controller' => 'EmailtextUsers')); ?></li>
-            <li><?php print $this->Html->link('Emailtexts', array('controller' => 'Emailtexts')); ?></li>
-            <li><?php print $this->Html->link('FileserverUsers', array('controller' => 'FileserverUsers')); ?></li>
-            <li><?php print $this->Html->link('Groups', array('controller' => 'Groups')); ?></li>
-            <li><?php print $this->Html->link('Ips', array('controller' => 'Ips')); ?></li>
-            <li><?php print $this->Html->link('Jobs', array('controller' => 'Jobs')); ?></li>
-            <li><?php print $this->Html->link('Macs', array('controller' => 'Macs')); ?></li>
-            <li><?php print $this->Html->link('Memberships', array('controller' => 'Memberships')); ?></li>
-            <li><?php print $this->Html->link('ModelHistory', array('controller' => 'ModelHistory')); ?></li>
-            <li><?php print $this->Html->link('People', array('controller' => 'People')); ?></li>
-            <li><?php print $this->Html->link('PeopleMemberships', array('controller' => 'PeopleMemberships')); ?></li>
-            <li><?php print $this->Html->link('PeopleUserRoles', array('controller' => 'PeopleUserRoles')); ?></li>
-            <li><?php print $this->Html->link('Permissions', array('controller' => 'Permissions')); ?></li>
-            <li><?php print $this->Html->link('Roomkeys', array('controller' => 'Roomkeys')); ?></li>
-            <li><?php print $this->Html->link('RoomkeysPeople', array('controller' => 'RoomkeysPeople')); ?></li>
-            <li><?php print $this->Html->link('Rooms', array('controller' => 'Rooms')); ?></li>
-            <li><?php print $this->Html->link('Tenants', array('controller' => 'Tenants')); ?></li>
-            <li><?php print $this->Html->link('UserRoles', array('controller' => 'UserRoles')); ?></li>
-            <li><?php print $this->Html->link('UserRolesPermissions', array('controller' => 'UserRolesPermissions')); ?></li>
-            <li><?php print $this->Html->link('WorkingGroups', array('controller' => 'WorkingGroups')); ?></li>
-            <li><?php print $this->Html->link('WorkingGroupsPeople', array('controller' => 'WorkingGroupsPeople')); ?></li>
+            <li><?= $this->Html->link('EmailtextGroups', array('controller' => 'EmailtextGroups')); ?></li>
+            <li><?= $this->Html->link('EmailtextUsers', array('controller' => 'EmailtextUsers')); ?></li>
+            <li><?= $this->Html->link('Emailtexts', array('controller' => 'Emailtexts')); ?></li>
+            <li><?= $this->Html->link('FileserverUsers', array('controller' => 'FileserverUsers')); ?></li>
+            <li><?= $this->Html->link('Groups', array('controller' => 'Groups')); ?></li>
+            <li><?= $this->Html->link('Ips', array('controller' => 'Ips')); ?></li>
+            <li><?= $this->Html->link('Jobs', array('controller' => 'Jobs')); ?></li>
+            <li><?= $this->Html->link('Macs', array('controller' => 'Macs')); ?></li>
+            <li><?= $this->Html->link('Memberships', array('controller' => 'Memberships')); ?></li>
+            <li><?= $this->Html->link('ModelHistory', array('controller' => 'ModelHistory')); ?></li>
+            <li><?= $this->Html->link('People', array('controller' => 'People')); ?></li>
+            <li><?= $this->Html->link('PeopleMemberships', array('controller' => 'PeopleMemberships')); ?></li>
+            <li><?= $this->Html->link('PeopleUserRoles', array('controller' => 'PeopleUserRoles')); ?></li>
+            <li><?= $this->Html->link('Permissions', array('controller' => 'Permissions')); ?></li>
+            <li><?= $this->Html->link('Roomkeys', array('controller' => 'Roomkeys')); ?></li>
+            <li><?= $this->Html->link('RoomkeysPeople', array('controller' => 'RoomkeysPeople')); ?></li>
+            <li><?= $this->Html->link('Rooms', array('controller' => 'Rooms')); ?></li>
+            <li><?= $this->Html->link('Tenants', array('controller' => 'Tenants')); ?></li>
+            <li><?= $this->Html->link('UserRoles', array('controller' => 'UserRoles')); ?></li>
+            <li><?= $this->Html->link('UserRolesPermissions', array('controller' => 'UserRolesPermissions')); ?></li>
+            <li><?= $this->Html->link('WorkingGroups', array('controller' => 'WorkingGroups')); ?></li>
+            <li><?= $this->Html->link('WorkingGroupsPeople', array('controller' => 'WorkingGroupsPeople')); ?></li>
         </ul>
     </section>
 </aside>
