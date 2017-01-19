@@ -30,21 +30,16 @@ use JeremyHarris\LazyLoad\ORM\LazyLoadEntityTrait;
  * @property string $last_passwords
  *
  * @property \App\Model\Entity\FileserverUser[] $fileserver_users
- * @property \App\Model\Entity\HouseContibution[] $house_contibution
  * @property \App\Model\Entity\Mac[] $macs
- * @property \App\Model\Entity\PeopleNetwork[] $people_network
  * @property \App\Model\Entity\Tenant[] $tenants
+ * @property \App\Model\Entity\Membership[] $memberships
  * @property \App\Model\Entity\UserRole[] $user_roles
  * @property \App\Model\Entity\Roomkey[] $roomkeys
  * @property \App\Model\Entity\WorkingGroup[] $working_groups
  */
-class Person extends Entity {
-    
-    use TypeAwareTrait; 
-    use LazyLoadEntityTrait; 
+class Person extends Entity
+{
 
-    protected $_virtual = ['full_name', 'roles'];
- 
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().
      *

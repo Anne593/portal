@@ -34,7 +34,7 @@ class MembershipsController extends AppController
     public function view($id = null)
     {
         $membership = $this->Memberships->get($id, [
-            'contain' => ['PeopleNetwork']
+            'contain' => ['People']
         ]);
 
         $this->set('membership', $membership);
@@ -59,8 +59,8 @@ class MembershipsController extends AppController
                 $this->Flash->error(__('The membership could not be saved. Please, try again.'));
             }
         }
-        $peopleNetwork = $this->Memberships->PeopleNetwork->find('list', ['limit' => 200]);
-        $this->set(compact('membership', 'peopleNetwork'));
+        $people = $this->Memberships->People->find('list', ['limit' => 200]);
+        $this->set(compact('membership', 'people'));
         $this->set('_serialize', ['membership']);
     }
 
@@ -74,7 +74,7 @@ class MembershipsController extends AppController
     public function edit($id = null)
     {
         $membership = $this->Memberships->get($id, [
-            'contain' => ['PeopleNetwork']
+            'contain' => ['People']
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $membership = $this->Memberships->patchEntity($membership, $this->request->data);
@@ -86,8 +86,8 @@ class MembershipsController extends AppController
                 $this->Flash->error(__('The membership could not be saved. Please, try again.'));
             }
         }
-        $peopleNetwork = $this->Memberships->PeopleNetwork->find('list', ['limit' => 200]);
-        $this->set(compact('membership', 'peopleNetwork'));
+        $people = $this->Memberships->People->find('list', ['limit' => 200]);
+        $this->set(compact('membership', 'people'));
         $this->set('_serialize', ['membership']);
     }
 

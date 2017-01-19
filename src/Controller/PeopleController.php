@@ -92,7 +92,7 @@ class PeopleController extends AppController
     public function view($id = null)
     {
         $person = $this->People->get($id, [
-            'contain' => ['UserRoles', 'Roomkeys', 'WorkingGroups', 'FileserverUsers', 'HouseContibution', 'Macs', 'PeopleNetwork', 'Tenants']
+            'contain' => ['Memberships', 'UserRoles', 'Roomkeys', 'WorkingGroups', 'FileserverUsers', 'Macs', 'Tenants']
         ]);
 
         $this->set('person', $person);
@@ -117,10 +117,11 @@ class PeopleController extends AppController
                 $this->Flash->error(__('The person could not be saved. Please, try again.'));
             }
         }
+        $memberships = $this->People->Memberships->find('list', ['limit' => 200]);
         $userRoles = $this->People->UserRoles->find('list', ['limit' => 200]);
         $roomkeys = $this->People->Roomkeys->find('list', ['limit' => 200]);
         $workingGroups = $this->People->WorkingGroups->find('list', ['limit' => 200]);
-        $this->set(compact('person', 'userRoles', 'roomkeys', 'workingGroups'));
+        $this->set(compact('person', 'memberships', 'userRoles', 'roomkeys', 'workingGroups'));
         $this->set('_serialize', ['person']);
     }
 
@@ -134,7 +135,7 @@ class PeopleController extends AppController
     public function edit($id = null)
     {
         $person = $this->People->get($id, [
-            'contain' => ['UserRoles', 'Roomkeys', 'WorkingGroups']
+            'contain' => ['Memberships', 'UserRoles', 'Roomkeys', 'WorkingGroups']
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $person = $this->People->patchEntity($person, $this->request->data);
@@ -146,10 +147,11 @@ class PeopleController extends AppController
                 $this->Flash->error(__('The person could not be saved. Please, try again.'));
             }
         }
+        $memberships = $this->People->Memberships->find('list', ['limit' => 200]);
         $userRoles = $this->People->UserRoles->find('list', ['limit' => 200]);
         $roomkeys = $this->People->Roomkeys->find('list', ['limit' => 200]);
         $workingGroups = $this->People->WorkingGroups->find('list', ['limit' => 200]);
-        $this->set(compact('person', 'userRoles', 'roomkeys', 'workingGroups'));
+        $this->set(compact('person', 'memberships', 'userRoles', 'roomkeys', 'workingGroups'));
         $this->set('_serialize', ['person']);
     }
 
