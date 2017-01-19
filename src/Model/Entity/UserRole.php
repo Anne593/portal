@@ -11,6 +11,8 @@ use Cake\ORM\Entity;
  *
  * @property \App\Model\Entity\Person[] $people
  * @property \App\Model\Entity\Permission[] $permissions
+ * @property \App\Model\Entity\PeopleUserRole[] $people_user_roles
+ * @property \App\Model\Entity\UserRolesPermission[] $user_roles_permissions
  */
 class UserRole extends Entity
 {

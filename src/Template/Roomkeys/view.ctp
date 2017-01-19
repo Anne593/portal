@@ -41,6 +41,9 @@
                 <th scope="col"><?= __('Birthday') ?></th>
                 <th scope="col"><?= __('Matriculation Number') ?></th>
                 <th scope="col"><?= __('Studentenwerk Identification') ?></th>
+                <th scope="col"><?= __('Nationality') ?></th>
+                <th scope="col"><?= __('Sex') ?></th>
+                <th scope="col"><?= __('Eth Unlocked Primary') ?></th>
                 <th scope="col"><?= __('Password') ?></th>
                 <th scope="col"><?= __('Password Retrieval') ?></th>
                 <th scope="col"><?= __('Status') ?></th>
@@ -60,6 +63,9 @@
                 <td><?= h($people->birthday) ?></td>
                 <td><?= h($people->matriculation_number) ?></td>
                 <td><?= h($people->studentenwerk_identification) ?></td>
+                <td><?= h($people->nationality) ?></td>
+                <td><?= h($people->sex) ?></td>
+                <td><?= h($people->eth_unlocked_primary) ?></td>
                 <td><?= h($people->password) ?></td>
                 <td><?= h($people->password_retrieval) ?></td>
                 <td><?= h($people->status) ?></td>

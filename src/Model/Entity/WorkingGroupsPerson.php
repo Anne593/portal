@@ -8,7 +8,7 @@ use Cake\ORM\Entity;
  *
  * @property int $id
  * @property int $person_id
- * @property int $workshop_id
+ * @property int $working_group_id
  * @property \Cake\I18n\Time $member_since
  * @property \Cake\I18n\Time $member_until
  * @property string $type
@@ -17,6 +17,7 @@ use Cake\ORM\Entity;
  *
  * @property \App\Model\Entity\Person $person
  * @property \App\Model\Entity\Workshop $workshop
+ * @property \App\Model\Entity\WorkingGroup $working_group
  */
 class WorkingGroupsPerson extends Entity
 {

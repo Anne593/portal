@@ -10,7 +10,7 @@ use Cake\Validation\Validator;
  * WorkingGroupsPeople Model
  *
  * @property \Cake\ORM\Association\BelongsTo $People
- * @property \Cake\ORM\Association\BelongsTo $Workshops
+ * @property \Cake\ORM\Association\BelongsTo $WorkingGroups
  *
  * @method \App\Model\Entity\WorkingGroupsPerson get($primaryKey, $options = [])
  * @method \App\Model\Entity\WorkingGroupsPerson newEntity($data = null, array $options = [])
@@ -41,8 +41,8 @@ class WorkingGroupsPeopleTable extends Table
             'foreignKey' => 'person_id',
             'joinType' => 'INNER'
         ]);
-        $this->belongsTo('Workshops', [
-            'foreignKey' => 'workshop_id',
+        $this->belongsTo('WorkingGroups', [
+            'foreignKey' => 'working_group_id',
             'joinType' => 'INNER'
         ]);
     }
@@ -69,8 +69,7 @@ class WorkingGroupsPeopleTable extends Table
             ->allowEmpty('member_until');
 
         $validator
-            ->requirePresence('type', 'create')
-            ->notEmpty('type');
+            ->allowEmpty('type');
 
         $validator
             ->allowEmpty('comment');
@@ -93,7 +92,7 @@ class WorkingGroupsPeopleTable extends Table
     public function buildRules(RulesChecker $rules)
     {
         $rules->add($rules->existsIn(['person_id'], 'People'));
-        $rules->add($rules->existsIn(['workshop_id'], 'Workshops'));
+        $rules->add($rules->existsIn(['working_group_id'], 'WorkingGroups'));
 
         return $rules;
     }

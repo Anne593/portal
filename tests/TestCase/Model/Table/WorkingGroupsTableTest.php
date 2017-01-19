@@ -42,7 +42,8 @@ class WorkingGroupsTableTest extends TestCase
         'app.user_roles_permissions',
         'app.roomkeys',
         'app.roomkeys_people',
-        'app.working_groups_people'
+        'app.working_groups_people',
+        'app.workshops'
     ];
 
     /**

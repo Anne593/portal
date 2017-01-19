@@ -7,19 +7,20 @@ use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
- * HouseContibution Model
+ * PeopleMemberships Model
  *
  * @property \Cake\ORM\Association\BelongsTo $People
+ * @property \Cake\ORM\Association\BelongsTo $Memberships
  *
- * @method \App\Model\Entity\HouseContibution get($primaryKey, $options = [])
- * @method \App\Model\Entity\HouseContibution newEntity($data = null, array $options = [])
- * @method \App\Model\Entity\HouseContibution[] newEntities(array $data, array $options = [])
- * @method \App\Model\Entity\HouseContibution|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
- * @method \App\Model\Entity\HouseContibution patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
- * @method \App\Model\Entity\HouseContibution[] patchEntities($entities, array $data, array $options = [])
- * @method \App\Model\Entity\HouseContibution findOrCreate($search, callable $callback = null, $options = [])
+ * @method \App\Model\Entity\PeopleMembership get($primaryKey, $options = [])
+ * @method \App\Model\Entity\PeopleMembership newEntity($data = null, array $options = [])
+ * @method \App\Model\Entity\PeopleMembership[] newEntities(array $data, array $options = [])
+ * @method \App\Model\Entity\PeopleMembership|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
+ * @method \App\Model\Entity\PeopleMembership patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
+ * @method \App\Model\Entity\PeopleMembership[] patchEntities($entities, array $data, array $options = [])
+ * @method \App\Model\Entity\PeopleMembership findOrCreate($search, callable $callback = null, $options = [])
  */
-class HouseContibutionTable extends Table
+class PeopleMembershipsTable extends Table
 {
 
     /**
@@ -32,12 +33,16 @@ class HouseContibutionTable extends Table
     {
         parent::initialize($config);
 
-        $this->table('house_contibution');
+        $this->table('people_memberships');
         $this->displayField('id');
         $this->primaryKey('id');
 
         $this->belongsTo('People', [
             'foreignKey' => 'person_id',
+            'joinType' => 'INNER'
+        ]);
+        $this->belongsTo('Memberships', [
+            'foreignKey' => 'membership_id',
             'joinType' => 'INNER'
         ]);
     }
@@ -56,7 +61,8 @@ class HouseContibutionTable extends Table
 
         $validator
             ->integer('semester')
-            ->allowEmpty('semester');
+            ->requirePresence('semester', 'create')
+            ->notEmpty('semester');
 
         $validator
             ->boolean('payment')
@@ -64,7 +70,7 @@ class HouseContibutionTable extends Table
             ->notEmpty('payment');
 
         $validator
-            ->boolean('social_service')
+            ->integer('social_service')
             ->requirePresence('social_service', 'create')
             ->notEmpty('social_service');
 
@@ -73,9 +79,8 @@ class HouseContibutionTable extends Table
             ->notEmpty('social_service_comment');
 
         $validator
-            ->boolean('new_tenant_bar')
-            ->requirePresence('new_tenant_bar', 'create')
-            ->notEmpty('new_tenant_bar');
+            ->requirePresence('comment', 'create')
+            ->notEmpty('comment');
 
         return $validator;
     }
@@ -90,6 +95,7 @@ class HouseContibutionTable extends Table
     public function buildRules(RulesChecker $rules)
     {
         $rules->add($rules->existsIn(['person_id'], 'People'));
+        $rules->add($rules->existsIn(['membership_id'], 'Memberships'));
 
         return $rules;
     }

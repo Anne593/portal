@@ -14,7 +14,7 @@
         <legend><?= __('Add Working Groups Person') ?></legend>
         <?php
             echo $this->Form->input('person_id', ['options' => $people]);
-            echo $this->Form->input('workshop_id');
+            echo $this->Form->input('working_group_id', ['options' => $workingGroups]);
             echo $this->Form->input('member_since');
             echo $this->Form->input('member_until', ['empty' => true]);
             echo $this->Form->input('type');

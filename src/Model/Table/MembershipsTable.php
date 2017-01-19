@@ -9,7 +9,7 @@ use Cake\Validation\Validator;
 /**
  * Memberships Model
  *
- * @property \Cake\ORM\Association\BelongsToMany $PeopleNetwork
+ * @property \Cake\ORM\Association\BelongsToMany $People
  *
  * @method \App\Model\Entity\Membership get($primaryKey, $options = [])
  * @method \App\Model\Entity\Membership newEntity($data = null, array $options = [])
@@ -36,10 +36,10 @@ class MembershipsTable extends Table
         $this->displayField('name');
         $this->primaryKey('id');
 
-        $this->belongsToMany('PeopleNetwork', [
+        $this->belongsToMany('People', [
             'foreignKey' => 'membership_id',
-            'targetForeignKey' => 'people_network_id',
-            'joinTable' => 'people_network_memberships'
+            'targetForeignKey' => 'person_id',
+            'joinTable' => 'people_memberships'
         ]);
     }
 

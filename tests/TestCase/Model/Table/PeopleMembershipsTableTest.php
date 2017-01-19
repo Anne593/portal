@@ -1,22 +1,22 @@
 <?php
 namespace App\Test\TestCase\Model\Table;
 
-use App\Model\Table\UserRolesPermissionsTable;
+use App\Model\Table\PeopleMembershipsTable;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
 
 /**
- * App\Model\Table\UserRolesPermissionsTable Test Case
+ * App\Model\Table\PeopleMembershipsTable Test Case
  */
-class UserRolesPermissionsTableTest extends TestCase
+class PeopleMembershipsTableTest extends TestCase
 {
 
     /**
      * Test subject
      *
-     * @var \App\Model\Table\UserRolesPermissionsTable
+     * @var \App\Model\Table\PeopleMembershipsTable
      */
-    public $UserRolesPermissions;
+    public $PeopleMemberships;
 
     /**
      * Fixtures
@@ -24,8 +24,7 @@ class UserRolesPermissionsTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
-        'app.user_roles_permissions',
-        'app.user_roles',
+        'app.people_memberships',
         'app.people',
         'app.fileserver_users',
         'app.house_contibution',
@@ -37,13 +36,15 @@ class UserRolesPermissionsTableTest extends TestCase
         'app.networkinfos',
         'app.tenants',
         'app.rooms',
+        'app.user_roles',
         'app.people_user_roles',
+        'app.permissions',
+        'app.user_roles_permissions',
         'app.roomkeys',
         'app.roomkeys_people',
         'app.working_groups',
         'app.working_groups_people',
-        'app.workshops',
-        'app.permissions'
+        'app.workshops'
     ];
 
     /**
@@ -54,8 +55,8 @@ class UserRolesPermissionsTableTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $config = TableRegistry::exists('UserRolesPermissions') ? [] : ['className' => 'App\Model\Table\UserRolesPermissionsTable'];
-        $this->UserRolesPermissions = TableRegistry::get('UserRolesPermissions', $config);
+        $config = TableRegistry::exists('PeopleMemberships') ? [] : ['className' => 'App\Model\Table\PeopleMembershipsTable'];
+        $this->PeopleMemberships = TableRegistry::get('PeopleMemberships', $config);
     }
 
     /**
@@ -65,7 +66,7 @@ class UserRolesPermissionsTableTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->UserRolesPermissions);
+        unset($this->PeopleMemberships);
 
         parent::tearDown();
     }

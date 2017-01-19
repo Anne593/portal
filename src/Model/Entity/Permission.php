@@ -12,6 +12,7 @@ use Cake\ORM\Entity;
  * @property string $field_name
  *
  * @property \App\Model\Entity\UserRole[] $user_roles
+ * @property \App\Model\Entity\UserRolesPermission[] $user_roles_permissions
  */
 class Permission extends Entity
 {

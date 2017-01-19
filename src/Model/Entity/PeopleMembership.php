@@ -4,19 +4,21 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * HouseContibution Entity
+ * PeopleMembership Entity
  *
  * @property int $id
- * @property int $person_id
  * @property int $semester
+ * @property int $person_id
+ * @property int $membership_id
  * @property bool $payment
- * @property bool $social_service
+ * @property int $social_service
  * @property string $social_service_comment
- * @property bool $new_tenant_bar
+ * @property string $comment
  *
  * @property \App\Model\Entity\Person $person
+ * @property \App\Model\Entity\Membership $membership
  */
-class HouseContibution extends Entity
+class PeopleMembership extends Entity
 {
 
     /**

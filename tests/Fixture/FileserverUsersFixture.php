@@ -19,8 +19,8 @@ class FileserverUsersFixture extends TestFixture
     public $fields = [
         'id' => ['type' => 'integer', 'length' => 10, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
         'person_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => true, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
-        'username' => ['type' => 'string', 'length' => 30, 'null' => false, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-        'password' => ['type' => 'string', 'length' => 32, 'null' => false, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+        'username' => ['type' => 'string', 'length' => 30, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+        'password' => ['type' => 'string', 'length' => 32, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         'vip' => ['type' => 'boolean', 'length' => null, 'null' => false, 'default' => null, 'comment' => '0=>no, 1=>yes', 'precision' => null],
         'accepted' => ['type' => 'boolean', 'length' => null, 'null' => false, 'default' => null, 'comment' => '0=>no, 1=>yes', 'precision' => null],
         'active' => ['type' => 'boolean', 'length' => null, 'null' => false, 'default' => null, 'comment' => '0=>no, 1=>yes', 'precision' => null],
@@ -28,11 +28,11 @@ class FileserverUsersFixture extends TestFixture
         'password_retrieval' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
-            'tenant_id' => ['type' => 'unique', 'columns' => ['person_id'], 'length' => []],
+            'person_id' => ['type' => 'unique', 'columns' => ['person_id'], 'length' => []],
         ],
         '_options' => [
-            'engine' => 'MyISAM',
-            'collation' => 'latin1_swedish_ci'
+            'engine' => 'InnoDB',
+            'collation' => 'utf8_general_ci'
         ],
     ];
     // @codingStandardsIgnoreEnd
@@ -51,7 +51,7 @@ class FileserverUsersFixture extends TestFixture
             'vip' => 1,
             'accepted' => 1,
             'active' => 1,
-            'created' => '2017-01-15 22:59:15',
+            'created' => '2017-01-19 01:18:10',
             'password_retrieval' => 1
         ],
     ];

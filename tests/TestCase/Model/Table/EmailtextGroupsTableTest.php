@@ -26,6 +26,8 @@ class EmailtextGroupsTableTest extends TestCase
     public $fixtures = [
         'app.emailtext_groups',
         'app.emailtexts',
+        'app.emailtext_users',
+        'app.types',
         'app.groups'
     ];
 

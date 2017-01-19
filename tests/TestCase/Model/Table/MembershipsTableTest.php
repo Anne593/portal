@@ -26,7 +26,24 @@ class MembershipsTableTest extends TestCase
     public $fixtures = [
         'app.memberships',
         'app.people_network',
-        'app.people_network_memberships'
+        'app.people',
+        'app.fileserver_users',
+        'app.house_contibution',
+        'app.macs',
+        'app.ips',
+        'app.tenants',
+        'app.rooms',
+        'app.user_roles',
+        'app.people_user_roles',
+        'app.permissions',
+        'app.user_roles_permissions',
+        'app.roomkeys',
+        'app.roomkeys_people',
+        'app.working_groups',
+        'app.working_groups_people',
+        'app.workshops',
+        'app.people_network_memberships',
+        'app.networkinfos'
     ];
 
     /**

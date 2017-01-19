@@ -8,8 +8,6 @@
             )
         ?></li>
         <li><?= $this->Html->link(__('List Memberships'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List People Network'), ['controller' => 'PeopleNetwork', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New People Network'), ['controller' => 'PeopleNetwork', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="memberships form large-9 medium-8 columns content">
@@ -21,7 +19,6 @@
             echo $this->Form->input('type');
             echo $this->Form->input('description');
             echo $this->Form->input('membership_fee');
-            echo $this->Form->input('people_network._ids', ['options' => $peopleNetwork]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

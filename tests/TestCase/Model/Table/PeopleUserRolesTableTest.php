@@ -35,11 +35,15 @@ class PeopleUserRolesTableTest extends TestCase
         'app.people_network_memberships',
         'app.networkinfos',
         'app.tenants',
+        'app.rooms',
         'app.user_roles',
+        'app.permissions',
+        'app.user_roles_permissions',
         'app.roomkeys',
         'app.roomkeys_people',
         'app.working_groups',
-        'app.working_groups_people'
+        'app.working_groups_people',
+        'app.workshops'
     ];
 
     /**

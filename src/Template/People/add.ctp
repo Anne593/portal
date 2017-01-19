@@ -4,12 +4,8 @@
         <li><?= $this->Html->link(__('List People'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Fileserver Users'), ['controller' => 'FileserverUsers', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Fileserver User'), ['controller' => 'FileserverUsers', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List House Contibution'), ['controller' => 'HouseContibution', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New House Contibution'), ['controller' => 'HouseContibution', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Macs'), ['controller' => 'Macs', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Mac'), ['controller' => 'Macs', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List People Network'), ['controller' => 'PeopleNetwork', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New People Network'), ['controller' => 'PeopleNetwork', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Tenants'), ['controller' => 'Tenants', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Tenant'), ['controller' => 'Tenants', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List User Roles'), ['controller' => 'UserRoles', 'action' => 'index']) ?></li>
@@ -31,6 +27,9 @@
             echo $this->Form->input('birthday');
             echo $this->Form->input('matriculation_number');
             echo $this->Form->input('studentenwerk_identification');
+            echo $this->Form->input('nationality');
+            echo $this->Form->input('sex');
+            echo $this->Form->input('eth_unlocked_primary');
             echo $this->Form->input('password');
             echo $this->Form->input('password_retrieval');
             echo $this->Form->input('status');

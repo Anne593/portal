@@ -25,8 +25,8 @@ class RoomsFixture extends TestFixture
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
         ],
         '_options' => [
-            'engine' => 'MyISAM',
-            'collation' => 'latin1_swedish_ci'
+            'engine' => 'InnoDB',
+            'collation' => 'utf8_general_ci'
         ],
     ];
     // @codingStandardsIgnoreEnd

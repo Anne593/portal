@@ -10,7 +10,6 @@ use Cake\Validation\Validator;
  * ModelHistory Model
  *
  * @property \Cake\ORM\Association\BelongsTo $Users
- * @property \Cake\ORM\Association\BelongsToMany $Phinxlog
  *
  * @method \App\Model\Entity\ModelHistory get($primaryKey, $options = [])
  * @method \App\Model\Entity\ModelHistory newEntity($data = null, array $options = [])
@@ -43,11 +42,6 @@ class ModelHistoryTable extends Table
 
         $this->belongsTo('Users', [
             'foreignKey' => 'user_id'
-        ]);
-        $this->belongsToMany('Phinxlog', [
-            'foreignKey' => 'model_history_id',
-            'targetForeignKey' => 'phinxlog_id',
-            'joinTable' => 'model_history_phinxlog'
         ]);
     }
 

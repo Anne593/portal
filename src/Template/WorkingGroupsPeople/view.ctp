@@ -19,12 +19,12 @@
             <td><?= $workingGroupsPerson->has('person') ? $this->Html->link($workingGroupsPerson->person->id, ['controller' => 'People', 'action' => 'view', $workingGroupsPerson->person->id]) : '' ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= $this->Number->format($workingGroupsPerson->id) ?></td>
+            <th scope="row"><?= __('Working Group') ?></th>
+            <td><?= $workingGroupsPerson->has('working_group') ? $this->Html->link($workingGroupsPerson->working_group->name, ['controller' => 'WorkingGroups', 'action' => 'view', $workingGroupsPerson->working_group->id]) : '' ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Workshop Id') ?></th>
-            <td><?= $this->Number->format($workingGroupsPerson->workshop_id) ?></td>
+            <th scope="row"><?= __('Id') ?></th>
+            <td><?= $this->Number->format($workingGroupsPerson->id) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Member Since') ?></th>

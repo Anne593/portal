@@ -2,7 +2,6 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
-use App\Model\Entity\Person;
 
 /**
  * People Controller
@@ -11,63 +10,6 @@ use App\Model\Entity\Person;
  */
 class PeopleController extends AppController
 {
-
-    /**
-     * Provides ListFilter configuration
-     *
-     * @return array
-     */
-    public function getListFilters()
-    {
-        $filters = [];
-        if ($this->request->action == 'index') {
-            $filters['fields'] = [
-                'People.role' => [
-                    'searchType' => 'select',
-                    'options' => Person::getRoles(),
-                    'inputOptions' => [
-                        'label' => __('user.role')
-                    ]
-                ],
-                'People.status' => [
-                    'searchType' => 'select',
-                    'options' => Person::getStatuses(),
-                    'inputOptions' => [
-                        'label' => __('user.status')
-                    ]
-                ],
-                'People.matriculation_number' => [
-                    'searchType' => 'wildcard',
-                    'inputOptions' => [
-                        'label' => __('user.matriculation_number')
-                    ]
-                ],
-                'People.studentenwerk_identification' => [
-                    'searchType' => 'wildcard',
-                    'inputOptions' => [
-                        'label' => __('user.studentenwerk_identification')
-                    ]
-                ],
-                'People.status' => [
-                    'searchType' => 'select',
-                    'options' => Person::getStatuses(),
-                    'inputOptions' => [
-                        'label' => __('user.status')
-                    ]
-                ],
-                'People.fulltext' => [
-                    'searchType' => 'fulltext',
-                    'searchFields' => [
-                        'People.forename',
-                        'People.surname',
-                        'People.email'
-                    ]
-                ]
-            ];
-        }
-
-        return $filters;
-    }
 
     /**
      * Index method

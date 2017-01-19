@@ -11,6 +11,7 @@ use Cake\ORM\Entity;
  * @property string $description
  *
  * @property \App\Model\Entity\Person[] $people
+ * @property \App\Model\Entity\WorkingGroupsPerson[] $working_groups_people
  */
 class WorkingGroup extends Entity
 {

@@ -15,7 +15,7 @@
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('person_id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('workshop_id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('working_group_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('member_since') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('member_until') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('mailing_list_enabled') ?></th>
@@ -27,7 +27,7 @@
             <tr>
                 <td><?= $this->Number->format($workingGroupsPerson->id) ?></td>
                 <td><?= $workingGroupsPerson->has('person') ? $this->Html->link($workingGroupsPerson->person->id, ['controller' => 'People', 'action' => 'view', $workingGroupsPerson->person->id]) : '' ?></td>
-                <td><?= $this->Number->format($workingGroupsPerson->workshop_id) ?></td>
+                <td><?= $workingGroupsPerson->has('working_group') ? $this->Html->link($workingGroupsPerson->working_group->name, ['controller' => 'WorkingGroups', 'action' => 'view', $workingGroupsPerson->working_group->id]) : '' ?></td>
                 <td><?= h($workingGroupsPerson->member_since) ?></td>
                 <td><?= h($workingGroupsPerson->member_until) ?></td>
                 <td><?= h($workingGroupsPerson->mailing_list_enabled) ?></td>

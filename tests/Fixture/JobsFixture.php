@@ -26,7 +26,7 @@ class JobsFixture extends TestFixture
         'locked' => ['type' => 'integer', 'length' => 1, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'attempts' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         '_indexes' => [
-            'is_locked' => ['type' => 'index', 'columns' => ['queue', 'locked'], 'length' => []],
+            'queue' => ['type' => 'index', 'columns' => ['queue', 'locked'], 'length' => []],
         ],
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
@@ -49,8 +49,8 @@ class JobsFixture extends TestFixture
             'queue' => 'Lorem ipsum dolor sit amet',
             'data' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
             'priority' => 1,
-            'expires_at' => '2017-01-15 22:59:15',
-            'delay_until' => '2017-01-15 22:59:15',
+            'expires_at' => '2017-01-19 01:18:10',
+            'delay_until' => '2017-01-19 01:18:10',
             'locked' => 1,
             'attempts' => 'Lorem ipsum dolor sit amet'
         ],

@@ -13,6 +13,7 @@ use Cake\ORM\Entity;
  * @property int $membership_fee
  *
  * @property \App\Model\Entity\PeopleNetwork[] $people_network
+ * @property \App\Model\Entity\PeopleNetworkMembership[] $people_network_memberships
  */
 class Membership extends Entity
 {
