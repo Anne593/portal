@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Model\Entity;
+
 use App\Lib\Status;
 use Cake\Auth\DefaultPasswordHasher;
 use Cake\ORM\Entity;
@@ -89,7 +90,7 @@ class Person extends Entity
      */
     public static function getRoles() {
         return self::getTypeMap(
-            ROLE_ADMIN, ROLE_NETWORK, ROLE_ASSIGNMENT_COMMITTEE, ROLE_WORKING_GROUP_REPRESENTATIVE, ROLE_TENANT, ROLE_HOUSE_REPRESENTATIVE, ROLE_HOUSEKEEPER
+                        ROLE_ADMIN, ROLE_NETWORK, ROLE_ASSIGNMENT_COMMITTEE, ROLE_WORKING_GROUP_REPRESENTATIVE, ROLE_TENANT, ROLE_HOUSE_REPRESENTATIVE, ROLE_HOUSEKEEPER
         );
     }
 
