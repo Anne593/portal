@@ -15,7 +15,7 @@ use App\Model\Entity\Person;
         </form>
 
         <ul class="sidebar-menu">
-            <<li><?php print $this->Html->link('EmailtextGroups', array('controller' => 'EmailtextGroups')); ?></li>
+            <li><?php print $this->Html->link('EmailtextGroups', array('controller' => 'EmailtextGroups')); ?></li>
             <li><?php print $this->Html->link('EmailtextUsers', array('controller' => 'EmailtextUsers')); ?></li>
             <li><?php print $this->Html->link('Emailtexts', array('controller' => 'Emailtexts')); ?></li>
             <li><?php print $this->Html->link('FileserverUsers', array('controller' => 'FileserverUsers')); ?></li>
