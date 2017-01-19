@@ -19,7 +19,7 @@ class ModelHistoryController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Users']
+            'contain' => ['People']
         ];
         $modelHistory = $this->paginate($this->ModelHistory);
 
@@ -37,7 +37,7 @@ class ModelHistoryController extends AppController
     public function view($id = null)
     {
         $modelHistory = $this->ModelHistory->get($id, [
-            'contain' => ['Users', 'Phinxlog']
+            'contain' => ['People', 'Phinxlog']
         ]);
 
         $this->set('modelHistory', $modelHistory);
@@ -62,9 +62,9 @@ class ModelHistoryController extends AppController
                 $this->Flash->error(__('The model history could not be saved. Please, try again.'));
             }
         }
-        $users = $this->ModelHistory->Users->find('list', ['limit' => 200]);
+        $people = $this->ModelHistory->People->find('list', ['limit' => 200]);
         $phinxlog = $this->ModelHistory->Phinxlog->find('list', ['limit' => 200]);
-        $this->set(compact('modelHistory', 'users', 'phinxlog'));
+        $this->set(compact('modelHistory', 'people', 'phinxlog'));
         $this->set('_serialize', ['modelHistory']);
     }
 
@@ -90,9 +90,9 @@ class ModelHistoryController extends AppController
                 $this->Flash->error(__('The model history could not be saved. Please, try again.'));
             }
         }
-        $users = $this->ModelHistory->Users->find('list', ['limit' => 200]);
+        $people = $this->ModelHistory->People->find('list', ['limit' => 200]);
         $phinxlog = $this->ModelHistory->Phinxlog->find('list', ['limit' => 200]);
-        $this->set(compact('modelHistory', 'users', 'phinxlog'));
+        $this->set(compact('modelHistory', 'people', 'phinxlog'));
         $this->set('_serialize', ['modelHistory']);
     }
 

@@ -40,8 +40,8 @@ class ModelHistoryTable extends Table
 
         $this->addBehavior('Timestamp');
 
-        $this->belongsTo('Users', [
-            'foreignKey' => 'user_id'
+        $this->belongsTo('People', [
+            'foreignKey' => 'person_id'
         ]);
     }
 
@@ -96,7 +96,7 @@ class ModelHistoryTable extends Table
      */
     public function buildRules(RulesChecker $rules)
     {
-        $rules->add($rules->existsIn(['user_id'], 'Users'));
+        $rules->add($rules->existsIn(['person_id'], 'People'));
 
         return $rules;
     }
