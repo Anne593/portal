@@ -1,28 +1,34 @@
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('List Model History'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Phinxlog'), ['controller' => 'Phinxlog', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Phinxlog'), ['controller' => 'Phinxlog', 'action' => 'add']) ?></li>
-    </ul>
-</nav>
-<div class="modelHistory form large-9 medium-8 columns content">
-    <?= $this->Form->create($modelHistory) ?>
-    <fieldset>
-        <legend><?= __('Add Model History') ?></legend>
-        <?php
-            echo $this->Form->input('model');
-            echo $this->Form->input('foreign_key');
-            echo $this->Form->input('user_id');
-            echo $this->Form->input('action');
-            echo $this->Form->input('data');
-            echo $this->Form->input('context');
-            echo $this->Form->input('context_type');
-            echo $this->Form->input('context_slug');
-            echo $this->Form->input('revision');
-            echo $this->Form->input('phinxlog._ids', ['options' => $phinxlog]);
-        ?>
-    </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
-    <?= $this->Form->end() ?>
-</div>
+<?php
+$this->extend('../Layout/TwitterBootstrap/dashboard');
+
+$this->start('tb_actions');
+?>
+    <li><?= $this->Html->link(__('List Model History'), ['action' => 'index']) ?></li>
+<?php
+$this->end();
+
+$this->start('tb_sidebar');
+?>
+<ul class="nav nav-sidebar">
+    <li><?= $this->Html->link(__('List Model History'), ['action' => 'index']) ?></li>
+</ul>
+<?php
+$this->end();
+?>
+<?= $this->Form->create($modelHistory); ?>
+<fieldset>
+    <legend><?= __('Add {0}', ['Model History']) ?></legend>
+    <?php
+    echo $this->Form->input('model');
+    echo $this->Form->input('foreign_key');
+    echo $this->Form->input('user_id');
+    echo $this->Form->input('action');
+    echo $this->Form->input('data');
+    echo $this->Form->input('context');
+    echo $this->Form->input('context_type');
+    echo $this->Form->input('context_slug');
+    echo $this->Form->input('revision');
+    ?>
+</fieldset>
+<?= $this->Form->button(__("Add")); ?>
+<?= $this->Form->end() ?>

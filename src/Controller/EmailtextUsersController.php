@@ -19,7 +19,7 @@ class EmailtextUsersController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Emailtexts', 'Types']
+            'contain' => ['Emailtexts']
         ];
         $emailtextUsers = $this->paginate($this->EmailtextUsers);
 
@@ -37,7 +37,7 @@ class EmailtextUsersController extends AppController
     public function view($id = null)
     {
         $emailtextUser = $this->EmailtextUsers->get($id, [
-            'contain' => ['Emailtexts', 'Types']
+            'contain' => ['Emailtexts']
         ]);
 
         $this->set('emailtextUser', $emailtextUser);
@@ -63,8 +63,7 @@ class EmailtextUsersController extends AppController
             }
         }
         $emailtexts = $this->EmailtextUsers->Emailtexts->find('list', ['limit' => 200]);
-        $types = $this->EmailtextUsers->Types->find('list', ['limit' => 200]);
-        $this->set(compact('emailtextUser', 'emailtexts', 'types'));
+        $this->set(compact('emailtextUser', 'emailtexts'));
         $this->set('_serialize', ['emailtextUser']);
     }
 
@@ -91,8 +90,7 @@ class EmailtextUsersController extends AppController
             }
         }
         $emailtexts = $this->EmailtextUsers->Emailtexts->find('list', ['limit' => 200]);
-        $types = $this->EmailtextUsers->Types->find('list', ['limit' => 200]);
-        $this->set(compact('emailtextUser', 'emailtexts', 'types'));
+        $this->set(compact('emailtextUser', 'emailtexts'));
         $this->set('_serialize', ['emailtextUser']);
     }
 

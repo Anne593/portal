@@ -8,9 +8,9 @@ use Cake\ORM\Entity;
  *
  * @property int $id
  * @property int $emailtext_id
- * @property int $type_id
+ * @property string $type
+ * @property int $typeId
  *
- * @property \App\Model\Entity\Type $type
  * @property \App\Model\Entity\Emailtext $emailtext
  */
 class EmailtextUser extends Entity

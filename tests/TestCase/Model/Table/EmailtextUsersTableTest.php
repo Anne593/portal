@@ -27,8 +27,7 @@ class EmailtextUsersTableTest extends TestCase
         'app.emailtext_users',
         'app.emailtexts',
         'app.emailtext_groups',
-        'app.groups',
-        'app.types'
+        'app.groups'
     ];
 
     /**

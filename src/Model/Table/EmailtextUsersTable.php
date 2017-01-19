@@ -10,7 +10,6 @@ use Cake\Validation\Validator;
  * EmailtextUsers Model
  *
  * @property \Cake\ORM\Association\BelongsTo $Emailtexts
- * @property \Cake\ORM\Association\BelongsTo $Types
  *
  * @method \App\Model\Entity\EmailtextUser get($primaryKey, $options = [])
  * @method \App\Model\Entity\EmailtextUser newEntity($data = null, array $options = [])
@@ -41,10 +40,6 @@ class EmailtextUsersTable extends Table
             'foreignKey' => 'emailtext_id',
             'joinType' => 'INNER'
         ]);
-        $this->belongsTo('Types', [
-            'foreignKey' => 'type_id',
-            'joinType' => 'INNER'
-        ]);
     }
 
     /**
@@ -63,6 +58,11 @@ class EmailtextUsersTable extends Table
             ->requirePresence('type', 'create')
             ->notEmpty('type');
 
+        $validator
+            ->integer('typeId')
+            ->requirePresence('typeId', 'create')
+            ->notEmpty('typeId');
+
         return $validator;
     }
 
@@ -76,7 +76,6 @@ class EmailtextUsersTable extends Table
     public function buildRules(RulesChecker $rules)
     {
         $rules->add($rules->existsIn(['emailtext_id'], 'Emailtexts'));
-        $rules->add($rules->existsIn(['type_id'], 'Types'));
 
         return $rules;
     }

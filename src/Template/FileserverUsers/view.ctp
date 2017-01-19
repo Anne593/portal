@@ -1,52 +1,73 @@
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('Edit Fileserver User'), ['action' => 'edit', $fileserverUser->id]) ?> </li>
-        <li><?= $this->Form->postLink(__('Delete Fileserver User'), ['action' => 'delete', $fileserverUser->id], ['confirm' => __('Are you sure you want to delete # {0}?', $fileserverUser->id)]) ?> </li>
-        <li><?= $this->Html->link(__('List Fileserver Users'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Fileserver User'), ['action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List People'), ['controller' => 'People', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Person'), ['controller' => 'People', 'action' => 'add']) ?> </li>
-    </ul>
-</nav>
-<div class="fileserverUsers view large-9 medium-8 columns content">
-    <h3><?= h($fileserverUser->id) ?></h3>
-    <table class="vertical-table">
+<?php
+$this->extend('../Layout/TwitterBootstrap/dashboard');
+
+
+$this->start('tb_actions');
+?>
+<li><?= $this->Html->link(__('Edit Fileserver User'), ['action' => 'edit', $fileserverUser->id]) ?> </li>
+<li><?= $this->Form->postLink(__('Delete Fileserver User'), ['action' => 'delete', $fileserverUser->id], ['confirm' => __('Are you sure you want to delete # {0}?', $fileserverUser->id)]) ?> </li>
+<li><?= $this->Html->link(__('List Fileserver Users'), ['action' => 'index']) ?> </li>
+<li><?= $this->Html->link(__('New Fileserver User'), ['action' => 'add']) ?> </li>
+<li><?= $this->Html->link(__('List People'), ['controller' => 'People', 'action' => 'index']) ?> </li>
+<li><?= $this->Html->link(__('New Person'), ['controller' => 'People', 'action' => 'add']) ?> </li>
+<?php
+$this->end();
+
+$this->start('tb_sidebar');
+?>
+<ul class="nav nav-sidebar">
+<li><?= $this->Html->link(__('Edit Fileserver User'), ['action' => 'edit', $fileserverUser->id]) ?> </li>
+<li><?= $this->Form->postLink(__('Delete Fileserver User'), ['action' => 'delete', $fileserverUser->id], ['confirm' => __('Are you sure you want to delete # {0}?', $fileserverUser->id)]) ?> </li>
+<li><?= $this->Html->link(__('List Fileserver Users'), ['action' => 'index']) ?> </li>
+<li><?= $this->Html->link(__('New Fileserver User'), ['action' => 'add']) ?> </li>
+<li><?= $this->Html->link(__('List People'), ['controller' => 'People', 'action' => 'index']) ?> </li>
+<li><?= $this->Html->link(__('New Person'), ['controller' => 'People', 'action' => 'add']) ?> </li>
+</ul>
+<?php
+$this->end();
+?>
+<div class="panel panel-default">
+    <!-- Panel header -->
+    <div class="panel-heading">
+        <h3 class="panel-title"><?= h($fileserverUser->id) ?></h3>
+    </div>
+    <table class="table table-striped" cellpadding="0" cellspacing="0">
         <tr>
-            <th scope="row"><?= __('Person') ?></th>
+            <td><?= __('Person') ?></td>
             <td><?= $fileserverUser->has('person') ? $this->Html->link($fileserverUser->person->id, ['controller' => 'People', 'action' => 'view', $fileserverUser->person->id]) : '' ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Username') ?></th>
+            <td><?= __('Username') ?></td>
             <td><?= h($fileserverUser->username) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Password') ?></th>
+            <td><?= __('Password') ?></td>
             <td><?= h($fileserverUser->password) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Id') ?></th>
+            <td><?= __('Id') ?></td>
             <td><?= $this->Number->format($fileserverUser->id) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Password Retrieval') ?></th>
+            <td><?= __('Password Retrieval') ?></td>
             <td><?= $this->Number->format($fileserverUser->password_retrieval) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Created') ?></th>
+            <td><?= __('Created') ?></td>
             <td><?= h($fileserverUser->created) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Vip') ?></th>
+            <td><?= __('Vip') ?></td>
             <td><?= $fileserverUser->vip ? __('Yes') : __('No'); ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Accepted') ?></th>
+            <td><?= __('Accepted') ?></td>
             <td><?= $fileserverUser->accepted ? __('Yes') : __('No'); ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Active') ?></th>
+            <td><?= __('Active') ?></td>
             <td><?= $fileserverUser->active ? __('Yes') : __('No'); ?></td>
         </tr>
     </table>
 </div>
+
