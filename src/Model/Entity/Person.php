@@ -1,11 +1,11 @@
 <?php
 
 namespace App\Model\Entity;
-use App\Lib\Status; 
-use Cake\Auth\DefaultPasswordHasher; 
+use App\Lib\Status;
+use Cake\Auth\DefaultPasswordHasher;
 use Cake\ORM\Entity;
-use CkTools\Utility\TypeAwareTrait; 
-use JeremyHarris\LazyLoad\ORM\LazyLoadEntityTrait; 
+use CkTools\Utility\TypeAwareTrait;
+use JeremyHarris\LazyLoad\ORM\LazyLoadEntityTrait;
 
 /**
  * Person Entity
@@ -39,6 +39,8 @@ use JeremyHarris\LazyLoad\ORM\LazyLoadEntityTrait;
  */
 class Person extends Entity
 {
+    use TypeAwareTrait;
+    use LazyLoadEntityTrait;
 
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().
