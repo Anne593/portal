@@ -249,6 +249,7 @@ Plugin::load('Schema', ['bootstrap' => true]);
 Plugin::load('CakeApiBaselayer', ['bootstrap' => true, 'routes' => true]);
 Plugin::load('Api/V1', ['bootstrap' => false, 'routes' => true]);
 Plugin::load('LanguageSwitcher');
+Plugin::load('TinyAuth');
 
 /**
  * Datasource Type Mappings
@@ -287,9 +288,6 @@ function dlog()
     }
 }
 
-Plugin::load('TinyAuth');
-
-define('ROLE_MOD', 'moderator');
 define('ROLE_ADMIN', 'admin');
 define('ROLE_NETWORK', 'network');
 define('ROLE_HOUSE_REPRESENTATIVE', 'house_representative');

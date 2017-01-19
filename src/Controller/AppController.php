@@ -38,8 +38,12 @@ class AppController extends Controller
         'FrontendBridge.FrontendBridge',
         'ListFilter.ListFilter',
         'Cookie',
-        'CakeApiBaselayer.Api'
+        'CakeApiBaselayer.Api',
+        'TinyAuth.AuthUser'
     ];
+
+
+    public $helpers = ['TinyAuth.AuthUser'];
 
     /**
      * Initialization hook method.
@@ -51,40 +55,39 @@ class AppController extends Controller
     public function initialize()
     {
         $this->loadComponent('RequestHandler');
-        $this->loadComponent('TinyAuth.AuthUser');
         $this->loadComponent('TinyAuth.Auth', [
-            'authorize' => [
-                'TinyAuth.Tiny' => [
-                    'multiRole' => true,
-                    'rolesTable' => UserRolesTable::TABLE_NAME,
-                    'pivotTable' => PeopleUserRolesTable::TABLE_NAME,
-                    'usersTable' => PeopleTable::TABLE_NAME,
-                    'superAdmin' => Person::ROLE_ADMIN
+                'authenticate' => [
+                    'Form' => [
+                        'userModel' => 'People',
+                        'fields' => ['username' => 'email'],
+                        'repository' => 'People',
+                        'finder' => 'auth'
+                    ]
                 ],
-
+                'loginAction' => ['plugin' => false, 'controller' => 'Login', 'action' => 'login'],
+                'loginRedirect' => ['plugin' => false, 'controller' => 'Dashboard', 'action' => 'index'],
+                'logoutRedirect' => ['plugin' => false, 'controller' => 'Home', 'action' => 'index'],
+                'authError' => __('auth.not_allowed'),
+                'flash' => [
+                    'params' => [
+                        'class' => 'alert alert-warning'
+                    ]
+                ],
+                'authorize' => [
+                    'TinyAuth.Tiny' => [
+                        'rolesTable' => UserRolesTable::TABLE_NAME,
+                        'pivotTable' => PeopleUserRolesTable::TABLE_NAME,
+                        'roleColumn' => 'user_role_id',
+                        'userColumn' => 'person_id',
+                        'usersTable' => PeopleTable::TABLE_NAME,
+                        'aliasColumn' => 'title',
+                        'superAdmin' => ROLE_ADMIN
+                    ]
+                ]
             ]
-        ]);
+        );
+        $this->loadComponent('TinyAuth.AuthUser');
 
-        /*$this->loadComponent('Auth', [
-            'authenticate' => [
-                'Form' => [
-                    'userModel' => 'People',
-                    'fields' => ['username' => 'email'],
-                    'repository' => 'People',
-                    'finder' => 'auth'
-                ]
-            ],
-            'authorize' => ['Controller'],
-            'loginAction' => ['plugin' => false, 'controller' => 'Login', 'action' => 'login'],
-            'loginRedirect' => ['plugin' => false, 'controller' => 'Dashboard', 'action' => 'index'],
-            'logoutRedirect' => ['plugin' => false, 'controller' => 'Home', 'action' => 'index'],
-            'authError' => __('auth.not_allowed'),
-            'flash' => [
-                'params' => [
-                    'class' => 'alert alert-warning'
-                ]
-            ],
-        ]);*/
         /*
          * Enable the following components for recommended CakePHP security settings.
          * see http://book.cakephp.org/3.0/en/controllers/components/security.html
@@ -116,9 +119,9 @@ class AppController extends Controller
     public function beforeFilter(\Cake\Event\Event $event)
     {
         $this->loadModel('People');
-        $this->Auth->eventManager()->attach([$this->People, 'resetLoginRetriesListener'], 'Auth.afterIdentify');
+        /*$this->Auth->eventManager()->attach([$this->People, 'resetLoginRetriesListener'], 'Auth.afterIdentify');
 
-        if (!$this->AuthUtils->loggedIn() && $userId = $this->AuthUtils->checkRememberMeCookie()) {
+        if (!$this->Auth->loggedIn() && $userId = $this->AuthUtils->checkRememberMeCookie()) {
             $this->loadModel('People');
             $user = $this->People->get($userId)->toArray();
             $this->Auth->setUser($user);
@@ -126,7 +129,7 @@ class AppController extends Controller
 
         if (!$this->Auth->user()) {
             $this->Auth->config('authError', false);
-        }
+        }*/
 
         parent::beforeFilter($event);
     }
@@ -139,7 +142,6 @@ class AppController extends Controller
         if ($this->_isJsonActionRequest()) {
             return $this->renderJsonAction($view, $layout);
         }
-
         return parent::render($view, $layout);
     }
 }

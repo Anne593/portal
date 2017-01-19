@@ -14,18 +14,18 @@ use App\Model\Entity\User;
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
                 <?= $this->LanguageSwitcher->renderLanguageSwitcher(); ?>
-                <?php if ($this->Auth->loggedIn()): ?>
+                <?php if ($this->AuthUser->user()): ?>
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <img src="/img/avatar5.png" class="user-image" alt="User Image">
-                            <span class="hidden-xs"><?= $this->Auth->user('firstname') ?> <?= $this->Auth->user('lastname') ?></span>
+                            <span class="hidden-xs"><?= h($this->AuthUser->user('full_name')) ?></span>
                         </a>
                         <ul class="dropdown-menu">
                             <li class="user-header">
                                 <img src="/img/avatar5.png" class="img-circle" alt="User Image">
                                 <p>
-                                    <?= $this->Auth->user('firstname') ?> <?= $this->Auth->user('lastname') ?> - <?= User::getTypeDescription($this->Auth->user('role')) ?>
-                                    <small><?= $this->Auth->user('mandator.company_name') ?></small>
+                                    <?= h($this->AuthUser->user('full_name')) ?>
+                                    <small>Placeholder <?= User::getTypeDescription(1) ?></small>
                                 </p>
                             </li>
                             <li class="user-footer">
