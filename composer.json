@@ -10,7 +10,6 @@
         "mobiledetect/mobiledetectlib": "2.*",
         "cakephp/migrations": "1.6.*",
         "cakephp/plugin-installer": "*",
-        "codekanzlei/cake-auth-actions": "1.0.*",
         "codekanzlei/cake-list-filter": "1.2.*",
         "codekanzlei/cake-cktools": "1.2.*",
         "codekanzlei/cake-frontend-bridge": "1.0.*",

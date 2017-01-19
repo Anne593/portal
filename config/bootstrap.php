@@ -239,7 +239,6 @@ if (Configure::read('debug')) {
 Plugin::load('BootstrapUI');
 Plugin::load('CkTools', ['bootstrap' => false, 'routes' => true]);
 Plugin::load('FrontendBridge', ['bootstrap' => false, 'routes' => true, 'autoload' => true]);
-Plugin::load('AuthActions', ['bootstrap' => false, 'routes' => false]);
 Plugin::load('ListFilter', ['bootstrap' => false, 'routes' => false]);
 Plugin::load('Notifications', ['bootstrap' => true, 'routes' => true]);
 Plugin::load('Attachments', ['bootstrap' => false, 'routes' => true]);

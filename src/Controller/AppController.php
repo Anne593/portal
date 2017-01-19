@@ -27,8 +27,6 @@ use Cake\Event\Event;
  */
 class AppController extends Controller
 {
-
-    use \AuthActions\Lib\AuthActionsTrait;
     use \FrontendBridge\Lib\FrontendBridgeTrait;
 
     public $components = [
@@ -36,7 +34,6 @@ class AppController extends Controller
         'FrontendBridge.FrontendBridge',
         'ListFilter.ListFilter',
         'Cookie',
-        'AuthActions.AuthUtils',
         'CakeApiBaselayer.Api'
     ];
 
@@ -100,7 +97,6 @@ class AppController extends Controller
      */
     public function beforeFilter(\Cake\Event\Event $event)
     {
-        $this->initAuthActions();
         $this->loadModel('People');
         $this->Auth->eventManager()->attach([$this->People, 'resetLoginRetriesListener'], 'Auth.afterIdentify');
 
