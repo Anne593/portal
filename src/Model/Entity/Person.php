@@ -42,16 +42,8 @@ class Person extends Entity {
     
     use TypeAwareTrait; 
     use LazyLoadEntityTrait; 
- 
-    const ROLE_ADMIN = 'admin'; 
-    const ROLE_NETWORK = '2'; 
-    const ROLE_HOUSE_REPRESENTATIVE = '3'; 
-    const ROLE_WORKING_GROUP_REPRESENTATIVE = '4'; 
-    const ROLE_TENANT = '5'; 
-    const ROLE_ASSIGNMENT_COMMITTEE = '6'; 
-    const ROLE_HOUSEKEEPER = '7'; 
- 
-    protected $_virtual = ['full_name', 'role', 'roles']; 
+
+    protected $_virtual = ['full_name', 'roles'];
  
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().
@@ -83,13 +75,13 @@ class Person extends Entity {
      */
     public static function typeDescriptions() {
         return [
-            self::ROLE_ADMIN => __('user.role.admin'),
-            self::ROLE_NETWORK => __('user.role.network'),
-            self::ROLE_HOUSE_REPRESENTATIVE => __('user.role.house_representative'),
-            self::ROLE_WORKING_GROUP_REPRESENTATIVE => __('user.role.working_group_representative'),
-            self::ROLE_TENANT => __('user.role.tenant'),
-            self::ROLE_ASSIGNMENT_COMMITTEE => __('user.role.assignment_committee'),
-            self::ROLE_HOUSEKEEPER => __('user.role.housekeeper'),
+            ROLE_ADMIN => __('user.role.admin'),
+            ROLE_NETWORK => __('user.role.network'),
+            ROLE_HOUSE_REPRESENTATIVE => __('user.role.house_representative'),
+            ROLE_WORKING_GROUP_REPRESENTATIVE => __('user.role.working_group_representative'),
+            ROLE_TENANT => __('user.role.tenant'),
+            ROLE_ASSIGNMENT_COMMITTEE => __('user.role.assignment_committee'),
+            ROLE_HOUSEKEEPER => __('user.role.housekeeper'),
         ];
     }
 
@@ -100,7 +92,7 @@ class Person extends Entity {
      */
     public static function getRoles() {
         return self::getTypeMap(
-                        self::ROLE_ADMIN, self::ROLE_NETWORK, self::ROLE_ASSIGNMENT_COMMITTEE, self::ROLE_WORKING_GROUP_REPRESENTATIVE, self::ROLE_TENANT, self::ROLE_HOUSE_REPRESENTATIVE, self::ROLE_HOUSEKEEPER
+            ROLE_ADMIN, ROLE_NETWORK, ROLE_ASSIGNMENT_COMMITTEE, ROLE_WORKING_GROUP_REPRESENTATIVE, ROLE_TENANT, ROLE_HOUSE_REPRESENTATIVE, ROLE_HOUSEKEEPER
         );
     }
 
@@ -147,11 +139,6 @@ class Person extends Entity {
             array_push($roles, $role['id']);
         }
         return $roles;
-    }
-
-    //TODO this is a hack to bypass the authentication in a simple way. Should be replaced with multi-role support 
-    protected function _getRole() {
-        return Person::ROLE_ADMIN;
     }
 
     /**

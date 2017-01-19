@@ -436,5 +436,16 @@ return [
                 'en_US' => 'en_US'
             ]
         ]
+    ],
+
+    'TinyAuth' => [
+        'multiRole' => true,
+        'usersTable' => 'people',
+        'rolesTable' => 'user_roles',
+        'pivotTable' => 'people_user_roles',
+        'roleColumn' => 'user_role_id',
+        'userColumn' => 'person_id',
+        'aliasColumn' => 'title',
+        'superAdminRole' => 1
     ]
 ];

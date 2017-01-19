@@ -239,7 +239,6 @@ if (Configure::read('debug')) {
 Plugin::load('BootstrapUI');
 Plugin::load('CkTools', ['bootstrap' => false, 'routes' => true]);
 Plugin::load('FrontendBridge', ['bootstrap' => false, 'routes' => true, 'autoload' => true]);
-Plugin::load('AuthActions', ['bootstrap' => false, 'routes' => false]);
 Plugin::load('ListFilter', ['bootstrap' => false, 'routes' => false]);
 Plugin::load('Notifications', ['bootstrap' => true, 'routes' => true]);
 Plugin::load('Attachments', ['bootstrap' => false, 'routes' => true]);
@@ -250,6 +249,7 @@ Plugin::load('Schema', ['bootstrap' => true]);
 Plugin::load('CakeApiBaselayer', ['bootstrap' => true, 'routes' => true]);
 Plugin::load('Api/V1', ['bootstrap' => false, 'routes' => true]);
 Plugin::load('LanguageSwitcher');
+Plugin::load('TinyAuth');
 
 /**
  * Datasource Type Mappings
@@ -287,3 +287,11 @@ function dlog()
         \Cake\Log\Log::write('debug', print_r($arg, true));
     }
 }
+
+define('ROLE_ADMIN', 'admin');
+define('ROLE_NETWORK', 'network');
+define('ROLE_HOUSE_REPRESENTATIVE', 'house_representative');
+define('ROLE_WORKING_GROUP_REPRESENTATIVE', 'working_group_representative');
+define('ROLE_TENANT', 'tenant');
+define('ROLE_ASSIGNMENT_COMMITTEE', 'assignment_committee');
+define('ROLE_HOUSEKEEPER', 'housekeeper');

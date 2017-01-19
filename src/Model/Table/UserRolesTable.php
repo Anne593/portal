@@ -22,6 +22,7 @@ use Cake\Validation\Validator;
  */
 class UserRolesTable extends Table
 {
+    const TABLE_NAME = 'user_roles';
 
     /**
      * Initialize method

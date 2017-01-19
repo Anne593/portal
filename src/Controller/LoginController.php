@@ -3,6 +3,7 @@ namespace App\Controller;
 
 use App\Lib\Status;
 use App\Model\Entity\User;
+use Cake\Event\Event;
 use Cake\Event\EventManager;
 use Cake\Routing\Router;
 use Cake\Validation\Validation;
@@ -37,14 +38,14 @@ class LoginController extends AppController
         }
         $person = $this->People->newEntity();
         // Expose virtual property
-        $person->virtualProperties(['full_name', 'role']);
+        $person->virtualProperties(['roles']);
 
         if ($this->request->is('post')) {
             $personData = $this->Auth->identify();
             if ($personData) {
-                if ($this->request->data['cookie']) {
+                /*if ($this->request->data['cookie']) {
                     $this->AuthUtils->addRememberMeCookie($personData['id']);
-                }
+                }*/
                 $this->Auth->setUser($personData);
                 return $this->redirect($this->Auth->redirectUrl());
             } elseif ($this->People->hasLoginRetriesLock($this->request->data)) {
@@ -68,7 +69,7 @@ class LoginController extends AppController
         if ($this->request->session()->started()) {
             $this->request->session()->destroy();
         }
-        $this->AuthUtils->destroyRememberMeCookie();
+        //$this->AuthUtils->destroyRememberMeCookie();
 
         return $this->redirect($this->Auth->logout());
     }
@@ -144,4 +145,5 @@ class LoginController extends AppController
         }
         $this->set(compact('user'));
     }
+
 }

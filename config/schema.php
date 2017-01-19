@@ -24,19 +24,19 @@ return [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             ],
             '_options' => [
-'engine' => 'InnoDB', 'collation' => 'latin1_swedish_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'emailtext_users' => [
             'id' => ['type' => 'integer', 'length' => 10, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
             'emailtext_id' => ['type' => 'integer', 'length' => 10, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
-            'type' => ['type' => 'text', 'length' => null, 'null' => false, 'default' => null, 'collate' => 'utf16_general_ci', 'comment' => '', 'precision' => null],
+            'type' => ['type' => 'text', 'length' => null, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null],
             'type_id' => ['type' => 'integer', 'length' => 10, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
             '_constraints' => [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             ],
             '_options' => [
-'engine' => 'InnoDB', 'collation' => 'utf16_general_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'emailtexts' => [
@@ -44,20 +44,20 @@ return [
             'topic' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
             'subject' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
             'text' => ['type' => 'text', 'length' => null, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null],
-            'resume_email' => ['type' => 'string', 'length' => 55, 'null' => false, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+            'resume_email' => ['type' => 'string', 'length' => 55, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
             'deadline' => ['type' => 'integer', 'length' => 10, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
             '_constraints' => [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             ],
             '_options' => [
-'engine' => 'MyISAM', 'collation' => 'latin1_swedish_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'fileserver_users' => [
             'id' => ['type' => 'integer', 'length' => 10, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
             'person_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => true, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
-            'username' => ['type' => 'string', 'length' => 30, 'null' => false, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-            'password' => ['type' => 'string', 'length' => 32, 'null' => false, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+            'username' => ['type' => 'string', 'length' => 30, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+            'password' => ['type' => 'string', 'length' => 32, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
             'vip' => ['type' => 'boolean', 'length' => null, 'null' => false, 'default' => null, 'comment' => '0=>no, 1=>yes', 'precision' => null],
             'accepted' => ['type' => 'boolean', 'length' => null, 'null' => false, 'default' => null, 'comment' => '0=>no, 1=>yes', 'precision' => null],
             'active' => ['type' => 'boolean', 'length' => null, 'null' => false, 'default' => null, 'comment' => '0=>no, 1=>yes', 'precision' => null],
@@ -65,49 +65,34 @@ return [
             'password_retrieval' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
             '_constraints' => [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
-                'tenant_id' => ['type' => 'unique', 'columns' => ['person_id'], 'length' => []],
+                'person_id' => ['type' => 'unique', 'columns' => ['person_id'], 'length' => []],
             ],
             '_options' => [
-'engine' => 'MyISAM', 'collation' => 'latin1_swedish_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'groups' => [
             'id' => ['type' => 'integer', 'length' => 10, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
-            'name' => ['type' => 'string', 'length' => 50, 'null' => false, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-            'conditions' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+            'name' => ['type' => 'string', 'length' => 50, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+            'conditions' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
             '_constraints' => [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             ],
             '_options' => [
-'engine' => 'InnoDB', 'collation' => 'latin1_swedish_ci'
-            ],
-        ],
-        'house_contibution' => [
-            'id' => ['type' => 'integer', 'length' => 10, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
-            'person_id' => ['type' => 'integer', 'length' => 10, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
-            'semester' => ['type' => 'integer', 'length' => 10, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
-            'payment' => ['type' => 'boolean', 'length' => null, 'null' => false, 'default' => '0', 'comment' => '', 'precision' => null],
-            'social_service' => ['type' => 'boolean', 'length' => null, 'null' => false, 'default' => '0', 'comment' => '', 'precision' => null],
-            'social_service_comment' => ['type' => 'string', 'length' => 50, 'null' => false, 'default' => '', 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-            'new_tenant_bar' => ['type' => 'boolean', 'length' => null, 'null' => false, 'default' => '0', 'comment' => '', 'precision' => null],
-            '_constraints' => [
-                'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
-            ],
-            '_options' => [
-'engine' => 'InnoDB', 'collation' => 'latin1_swedish_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'ips' => [
             'id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
             'mac_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
-            'ip' => ['type' => 'string', 'length' => 15, 'null' => false, 'default' => null, 'collate' => 'utf16_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+            'ip' => ['type' => 'string', 'length' => 15, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
             'lease_start' => ['type' => 'timestamp', 'length' => null, 'null' => false, 'default' => 'CURRENT_TIMESTAMP', 'comment' => '', 'precision' => null],
             'lease_end' => ['type' => 'timestamp', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
             '_constraints' => [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             ],
             '_options' => [
-'engine' => 'InnoDB', 'collation' => 'utf16_general_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'jobs' => [
@@ -120,23 +105,10 @@ return [
             'locked' => ['type' => 'integer', 'length' => 1, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
             'attempts' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
             '_indexes' => [
-                'is_locked' => ['type' => 'index', 'columns' => ['queue', 'locked'], 'length' => []],
+                'queue' => ['type' => 'index', 'columns' => ['queue', 'locked'], 'length' => []],
             ],
             '_constraints' => [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
-            ],
-            '_options' => [
-'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
-            ],
-        ],
-        'josegonzalez_cake_queuesadilla_phinxlog' => [
-            'version' => ['type' => 'biginteger', 'length' => 20, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
-            'migration_name' => ['type' => 'string', 'length' => 100, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-            'start_time' => ['type' => 'timestamp', 'length' => null, 'null' => false, 'default' => 'CURRENT_TIMESTAMP', 'comment' => '', 'precision' => null],
-            'end_time' => ['type' => 'timestamp', 'length' => null, 'null' => false, 'default' => '0000-00-00 00:00:00', 'comment' => '', 'precision' => null],
-            'breakpoint' => ['type' => 'boolean', 'length' => null, 'null' => false, 'default' => '0', 'comment' => '', 'precision' => null],
-            '_constraints' => [
-                'primary' => ['type' => 'primary', 'columns' => ['version'], 'length' => []],
             ],
             '_options' => [
 'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
@@ -145,42 +117,42 @@ return [
         'macs' => [
             'id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
             'person_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => true, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
-            'mac' => ['type' => 'string', 'length' => 18, 'null' => false, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-            'device_name' => ['type' => 'string', 'length' => 255, 'null' => true, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+            'mac' => ['type' => 'string', 'length' => 18, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+            'device_name' => ['type' => 'string', 'length' => 255, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
             '_indexes' => [
-                'person_fk' => ['type' => 'index', 'columns' => ['person_id'], 'length' => []],
+                'person_id' => ['type' => 'index', 'columns' => ['person_id'], 'length' => []],
             ],
             '_constraints' => [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
                 'mac' => ['type' => 'unique', 'columns' => ['mac'], 'length' => []],
             ],
             '_options' => [
-'engine' => 'MyISAM', 'collation' => 'latin1_swedish_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'memberships' => [
             'id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
-            'name' => ['type' => 'string', 'length' => 30, 'null' => false, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-            'type' => ['type' => 'text', 'length' => null, 'null' => false, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null],
-            'description' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+            'name' => ['type' => 'string', 'length' => 30, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+            'type' => ['type' => 'text', 'length' => null, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null],
+            'description' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
             'membership_fee' => ['type' => 'integer', 'length' => 32, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
             '_constraints' => [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             ],
             '_options' => [
-'engine' => 'InnoDB', 'collation' => 'latin1_swedish_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'model_history' => [
             'id' => ['type' => 'uuid', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
-            'model' => ['type' => 'string', 'length' => 255, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => 'e.g. \\"Installation\\"', 'precision' => null, 'fixed' => null],
+            'model' => ['type' => 'string', 'length' => 255, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => 'e.g. \\\\\\"Installation\\\\\\"', 'precision' => null, 'fixed' => null],
             'foreign_key' => ['type' => 'uuid', 'length' => null, 'null' => true, 'default' => null, 'comment' => 'uuid', 'precision' => null],
             'user_id' => ['type' => 'uuid', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
-            'action' => ['type' => 'string', 'length' => 45, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => 'e.g. \\"create\\", \\"update\\", \\"delete\\"', 'precision' => null, 'fixed' => null],
+            'action' => ['type' => 'string', 'length' => 45, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => 'e.g. \\\\\\"create\\\\\\", \\\\\\"update\\\\\\", \\\\\\"delete\\\\\\"', 'precision' => null, 'fixed' => null],
             'data' => ['type' => 'text', 'length' => 16777215, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => 'JSON text, schema per action', 'precision' => null],
             'context' => ['type' => 'text', 'length' => 16777215, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => 'JSON text, schema per action', 'precision' => null],
-            'context_type' => ['type' => 'string', 'length' => 255, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => 'e.g. \\"controller\\", \\"shell\\"', 'precision' => null, 'fixed' => null],
-            'context_slug' => ['type' => 'string', 'length' => 255, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => 'e.g. \\"Admin/Users/reset_password\\"', 'precision' => null, 'fixed' => null],
+            'context_type' => ['type' => 'string', 'length' => 255, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => 'e.g. \\\\\\"controller\\\\\\", \\\\\\"shell\\\\\\"', 'precision' => null, 'fixed' => null],
+            'context_slug' => ['type' => 'string', 'length' => 255, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => 'e.g. \\\\\\"Admin/Users/reset_password\\\\\\"', 'precision' => null, 'fixed' => null],
             'revision' => ['type' => 'integer', 'length' => 8, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
             'created' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
             '_constraints' => [
@@ -190,71 +162,48 @@ return [
 'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
-        'model_history_phinxlog' => [
-            'version' => ['type' => 'biginteger', 'length' => 20, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
-            'migration_name' => ['type' => 'string', 'length' => 100, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-            'start_time' => ['type' => 'timestamp', 'length' => null, 'null' => false, 'default' => 'CURRENT_TIMESTAMP', 'comment' => '', 'precision' => null],
-            'end_time' => ['type' => 'timestamp', 'length' => null, 'null' => false, 'default' => '0000-00-00 00:00:00', 'comment' => '', 'precision' => null],
-            'breakpoint' => ['type' => 'boolean', 'length' => null, 'null' => false, 'default' => '0', 'comment' => '', 'precision' => null],
+        'people' => [
+            'id' => ['type' => 'integer', 'length' => 10, 'unsigned' => true, 'null' => false, 'default' => null, 'comment' => 'globale personen-ID--', 'autoIncrement' => true, 'precision' => null],
+            'surname' => ['type' => 'string', 'length' => 50, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+            'forename' => ['type' => 'string', 'length' => 50, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+            'email' => ['type' => 'string', 'length' => 150, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+            'birthday' => ['type' => 'date', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
+            'matriculation_number' => ['type' => 'string', 'length' => 7, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+            'studentenwerk_identification' => ['type' => 'integer', 'length' => 10, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+            'nationality' => ['type' => 'string', 'length' => 20, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+            'sex' => ['type' => 'text', 'length' => null, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null],
+            'eth_unlocked_primary' => ['type' => 'integer', 'length' => 2, 'unsigned' => false, 'null' => false, 'default' => '2', 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+            'password' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+            'password_retrieval' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+            'status' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+            'failed_login_count' => ['type' => 'integer', 'length' => 3, 'unsigned' => false, 'null' => false, 'default' => '0', 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+            'failed_login_timestamp' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
+            'created' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
+            'modified' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
+            'last_passwords' => ['type' => 'text', 'length' => null, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null],
             '_constraints' => [
-                'primary' => ['type' => 'primary', 'columns' => ['version'], 'length' => []],
+                'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
+                'email' => ['type' => 'unique', 'columns' => ['email'], 'length' => []],
+                'studentenwerk_identification' => ['type' => 'unique', 'columns' => ['studentenwerk_identification'], 'length' => []],
             ],
             '_options' => [
 'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
-        'people' => [
-            'id' => ['type' => 'integer', 'length' => 10, 'unsigned' => true, 'null' => false, 'default' => null, 'comment' => 'globale personen-ID--', 'autoIncrement' => true, 'precision' => null],
-            'surname' => ['type' => 'string', 'length' => 50, 'null' => false, 'default' => null, 'collate' => 'utf8_unicode_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-            'forename' => ['type' => 'string', 'length' => 50, 'null' => false, 'default' => null, 'collate' => 'utf8_unicode_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-            'email' => ['type' => 'string', 'length' => 150, 'null' => false, 'default' => null, 'collate' => 'utf8_unicode_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-            'birthday' => ['type' => 'date', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
-            'matriculation_number' => ['type' => 'string', 'length' => 7, 'null' => true, 'default' => null, 'collate' => 'utf8_unicode_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-            'studentenwerk_identification' => ['type' => 'integer', 'length' => 10, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
-            'password' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'utf8_unicode_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-            'password_retrieval' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
-            'status' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'utf8_unicode_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-            'failed_login_count' => ['type' => 'integer', 'length' => 3, 'unsigned' => false, 'null' => false, 'default' => '0', 'comment' => '', 'precision' => null, 'autoIncrement' => null],
-            'failed_login_timestamp' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
-            'created' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
-            'modified' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
-            'last_passwords' => ['type' => 'text', 'length' => null, 'null' => true, 'default' => null, 'collate' => 'utf8_unicode_ci', 'comment' => '', 'precision' => null],
-            '_constraints' => [
-                'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
-                'email' => ['type' => 'unique', 'columns' => ['email'], 'length' => []],
-                'studentenwerkID' => ['type' => 'unique', 'columns' => ['studentenwerk_identification'], 'length' => []],
-            ],
-            '_options' => [
-'engine' => 'MyISAM', 'collation' => 'utf8_unicode_ci'
-            ],
-        ],
-        'people_network' => [
-            'id' => ['type' => 'integer', 'length' => 10, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
-            'person_id' => ['type' => 'integer', 'length' => 10, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
-            'data_access' => ['type' => 'boolean', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
-            'mail_access' => ['type' => 'boolean', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
-            'tim' => ['type' => 'string', 'length' => 10, 'null' => false, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-            'eth_unlocked_primary' => ['type' => 'text', 'length' => null, 'null' => false, 'default' => 'egal', 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null],
-            'comment' => ['type' => 'string', 'length' => 50, 'null' => false, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+        'people_memberships' => [
+            'id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
+            'semester' => ['type' => 'integer', 'length' => 5, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+            'person_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+            'membership_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+            'payment' => ['type' => 'boolean', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
+            'social_service' => ['type' => 'integer', 'length' => 4, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+            'social_service_comment' => ['type' => 'string', 'length' => 25, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+            'comment' => ['type' => 'string', 'length' => 25, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
             '_constraints' => [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             ],
             '_options' => [
-'engine' => 'InnoDB', 'collation' => 'latin1_swedish_ci'
-            ],
-        ],
-        'people_network_memberships' => [
-            'id' => ['type' => 'integer', 'length' => 10, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
-            'networkinfo_id' => ['type' => 'integer', 'length' => 10, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
-            'membership_id' => ['type' => 'integer', 'length' => 10, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
-            'date_join' => ['type' => 'date', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
-            'date_quit' => ['type' => 'date', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
-            'payment' => ['type' => 'boolean', 'length' => null, 'null' => false, 'default' => '0', 'comment' => '', 'precision' => null],
-            '_constraints' => [
-                'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
-            ],
-            '_options' => [
-'engine' => 'InnoDB', 'collation' => 'latin1_swedish_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'people_user_roles' => [
@@ -265,19 +214,19 @@ return [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             ],
             '_options' => [
-'engine' => 'MyISAM', 'collation' => 'latin1_swedish_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'permissions' => [
             'id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
             'type' => ['type' => 'integer', 'length' => 5, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '0=text, 1=bool, 2=link, 3=date, 4=bool+comment, 5=arrays', 'precision' => null, 'autoIncrement' => null],
-            'model' => ['type' => 'string', 'length' => 10, 'null' => false, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-            'field_name' => ['type' => 'string', 'length' => 30, 'null' => false, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+            'model' => ['type' => 'string', 'length' => 10, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+            'field_name' => ['type' => 'string', 'length' => 30, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
             '_constraints' => [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             ],
             '_options' => [
-'engine' => 'InnoDB', 'collation' => 'latin1_swedish_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'phinxlog' => [
@@ -293,29 +242,54 @@ return [
 'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
+        'roles' => [
+            'id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
+            'name' => ['type' => 'string', 'length' => 64, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+            'description' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+            'alias' => ['type' => 'string', 'length' => 20, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+            'created' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
+            'modified' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
+            '_constraints' => [
+                'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
+            ],
+            '_options' => [
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
+            ],
+        ],
+        'roles_users' => [
+            'id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
+            'user_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+            'role_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+            '_constraints' => [
+                'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
+            ],
+            '_options' => [
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
+            ],
+        ],
         'roomkeys' => [
             'id' => ['type' => 'integer', 'length' => 10, 'unsigned' => true, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
-            'name' => ['type' => 'string', 'length' => 25, 'null' => false, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-            'discription' => ['type' => 'text', 'length' => null, 'null' => false, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null],
+            'name' => ['type' => 'string', 'length' => 25, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+            'discription' => ['type' => 'text', 'length' => null, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null],
             'amount' => ['type' => 'integer', 'length' => 2, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
             '_constraints' => [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             ],
             '_options' => [
-'engine' => 'MyISAM', 'collation' => 'latin1_swedish_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'roomkeys_people' => [
             'id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
             'roomkey_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
             'person_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
-            'type' => ['type' => 'text', 'length' => null, 'null' => false, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null],
-            'comment' => ['type' => 'string', 'length' => 255, 'null' => true, 'default' => '', 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+            'type' => ['type' => 'text', 'length' => null, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null],
+            'comment' => ['type' => 'string', 'length' => 255, 'null' => true, 'default' => '', 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
             '_constraints' => [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             ],
             '_options' => [
-'engine' => 'MyISAM', 'collation' => 'latin1_swedish_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'rooms' => [
@@ -327,7 +301,7 @@ return [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             ],
             '_options' => [
-'engine' => 'MyISAM', 'collation' => 'latin1_swedish_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'tenants' => [
@@ -337,26 +311,39 @@ return [
             'date_move_in' => ['type' => 'date', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
             'date_move_out' => ['type' => 'date', 'length' => null, 'null' => true, 'default' => null, 'comment' => 'pflicht fuer untermieter!', 'precision' => null],
             'tenant_type' => ['type' => 'text', 'length' => null, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null],
-            'comment' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+            'comment' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
             '_indexes' => [
-                'room_fk' => ['type' => 'index', 'columns' => ['room_id'], 'length' => []],
+                'room_id' => ['type' => 'index', 'columns' => ['room_id'], 'length' => []],
                 'person_id' => ['type' => 'index', 'columns' => ['person_id'], 'length' => []],
             ],
             '_constraints' => [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             ],
             '_options' => [
-'engine' => 'MyISAM', 'collation' => 'latin1_swedish_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
+            ],
+        ],
+        'tiny_auth_phinxlog' => [
+            'version' => ['type' => 'biginteger', 'length' => 20, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+            'migration_name' => ['type' => 'string', 'length' => 100, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+            'start_time' => ['type' => 'timestamp', 'length' => null, 'null' => false, 'default' => 'CURRENT_TIMESTAMP', 'comment' => '', 'precision' => null],
+            'end_time' => ['type' => 'timestamp', 'length' => null, 'null' => false, 'default' => '0000-00-00 00:00:00', 'comment' => '', 'precision' => null],
+            'breakpoint' => ['type' => 'boolean', 'length' => null, 'null' => false, 'default' => '0', 'comment' => '', 'precision' => null],
+            '_constraints' => [
+                'primary' => ['type' => 'primary', 'columns' => ['version'], 'length' => []],
+            ],
+            '_options' => [
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'user_roles' => [
             'id' => ['type' => 'integer', 'length' => 10, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
-            'title' => ['type' => 'string', 'length' => 55, 'null' => false, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+            'title' => ['type' => 'string', 'length' => 55, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
             '_constraints' => [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             ],
             '_options' => [
-'engine' => 'MyISAM', 'collation' => 'latin1_swedish_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'user_roles_permissions' => [
@@ -369,35 +356,48 @@ return [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             ],
             '_options' => [
-'engine' => 'InnoDB', 'collation' => 'latin1_swedish_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
+            ],
+        ],
+        'users' => [
+            'id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
+            'username' => ['type' => 'string', 'length' => 255, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+            'password' => ['type' => 'string', 'length' => 255, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+            'created' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
+            'modified' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
+            '_constraints' => [
+                'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
+            ],
+            '_options' => [
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'working_groups' => [
             'id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
-            'name' => ['type' => 'string', 'length' => 50, 'null' => false, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-            'description' => ['type' => 'text', 'length' => null, 'null' => false, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null],
+            'name' => ['type' => 'string', 'length' => 50, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+            'description' => ['type' => 'text', 'length' => null, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null],
             '_constraints' => [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
                 'name' => ['type' => 'unique', 'columns' => ['name'], 'length' => []],
             ],
             '_options' => [
-'engine' => 'MyISAM', 'collation' => 'latin1_swedish_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'working_groups_people' => [
             'id' => ['type' => 'integer', 'length' => 10, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
             'person_id' => ['type' => 'integer', 'length' => 10, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
-            'workshop_id' => ['type' => 'integer', 'length' => 10, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+            'working_group_id' => ['type' => 'integer', 'length' => 10, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
             'member_since' => ['type' => 'datetime', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
             'member_until' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
-            'type' => ['type' => 'text', 'length' => null, 'null' => false, 'default' => 'Normal', 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null],
-            'comment' => ['type' => 'text', 'length' => null, 'null' => true, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null],
+            'type' => ['type' => 'text', 'length' => null, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null],
+            'comment' => ['type' => 'text', 'length' => null, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null],
             'mailing_list_enabled' => ['type' => 'boolean', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
             '_constraints' => [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             ],
             '_options' => [
-'engine' => 'InnoDB', 'collation' => 'latin1_swedish_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
 
