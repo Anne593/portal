@@ -38,6 +38,7 @@ use App\Model\Entity\Person;
  */
 class PeopleTable extends Table
 {
+    const TABLE_NAME = 'people';
 
     /**
      * Initialize method
@@ -48,7 +49,6 @@ class PeopleTable extends Table
     public function initialize(array $config)
     {
         parent::initialize($config);
-
         $this->table('people');
         $this->displayField('id');
         $this->primaryKey('id');

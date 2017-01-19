@@ -27,7 +27,8 @@
         "admad/cakephp-glide": "2.0.*",
         "josegonzalez/dotenv": "2.0.*",
         "beberlei/assert": "2.6.",
-        "jeremyharris/cakephp-lazyload": "^2.0"
+        "jeremyharris/cakephp-lazyload": "^2.0",
+        "dereuromark/cakephp-tinyauth": "^1.6"
     },
     "require-dev": {
         "psy/psysh": "@stable",

@@ -46,9 +46,7 @@ class AppView extends View
         $this->loadHelper('Flash', [
             'className' => 'BootstrapUI.Flash'
         ]);
-        $this->loadHelper('Auth', [
-            'className' => 'AuthActions.Auth'
-        ]);
+        $this->loadHelper('TinyAuth.AuthUser');
         $this->loadHelper('ADmad/Glide.Glide', [
             'baseUrl' => '/images/',
             'secureUrls' => true,

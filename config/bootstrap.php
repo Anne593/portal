@@ -286,3 +286,14 @@ function dlog()
         \Cake\Log\Log::write('debug', print_r($arg, true));
     }
 }
+
+Plugin::load('TinyAuth');
+
+define('ROLE_MOD', 'moderator');
+define('ROLE_ADMIN', 'admin');
+define('ROLE_NETWORK', 'network');
+define('ROLE_HOUSE_REPRESENTATIVE', 'house_representative');
+define('ROLE_WORKING_GROUP_REPRESENTATIVE', 'working_group_representative');
+define('ROLE_TENANT', 'tenant');
+define('ROLE_ASSIGNMENT_COMMITTEE', 'assignment_committee');
+define('ROLE_HOUSEKEEPER', 'housekeeper');

@@ -14,6 +14,10 @@
  */
 namespace App\Controller;
 
+use App\Model\Entity\Person;
+use App\Model\Table\PeopleTable;
+use App\Model\Table\PeopleUserRolesTable;
+use App\Model\Table\UserRolesTable;
 use Cake\Controller\Controller;
 use Cake\Event\Event;
 
@@ -47,7 +51,21 @@ class AppController extends Controller
     public function initialize()
     {
         $this->loadComponent('RequestHandler');
-        $this->loadComponent('Auth', [
+        $this->loadComponent('TinyAuth.AuthUser');
+        $this->loadComponent('TinyAuth.Auth', [
+            'authorize' => [
+                'TinyAuth.Tiny' => [
+                    'multiRole' => true,
+                    'rolesTable' => UserRolesTable::TABLE_NAME,
+                    'pivotTable' => PeopleUserRolesTable::TABLE_NAME,
+                    'usersTable' => PeopleTable::TABLE_NAME,
+                    'superAdmin' => Person::ROLE_ADMIN
+                ],
+
+            ]
+        ]);
+
+        /*$this->loadComponent('Auth', [
             'authenticate' => [
                 'Form' => [
                     'userModel' => 'People',
@@ -66,7 +84,7 @@ class AppController extends Controller
                     'class' => 'alert alert-warning'
                 ]
             ],
-        ]);
+        ]);*/
         /*
          * Enable the following components for recommended CakePHP security settings.
          * see http://book.cakephp.org/3.0/en/controllers/components/security.html
