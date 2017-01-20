@@ -67,11 +67,12 @@ class Person extends Entity
     ];
 
     /**
-     * Define type descriptions 
-     * 
-     * @return array 
+     * Define type descriptions
+     *
+     * @return array
      */
-    public static function typeDescriptions() {
+    public static function typeDescriptions()
+    {
         return [
             ROLE_ADMIN => __('user.role.admin'),
             ROLE_NETWORK => __('user.role.network'),
@@ -84,32 +85,35 @@ class Person extends Entity
     }
 
     /**
-     * Returns a map of possible roles for a user with descriptions 
-     * 
-     * @return array 
+     * Returns a map of possible roles for a user with descriptions
+     *
+     * @return array
      */
-    public static function getRoles() {
+    public static function getRoles()
+    {
         return self::getTypeMap(
-                        ROLE_ADMIN, ROLE_NETWORK, ROLE_ASSIGNMENT_COMMITTEE, ROLE_WORKING_GROUP_REPRESENTATIVE, ROLE_TENANT, ROLE_HOUSE_REPRESENTATIVE, ROLE_HOUSEKEEPER
+            ROLE_ADMIN, ROLE_NETWORK, ROLE_ASSIGNMENT_COMMITTEE, ROLE_WORKING_GROUP_REPRESENTATIVE, ROLE_TENANT, ROLE_HOUSE_REPRESENTATIVE, ROLE_HOUSEKEEPER
         );
     }
 
     /**
-     * Returns a map of possible statuses for a user with descriptions 
-     * 
-     * @return array 
+     * Returns a map of possible statuses for a user with descriptions
+     *
+     * @return array
      */
-    public static function getStatuses() {
+    public static function getStatuses()
+    {
         return Status::getMap(Status::ACTIVE, Status::SUSPENDED, Status::DELETED);
     }
 
     /**
-     * Setter for hashed password 
-     * 
-     * @param string $password not hashed password 
-     * @return string 
+     * Setter for hashed password
+     *
+     * @param string $password not hashed password
+     * @return string
      */
-    protected function _setPassword($password) {
+    protected function _setPassword($password)
+    {
         if (!empty($password)) {
             $password = (new DefaultPasswordHasher)->hash($password);
         }
@@ -118,20 +122,22 @@ class Person extends Entity
     }
 
     /**
-     * Getter for the full name 
-     * 
-     * @return string 
+     * Getter for the full name
+     *
+     * @return string
      */
-    protected function _getFullName() {
+    protected function _getFullName()
+    {
         return $this->forename . ' ' . $this->surname;
     }
 
     /**
-     * Getter for all roles 
-     * 
-     * @return string 
+     * Getter for all roles
+     *
+     * @return string
      */
-    protected function _getRoles() {
+    protected function _getRoles()
+    {
         $roles = [];
         foreach ($this->user_roles as $role) {
             array_push($roles, $role['title']);
@@ -140,11 +146,12 @@ class Person extends Entity
     }
 
     /**
-     * Api transform for user 
-     * 
-     * @return array 
+     * Api transform for user
+     *
+     * @return array
      */
-    public function apiTransform() {
+    public function apiTransform()
+    {
         return [
             'id' => $this->id,
             'api_token' => $this->api_token,

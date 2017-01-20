@@ -30,7 +30,8 @@ class Environment
             self::DEVELOPMENT_TEST,
             self::STAGING,
             self::PRODUCTION
-        ])) {
+        ])
+        ) {
             throw new RuntimeException('Invalid Environment: ' . $environment);
         };
 
