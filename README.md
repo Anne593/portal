@@ -1,9 +1,6 @@
-![CakePHP 3 Notifications Plugin](https://raw.githubusercontent.com/scherersoftware/cake-app-template/master/app-template.png)
-
-[![Build Status](https://travis-ci.org/scherersoftware/cake-app-template.svg?branch=master)](https://travis-ci.org/scherersoftware/cake-app-template)
-[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.txt)
-
-Pre-Configured Application Template for CakePHP 3
+# hiltonportal
+Portal/administration website for the Hilton dorm. Powered by CakePhp3.
+Keep in mind that this project is currently in an early **development** stage!
 
 ## Installation
 
@@ -13,13 +10,7 @@ Also, rename `app.default.php` to `app.php` and change the settings fitting your
 
 Install plugins with `$ composer install`
 
-Be sure to have `npm` installed and make sure afterwards `bower` is installed globally:
-
-```
-$ npm install -g bower
-```
-
-Now we have to install some npm packages and the bower dependencies:
+Install some npm packages and the bower dependencies:
 
 ```
 $ npm install
@@ -38,10 +29,9 @@ Now seed the database with a default user
 
 `$ bin/cake migrations seed`
 
-
 ## Credits
 
-This template is based on the [CakePHP Application Skeleton](https://github.com/cakephp/app)
+This template is based on the [CakePHP Application Skeleton](https://github.com/cakephp/app) and the [scherersoftware/cake-app-template](https://github.com/scherersoftware/cake-app-template) pre-configured template.
 
 Also, we're using the following awesome open-source projects:
 - [CakePHP Framework](https://github.com/cakephp/cakephp)
