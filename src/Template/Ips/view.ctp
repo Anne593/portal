@@ -1,57 +1,55 @@
-<?php
-$this->extend('../Layout/TwitterBootstrap/dashboard');
+<section class="content-header">
+    <h1>
+        <?php echo __('Ip'); ?>
+    </h1>
+    <ol class="breadcrumb">
+        <li>
+            <?= $this->Html->link('<i class="fa fa-chevron-left"></i> ' . __('Back'), ['action' => 'index'], ['escape' => false])?>
+        </li>
+    </ol>
+</section>
 
-
-$this->start('tb_actions');
-?>
-<li><?= $this->Html->link(__('Edit Ip'), ['action' => 'edit', $ip->id]) ?> </li>
-<li><?= $this->Form->postLink(__('Delete Ip'), ['action' => 'delete', $ip->id], ['confirm' => __('Are you sure you want to delete # {0}?', $ip->id)]) ?> </li>
-<li><?= $this->Html->link(__('List Ips'), ['action' => 'index']) ?> </li>
-<li><?= $this->Html->link(__('New Ip'), ['action' => 'add']) ?> </li>
-<li><?= $this->Html->link(__('List Macs'), ['controller' => 'Macs', 'action' => 'index']) ?> </li>
-<li><?= $this->Html->link(__('New Mac'), ['controller' => 'Macs', 'action' => 'add']) ?> </li>
-<?php
-$this->end();
-
-$this->start('tb_sidebar');
-?>
-<ul class="nav nav-sidebar">
-<li><?= $this->Html->link(__('Edit Ip'), ['action' => 'edit', $ip->id]) ?> </li>
-<li><?= $this->Form->postLink(__('Delete Ip'), ['action' => 'delete', $ip->id], ['confirm' => __('Are you sure you want to delete # {0}?', $ip->id)]) ?> </li>
-<li><?= $this->Html->link(__('List Ips'), ['action' => 'index']) ?> </li>
-<li><?= $this->Html->link(__('New Ip'), ['action' => 'add']) ?> </li>
-<li><?= $this->Html->link(__('List Macs'), ['controller' => 'Macs', 'action' => 'index']) ?> </li>
-<li><?= $this->Html->link(__('New Mac'), ['controller' => 'Macs', 'action' => 'add']) ?> </li>
-</ul>
-<?php
-$this->end();
-?>
-<div class="panel panel-default">
-    <!-- Panel header -->
-    <div class="panel-heading">
-        <h3 class="panel-title"><?= h($ip->id) ?></h3>
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-solid">
+                <div class="box-header with-border">
+                    <i class="fa fa-info"></i>
+                    <h3 class="box-title"><?php echo __('Information'); ?></h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <dl class="dl-horizontal">
+                                                                                                <dt><?= __('Mac') ?></dt>
+                        <dd>
+                            <?= $ip->has('mac') ? $ip->mac->id : '' ?>
+                        </dd>
+                                                                                                <dt><?= __('Ip') ?></dt>
+                        <dd>
+                            <?= h($ip->ip) ?>
+                        </dd>
+                                                                                                
+                        
+                                                                                                                        
+                                                                                                <dt><?= __('Lease Start') ?></dt>
+                        <dd>
+                            <?= h($ip->lease_start) ?>
+                        </dd>
+                                                                                                <dt><?= __('Lease End') ?></dt>
+                        <dd>
+                            <?= h($ip->lease_end) ?>
+                        </dd>
+                                                                        
+                        
+                                            </dl>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- ./col -->
     </div>
-    <table class="table table-striped" cellpadding="0" cellspacing="0">
-        <tr>
-            <td><?= __('Mac') ?></td>
-            <td><?= $ip->has('mac') ? $this->Html->link($ip->mac->id, ['controller' => 'Macs', 'action' => 'view', $ip->mac->id]) : '' ?></td>
-        </tr>
-        <tr>
-            <td><?= __('Ip') ?></td>
-            <td><?= h($ip->ip) ?></td>
-        </tr>
-        <tr>
-            <td><?= __('Id') ?></td>
-            <td><?= $this->Number->format($ip->id) ?></td>
-        </tr>
-        <tr>
-            <td><?= __('Lease Start') ?></td>
-            <td><?= h($ip->lease_start) ?></td>
-        </tr>
-        <tr>
-            <td><?= __('Lease End') ?></td>
-            <td><?= h($ip->lease_end) ?></td>
-        </tr>
-    </table>
-</div>
+    <!-- div -->
 
+    </section>

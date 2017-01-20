@@ -1,38 +1,43 @@
-<?php
-use App\Model\Entity\User;
+<section class="content-header">
+    <h1>
+        <?php echo __('User'); ?>
+    </h1>
+    <ol class="breadcrumb">
+        <li>
+            <?= $this->Html->link('<i class="fa fa-chevron-left"></i> ' . __('Back'), ['action' => 'index'], ['escape' => false])?>
+        </li>
+    </ol>
+</section>
 
-$this->assign('title', __('users.view.title'));
-?>
-
-<div class="users view box">
-    <div class="box-header with-border">
-        <h3 class="box-title">
-            <?= __('users.view.title') ?>
-        </h3>
-        <div class="box-tools pull-right">
-            <?= $this->CkTools->editButton($user) ?>
-            <?= $this->ListFilter->backToListButton() ?>
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-solid">
+                <div class="box-header with-border">
+                    <i class="fa fa-info"></i>
+                    <h3 class="box-title"><?php echo __('Information'); ?></h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <dl class="dl-horizontal">
+                                                                                                <dt><?= __('Username') ?></dt>
+                        <dd>
+                            <?= h($user->username) ?>
+                        </dd>
+                                                                                                                                                                        
+                        
+                                                                                                                        
+                                                                                                                                                                        
+                        
+                                            </dl>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
         </div>
+        <!-- ./col -->
     </div>
-    <div class="box-body">
-        <dl class="dl dl-horizontal">
-            <dt><?= __('user.firstname') ?></dt>
-            <dd><?= h($user->firstname) ?></dd>
+    <!-- div -->
 
-            <dt><?= __('user.lastname') ?></dt>
-            <dd><?= h($user->lastname) ?></dd>
-
-            <dt><?= __('user.status') ?></dt>
-            <dd><?= $this->Utils->statusLabel($user->status) ?></dd>
-
-            <dt><?= __('user.email') ?></dt>
-            <dd><?= h($user->email) ?></dd>
-
-            <dt><?= __('user.role') ?></dt>
-            <dd><?= $this->Utils->roleLabel($user->role) ?></dd>
-
-            <dt><?= __('user.failed_login_count') ?></dt>
-            <dd><?= $this->Number->format($user->failed_login_count) ?></dd>
-        </dl>
-    </div>
-</div>
+    </section>

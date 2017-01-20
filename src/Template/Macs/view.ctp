@@ -1,95 +1,143 @@
-<?php
-$this->extend('../Layout/TwitterBootstrap/dashboard');
+<section class="content-header">
+    <h1>
+        <?php echo __('Mac'); ?>
+    </h1>
+    <ol class="breadcrumb">
+        <li>
+            <?= $this->Html->link('<i class="fa fa-chevron-left"></i> ' . __('Back'), ['action' => 'index'], ['escape' => false])?>
+        </li>
+    </ol>
+</section>
 
-
-$this->start('tb_actions');
-?>
-<li><?= $this->Html->link(__('Edit Mac'), ['action' => 'edit', $mac->id]) ?> </li>
-<li><?= $this->Form->postLink(__('Delete Mac'), ['action' => 'delete', $mac->id], ['confirm' => __('Are you sure you want to delete # {0}?', $mac->id)]) ?> </li>
-<li><?= $this->Html->link(__('List Macs'), ['action' => 'index']) ?> </li>
-<li><?= $this->Html->link(__('New Mac'), ['action' => 'add']) ?> </li>
-<li><?= $this->Html->link(__('List People'), ['controller' => 'People', 'action' => 'index']) ?> </li>
-<li><?= $this->Html->link(__('New Person'), ['controller' => 'People', 'action' => 'add']) ?> </li>
-<li><?= $this->Html->link(__('List Ips'), ['controller' => 'Ips', 'action' => 'index']) ?> </li>
-<li><?= $this->Html->link(__('New Ip'), ['controller' => 'Ips', 'action' => 'add']) ?> </li>
-<?php
-$this->end();
-
-$this->start('tb_sidebar');
-?>
-<ul class="nav nav-sidebar">
-<li><?= $this->Html->link(__('Edit Mac'), ['action' => 'edit', $mac->id]) ?> </li>
-<li><?= $this->Form->postLink(__('Delete Mac'), ['action' => 'delete', $mac->id], ['confirm' => __('Are you sure you want to delete # {0}?', $mac->id)]) ?> </li>
-<li><?= $this->Html->link(__('List Macs'), ['action' => 'index']) ?> </li>
-<li><?= $this->Html->link(__('New Mac'), ['action' => 'add']) ?> </li>
-<li><?= $this->Html->link(__('List People'), ['controller' => 'People', 'action' => 'index']) ?> </li>
-<li><?= $this->Html->link(__('New Person'), ['controller' => 'People', 'action' => 'add']) ?> </li>
-<li><?= $this->Html->link(__('List Ips'), ['controller' => 'Ips', 'action' => 'index']) ?> </li>
-<li><?= $this->Html->link(__('New Ip'), ['controller' => 'Ips', 'action' => 'add']) ?> </li>
-</ul>
-<?php
-$this->end();
-?>
-<div class="panel panel-default">
-    <!-- Panel header -->
-    <div class="panel-heading">
-        <h3 class="panel-title"><?= h($mac->id) ?></h3>
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-solid">
+                <div class="box-header with-border">
+                    <i class="fa fa-info"></i>
+                    <h3 class="box-title"><?php echo __('Information'); ?></h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <dl class="dl-horizontal">
+                                                                                                <dt><?= __('Person') ?></dt>
+                        <dd>
+                            <?= $mac->has('person') ? $mac->person->id : '' ?>
+                        </dd>
+                                                                                                <dt><?= __('Mac') ?></dt>
+                        <dd>
+                            <?= h($mac->mac) ?>
+                        </dd>
+                                                                                                                        <dt><?= __('Device Name') ?></dt>
+                        <dd>
+                            <?= h($mac->device_name) ?>
+                        </dd>
+                                                                                                
+                        
+                                                                                                                        
+                        
+                        
+                                            </dl>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- ./col -->
     </div>
-    <table class="table table-striped" cellpadding="0" cellspacing="0">
-        <tr>
-            <td><?= __('Person') ?></td>
-            <td><?= $mac->has('person') ? $this->Html->link($mac->person->id, ['controller' => 'People', 'action' => 'view', $mac->person->id]) : '' ?></td>
-        </tr>
-        <tr>
-            <td><?= __('Mac') ?></td>
-            <td><?= h($mac->mac) ?></td>
-        </tr>
-        <tr>
-            <td><?= __('Device Name') ?></td>
-            <td><?= h($mac->device_name) ?></td>
-        </tr>
-        <tr>
-            <td><?= __('Id') ?></td>
-            <td><?= $this->Number->format($mac->id) ?></td>
-        </tr>
-    </table>
-</div>
+    <!-- div -->
 
-<div class="panel panel-default">
-    <!-- Panel header -->
-    <div class="panel-heading">
-        <h3 class="panel-title"><?= __('Related Ips') ?></h3>
+        <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <i class="fa fa-share-alt"></i>
+                    <h3 class="box-title"><?= __('Related {0}', ['Ips']) ?></h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body table-responsive no-padding">
+
+                    <?php if (!empty($mac->ips)): ?>
+
+                    <table class="table table-hover">
+                        <tbody>
+                        <tr>
+                                                        
+                            <th>
+                                Id
+                            </th>
+
+                                                        
+                            <th>
+                                Mac Id
+                            </th>
+
+                                                        
+                            <th>
+                                Ip
+                            </th>
+
+                                                        
+                            <th>
+                                Lease Start
+                            </th>
+
+                                                        
+                            <th>
+                                Lease End
+                            </th>
+
+                            
+                            <th>
+                                <?php echo __('Actions'); ?>
+                            </th>
+                        </tr>
+
+                        <?php foreach ($mac->ips as $ips): ?>
+                        <tr>
+                                                        
+                            <td>
+                                <?= h($ips->id) ?>
+                            </td>
+                                                        
+                            <td>
+                                <?= h($ips->mac_id) ?>
+                            </td>
+                                                        
+                            <td>
+                                <?= h($ips->ip) ?>
+                            </td>
+                                                        
+                            <td>
+                                <?= h($ips->lease_start) ?>
+                            </td>
+                                                        
+                            <td>
+                                <?= h($ips->lease_end) ?>
+                            </td>
+                            
+                                                        <td class="actions">
+                                <?= $this->Html->link('', ['action' => 'view', $mac->id], ['title' => __('View'), 'class' =>
+                                'btn btn-default glyphicon glyphicon-eye-open']) ?>
+                                <?= $this->Html->link('', ['action' => 'edit', $mac->id], ['title' => __('Edit'), 'class' =>
+                                'btn btn-default glyphicon glyphicon-pencil']) ?>
+                                <?= $this->Form->postLink('', ['action' => 'delete', $mac->id], ['confirm' => __('Are you sure
+                                you want to delete # {0}?', $mac->id), 'title' => __('Delete'), 'class' => 'btn btn-default
+                                glyphicon glyphicon-trash']) ?>
+                            </td>
+                        </tr>
+                        <?php endforeach; ?>
+
+                        </tbody>
+                    </table>
+
+                    <?php endif; ?>
+
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
     </div>
-    <?php if (!empty($mac->ips)): ?>
-        <table class="table table-striped">
-            <thead>
-            <tr>
-                <th><?= __('Id') ?></th>
-                <th><?= __('Mac Id') ?></th>
-                <th><?= __('Ip') ?></th>
-                <th><?= __('Lease Start') ?></th>
-                <th><?= __('Lease End') ?></th>
-                <th class="actions"><?= __('Actions') ?></th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php foreach ($mac->ips as $ips): ?>
-                <tr>
-                    <td><?= h($ips->id) ?></td>
-                    <td><?= h($ips->mac_id) ?></td>
-                    <td><?= h($ips->ip) ?></td>
-                    <td><?= h($ips->lease_start) ?></td>
-                    <td><?= h($ips->lease_end) ?></td>
-                    <td class="actions">
-                        <?= $this->Html->link('', ['controller' => 'Ips', 'action' => 'view', $ips->id], ['title' => __('View'), 'class' => 'btn btn-default glyphicon glyphicon-eye-open']) ?>
-                        <?= $this->Html->link('', ['controller' => 'Ips', 'action' => 'edit', $ips->id], ['title' => __('Edit'), 'class' => 'btn btn-default glyphicon glyphicon-pencil']) ?>
-                        <?= $this->Form->postLink('', ['controller' => 'Ips', 'action' => 'delete', $ips->id], ['confirm' => __('Are you sure you want to delete # {0}?', $ips->id), 'title' => __('Delete'), 'class' => 'btn btn-default glyphicon glyphicon-trash']) ?>
-                    </td>
-                </tr>
-            <?php endforeach; ?>
-            </tbody>
-        </table>
-    <?php else: ?>
-        <p class="panel-body">no related Ips</p>
-    <?php endif; ?>
-</div>
+    </section>

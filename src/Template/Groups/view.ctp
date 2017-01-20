@@ -1,83 +1,121 @@
-<?php
-$this->extend('../Layout/TwitterBootstrap/dashboard');
+<section class="content-header">
+    <h1>
+        <?php echo __('Group'); ?>
+    </h1>
+    <ol class="breadcrumb">
+        <li>
+            <?= $this->Html->link('<i class="fa fa-chevron-left"></i> ' . __('Back'), ['action' => 'index'], ['escape' => false])?>
+        </li>
+    </ol>
+</section>
 
-
-$this->start('tb_actions');
-?>
-<li><?= $this->Html->link(__('Edit Group'), ['action' => 'edit', $group->id]) ?> </li>
-<li><?= $this->Form->postLink(__('Delete Group'), ['action' => 'delete', $group->id], ['confirm' => __('Are you sure you want to delete # {0}?', $group->id)]) ?> </li>
-<li><?= $this->Html->link(__('List Groups'), ['action' => 'index']) ?> </li>
-<li><?= $this->Html->link(__('New Group'), ['action' => 'add']) ?> </li>
-<li><?= $this->Html->link(__('List Emailtext Groups'), ['controller' => 'EmailtextGroups', 'action' => 'index']) ?> </li>
-<li><?= $this->Html->link(__('New Emailtext Group'), ['controller' => 'EmailtextGroups', 'action' => 'add']) ?> </li>
-<?php
-$this->end();
-
-$this->start('tb_sidebar');
-?>
-<ul class="nav nav-sidebar">
-<li><?= $this->Html->link(__('Edit Group'), ['action' => 'edit', $group->id]) ?> </li>
-<li><?= $this->Form->postLink(__('Delete Group'), ['action' => 'delete', $group->id], ['confirm' => __('Are you sure you want to delete # {0}?', $group->id)]) ?> </li>
-<li><?= $this->Html->link(__('List Groups'), ['action' => 'index']) ?> </li>
-<li><?= $this->Html->link(__('New Group'), ['action' => 'add']) ?> </li>
-<li><?= $this->Html->link(__('List Emailtext Groups'), ['controller' => 'EmailtextGroups', 'action' => 'index']) ?> </li>
-<li><?= $this->Html->link(__('New Emailtext Group'), ['controller' => 'EmailtextGroups', 'action' => 'add']) ?> </li>
-</ul>
-<?php
-$this->end();
-?>
-<div class="panel panel-default">
-    <!-- Panel header -->
-    <div class="panel-heading">
-        <h3 class="panel-title"><?= h($group->name) ?></h3>
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-solid">
+                <div class="box-header with-border">
+                    <i class="fa fa-info"></i>
+                    <h3 class="box-title"><?php echo __('Information'); ?></h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <dl class="dl-horizontal">
+                                                                                                <dt><?= __('Name') ?></dt>
+                        <dd>
+                            <?= h($group->name) ?>
+                        </dd>
+                                                                                                                        <dt><?= __('Conditions') ?></dt>
+                        <dd>
+                            <?= h($group->conditions) ?>
+                        </dd>
+                                                                                                
+                        
+                                                                                                                        
+                        
+                        
+                                            </dl>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- ./col -->
     </div>
-    <table class="table table-striped" cellpadding="0" cellspacing="0">
-        <tr>
-            <td><?= __('Name') ?></td>
-            <td><?= h($group->name) ?></td>
-        </tr>
-        <tr>
-            <td><?= __('Conditions') ?></td>
-            <td><?= h($group->conditions) ?></td>
-        </tr>
-        <tr>
-            <td><?= __('Id') ?></td>
-            <td><?= $this->Number->format($group->id) ?></td>
-        </tr>
-    </table>
-</div>
+    <!-- div -->
 
-<div class="panel panel-default">
-    <!-- Panel header -->
-    <div class="panel-heading">
-        <h3 class="panel-title"><?= __('Related EmailtextGroups') ?></h3>
+        <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <i class="fa fa-share-alt"></i>
+                    <h3 class="box-title"><?= __('Related {0}', ['Emailtext Groups']) ?></h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body table-responsive no-padding">
+
+                    <?php if (!empty($group->emailtext_groups)): ?>
+
+                    <table class="table table-hover">
+                        <tbody>
+                        <tr>
+                                                        
+                            <th>
+                                Id
+                            </th>
+
+                                                        
+                            <th>
+                                Emailtext Id
+                            </th>
+
+                                                        
+                            <th>
+                                Group Id
+                            </th>
+
+                            
+                            <th>
+                                <?php echo __('Actions'); ?>
+                            </th>
+                        </tr>
+
+                        <?php foreach ($group->emailtext_groups as $emailtextGroups): ?>
+                        <tr>
+                                                        
+                            <td>
+                                <?= h($emailtextGroups->id) ?>
+                            </td>
+                                                        
+                            <td>
+                                <?= h($emailtextGroups->emailtext_id) ?>
+                            </td>
+                                                        
+                            <td>
+                                <?= h($emailtextGroups->group_id) ?>
+                            </td>
+                            
+                                                        <td class="actions">
+                                <?= $this->Html->link('', ['action' => 'view', $group->id], ['title' => __('View'), 'class' =>
+                                'btn btn-default glyphicon glyphicon-eye-open']) ?>
+                                <?= $this->Html->link('', ['action' => 'edit', $group->id], ['title' => __('Edit'), 'class' =>
+                                'btn btn-default glyphicon glyphicon-pencil']) ?>
+                                <?= $this->Form->postLink('', ['action' => 'delete', $group->id], ['confirm' => __('Are you sure
+                                you want to delete # {0}?', $group->id), 'title' => __('Delete'), 'class' => 'btn btn-default
+                                glyphicon glyphicon-trash']) ?>
+                            </td>
+                        </tr>
+                        <?php endforeach; ?>
+
+                        </tbody>
+                    </table>
+
+                    <?php endif; ?>
+
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
     </div>
-    <?php if (!empty($group->emailtext_groups)): ?>
-        <table class="table table-striped">
-            <thead>
-            <tr>
-                <th><?= __('Id') ?></th>
-                <th><?= __('Emailtext Id') ?></th>
-                <th><?= __('Group Id') ?></th>
-                <th class="actions"><?= __('Actions') ?></th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php foreach ($group->emailtext_groups as $emailtextGroups): ?>
-                <tr>
-                    <td><?= h($emailtextGroups->id) ?></td>
-                    <td><?= h($emailtextGroups->emailtext_id) ?></td>
-                    <td><?= h($emailtextGroups->group_id) ?></td>
-                    <td class="actions">
-                        <?= $this->Html->link('', ['controller' => 'EmailtextGroups', 'action' => 'view', $emailtextGroups->id], ['title' => __('View'), 'class' => 'btn btn-default glyphicon glyphicon-eye-open']) ?>
-                        <?= $this->Html->link('', ['controller' => 'EmailtextGroups', 'action' => 'edit', $emailtextGroups->id], ['title' => __('Edit'), 'class' => 'btn btn-default glyphicon glyphicon-pencil']) ?>
-                        <?= $this->Form->postLink('', ['controller' => 'EmailtextGroups', 'action' => 'delete', $emailtextGroups->id], ['confirm' => __('Are you sure you want to delete # {0}?', $emailtextGroups->id), 'title' => __('Delete'), 'class' => 'btn btn-default glyphicon glyphicon-trash']) ?>
-                    </td>
-                </tr>
-            <?php endforeach; ?>
-            </tbody>
-        </table>
-    <?php else: ?>
-        <p class="panel-body">no related EmailtextGroups</p>
-    <?php endif; ?>
-</div>
+    </section>

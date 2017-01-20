@@ -1,69 +1,63 @@
-<?php
-$this->extend('../Layout/TwitterBootstrap/dashboard');
+<section class="content-header">
+    <h1>
+        <?php echo __('Tenant'); ?>
+    </h1>
+    <ol class="breadcrumb">
+        <li>
+            <?= $this->Html->link('<i class="fa fa-chevron-left"></i> ' . __('Back'), ['action' => 'index'], ['escape' => false])?>
+        </li>
+    </ol>
+</section>
 
-
-$this->start('tb_actions');
-?>
-<li><?= $this->Html->link(__('Edit Tenant'), ['action' => 'edit', $tenant->id]) ?> </li>
-<li><?= $this->Form->postLink(__('Delete Tenant'), ['action' => 'delete', $tenant->id], ['confirm' => __('Are you sure you want to delete # {0}?', $tenant->id)]) ?> </li>
-<li><?= $this->Html->link(__('List Tenants'), ['action' => 'index']) ?> </li>
-<li><?= $this->Html->link(__('New Tenant'), ['action' => 'add']) ?> </li>
-<li><?= $this->Html->link(__('List People'), ['controller' => 'People', 'action' => 'index']) ?> </li>
-<li><?= $this->Html->link(__('New Person'), ['controller' => 'People', 'action' => 'add']) ?> </li>
-<li><?= $this->Html->link(__('List Rooms'), ['controller' => 'Rooms', 'action' => 'index']) ?> </li>
-<li><?= $this->Html->link(__('New Room'), ['controller' => 'Rooms', 'action' => 'add']) ?> </li>
-<?php
-$this->end();
-
-$this->start('tb_sidebar');
-?>
-<ul class="nav nav-sidebar">
-<li><?= $this->Html->link(__('Edit Tenant'), ['action' => 'edit', $tenant->id]) ?> </li>
-<li><?= $this->Form->postLink(__('Delete Tenant'), ['action' => 'delete', $tenant->id], ['confirm' => __('Are you sure you want to delete # {0}?', $tenant->id)]) ?> </li>
-<li><?= $this->Html->link(__('List Tenants'), ['action' => 'index']) ?> </li>
-<li><?= $this->Html->link(__('New Tenant'), ['action' => 'add']) ?> </li>
-<li><?= $this->Html->link(__('List People'), ['controller' => 'People', 'action' => 'index']) ?> </li>
-<li><?= $this->Html->link(__('New Person'), ['controller' => 'People', 'action' => 'add']) ?> </li>
-<li><?= $this->Html->link(__('List Rooms'), ['controller' => 'Rooms', 'action' => 'index']) ?> </li>
-<li><?= $this->Html->link(__('New Room'), ['controller' => 'Rooms', 'action' => 'add']) ?> </li>
-</ul>
-<?php
-$this->end();
-?>
-<div class="panel panel-default">
-    <!-- Panel header -->
-    <div class="panel-heading">
-        <h3 class="panel-title"><?= h($tenant->id) ?></h3>
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-solid">
+                <div class="box-header with-border">
+                    <i class="fa fa-info"></i>
+                    <h3 class="box-title"><?php echo __('Information'); ?></h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <dl class="dl-horizontal">
+                                                                                                <dt><?= __('Person') ?></dt>
+                        <dd>
+                            <?= $tenant->has('person') ? $tenant->person->id : '' ?>
+                        </dd>
+                                                                                                <dt><?= __('Room') ?></dt>
+                        <dd>
+                            <?= $tenant->has('room') ? $tenant->room->id : '' ?>
+                        </dd>
+                                                                                                <dt><?= __('Comment') ?></dt>
+                        <dd>
+                            <?= h($tenant->comment) ?>
+                        </dd>
+                                                                                                
+                        
+                                                                                                                        
+                                                                                                <dt><?= __('Date Move In') ?></dt>
+                        <dd>
+                            <?= h($tenant->date_move_in) ?>
+                        </dd>
+                                                                                                <dt><?= __('Date Move Out') ?></dt>
+                        <dd>
+                            <?= h($tenant->date_move_out) ?>
+                        </dd>
+                                                                        
+                        
+                                                                        <dt><?= __('Tenant Type') ?></dt>
+                        <dd>
+                            <?= $this->Text->autoParagraph(h($tenant->tenant_type)); ?>
+                        </dd>
+                                                                    </dl>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- ./col -->
     </div>
-    <table class="table table-striped" cellpadding="0" cellspacing="0">
-        <tr>
-            <td><?= __('Person') ?></td>
-            <td><?= $tenant->has('person') ? $this->Html->link($tenant->person->id, ['controller' => 'People', 'action' => 'view', $tenant->person->id]) : '' ?></td>
-        </tr>
-        <tr>
-            <td><?= __('Room') ?></td>
-            <td><?= $tenant->has('room') ? $this->Html->link($tenant->room->id, ['controller' => 'Rooms', 'action' => 'view', $tenant->room->id]) : '' ?></td>
-        </tr>
-        <tr>
-            <td><?= __('Comment') ?></td>
-            <td><?= h($tenant->comment) ?></td>
-        </tr>
-        <tr>
-            <td><?= __('Id') ?></td>
-            <td><?= $this->Number->format($tenant->id) ?></td>
-        </tr>
-        <tr>
-            <td><?= __('Date Move In') ?></td>
-            <td><?= h($tenant->date_move_in) ?></td>
-        </tr>
-        <tr>
-            <td><?= __('Date Move Out') ?></td>
-            <td><?= h($tenant->date_move_out) ?></td>
-        </tr>
-        <tr>
-            <td><?= __('Tenant Type') ?></td>
-            <td><?= $this->Text->autoParagraph(h($tenant->tenant_type)); ?></td>
-        </tr>
-    </table>
-</div>
+    <!-- div -->
 
+    </section>

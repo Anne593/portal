@@ -295,3 +295,4 @@ define('ROLE_WORKING_GROUP_REPRESENTATIVE', 'working_group_representative');
 define('ROLE_TENANT', 'tenant');
 define('ROLE_ASSIGNMENT_COMMITTEE', 'assignment_committee');
 define('ROLE_HOUSEKEEPER', 'housekeeper');
+Plugin::load('Bootstrap', ['bootstrap' => false, 'routes' => true]);

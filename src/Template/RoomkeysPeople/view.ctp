@@ -1,61 +1,55 @@
-<?php
-$this->extend('../Layout/TwitterBootstrap/dashboard');
+<section class="content-header">
+    <h1>
+        <?php echo __('Roomkeys Person'); ?>
+    </h1>
+    <ol class="breadcrumb">
+        <li>
+            <?= $this->Html->link('<i class="fa fa-chevron-left"></i> ' . __('Back'), ['action' => 'index'], ['escape' => false])?>
+        </li>
+    </ol>
+</section>
 
-
-$this->start('tb_actions');
-?>
-<li><?= $this->Html->link(__('Edit Roomkeys Person'), ['action' => 'edit', $roomkeysPerson->id]) ?> </li>
-<li><?= $this->Form->postLink(__('Delete Roomkeys Person'), ['action' => 'delete', $roomkeysPerson->id], ['confirm' => __('Are you sure you want to delete # {0}?', $roomkeysPerson->id)]) ?> </li>
-<li><?= $this->Html->link(__('List Roomkeys People'), ['action' => 'index']) ?> </li>
-<li><?= $this->Html->link(__('New Roomkeys Person'), ['action' => 'add']) ?> </li>
-<li><?= $this->Html->link(__('List Roomkeys'), ['controller' => 'Roomkeys', 'action' => 'index']) ?> </li>
-<li><?= $this->Html->link(__('New Roomkey'), ['controller' => 'Roomkeys', 'action' => 'add']) ?> </li>
-<li><?= $this->Html->link(__('List People'), ['controller' => 'People', 'action' => 'index']) ?> </li>
-<li><?= $this->Html->link(__('New Person'), ['controller' => 'People', 'action' => 'add']) ?> </li>
-<?php
-$this->end();
-
-$this->start('tb_sidebar');
-?>
-<ul class="nav nav-sidebar">
-<li><?= $this->Html->link(__('Edit Roomkeys Person'), ['action' => 'edit', $roomkeysPerson->id]) ?> </li>
-<li><?= $this->Form->postLink(__('Delete Roomkeys Person'), ['action' => 'delete', $roomkeysPerson->id], ['confirm' => __('Are you sure you want to delete # {0}?', $roomkeysPerson->id)]) ?> </li>
-<li><?= $this->Html->link(__('List Roomkeys People'), ['action' => 'index']) ?> </li>
-<li><?= $this->Html->link(__('New Roomkeys Person'), ['action' => 'add']) ?> </li>
-<li><?= $this->Html->link(__('List Roomkeys'), ['controller' => 'Roomkeys', 'action' => 'index']) ?> </li>
-<li><?= $this->Html->link(__('New Roomkey'), ['controller' => 'Roomkeys', 'action' => 'add']) ?> </li>
-<li><?= $this->Html->link(__('List People'), ['controller' => 'People', 'action' => 'index']) ?> </li>
-<li><?= $this->Html->link(__('New Person'), ['controller' => 'People', 'action' => 'add']) ?> </li>
-</ul>
-<?php
-$this->end();
-?>
-<div class="panel panel-default">
-    <!-- Panel header -->
-    <div class="panel-heading">
-        <h3 class="panel-title"><?= h($roomkeysPerson->id) ?></h3>
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-solid">
+                <div class="box-header with-border">
+                    <i class="fa fa-info"></i>
+                    <h3 class="box-title"><?php echo __('Information'); ?></h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <dl class="dl-horizontal">
+                                                                                                <dt><?= __('Roomkey') ?></dt>
+                        <dd>
+                            <?= $roomkeysPerson->has('roomkey') ? $roomkeysPerson->roomkey->name : '' ?>
+                        </dd>
+                                                                                                <dt><?= __('Person') ?></dt>
+                        <dd>
+                            <?= $roomkeysPerson->has('person') ? $roomkeysPerson->person->id : '' ?>
+                        </dd>
+                                                                                                <dt><?= __('Comment') ?></dt>
+                        <dd>
+                            <?= h($roomkeysPerson->comment) ?>
+                        </dd>
+                                                                                                
+                        
+                                                                                                                        
+                        
+                        
+                                                                        <dt><?= __('Type') ?></dt>
+                        <dd>
+                            <?= $this->Text->autoParagraph(h($roomkeysPerson->type)); ?>
+                        </dd>
+                                                                    </dl>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- ./col -->
     </div>
-    <table class="table table-striped" cellpadding="0" cellspacing="0">
-        <tr>
-            <td><?= __('Roomkey') ?></td>
-            <td><?= $roomkeysPerson->has('roomkey') ? $this->Html->link($roomkeysPerson->roomkey->name, ['controller' => 'Roomkeys', 'action' => 'view', $roomkeysPerson->roomkey->id]) : '' ?></td>
-        </tr>
-        <tr>
-            <td><?= __('Person') ?></td>
-            <td><?= $roomkeysPerson->has('person') ? $this->Html->link($roomkeysPerson->person->id, ['controller' => 'People', 'action' => 'view', $roomkeysPerson->person->id]) : '' ?></td>
-        </tr>
-        <tr>
-            <td><?= __('Comment') ?></td>
-            <td><?= h($roomkeysPerson->comment) ?></td>
-        </tr>
-        <tr>
-            <td><?= __('Id') ?></td>
-            <td><?= $this->Number->format($roomkeysPerson->id) ?></td>
-        </tr>
-        <tr>
-            <td><?= __('Type') ?></td>
-            <td><?= $this->Text->autoParagraph(h($roomkeysPerson->type)); ?></td>
-        </tr>
-    </table>
-</div>
+    <!-- div -->
 
+    </section>

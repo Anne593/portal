@@ -1,65 +1,67 @@
-<?php
-$this->extend('../Layout/TwitterBootstrap/dashboard');
+<section class="content-header">
+    <h1>
+        <?php echo __('Job'); ?>
+    </h1>
+    <ol class="breadcrumb">
+        <li>
+            <?= $this->Html->link('<i class="fa fa-chevron-left"></i> ' . __('Back'), ['action' => 'index'], ['escape' => false])?>
+        </li>
+    </ol>
+</section>
 
-
-$this->start('tb_actions');
-?>
-<li><?= $this->Html->link(__('Edit Job'), ['action' => 'edit', $job->id]) ?> </li>
-<li><?= $this->Form->postLink(__('Delete Job'), ['action' => 'delete', $job->id], ['confirm' => __('Are you sure you want to delete # {0}?', $job->id)]) ?> </li>
-<li><?= $this->Html->link(__('List Jobs'), ['action' => 'index']) ?> </li>
-<li><?= $this->Html->link(__('New Job'), ['action' => 'add']) ?> </li>
-<?php
-$this->end();
-
-$this->start('tb_sidebar');
-?>
-<ul class="nav nav-sidebar">
-<li><?= $this->Html->link(__('Edit Job'), ['action' => 'edit', $job->id]) ?> </li>
-<li><?= $this->Form->postLink(__('Delete Job'), ['action' => 'delete', $job->id], ['confirm' => __('Are you sure you want to delete # {0}?', $job->id)]) ?> </li>
-<li><?= $this->Html->link(__('List Jobs'), ['action' => 'index']) ?> </li>
-<li><?= $this->Html->link(__('New Job'), ['action' => 'add']) ?> </li>
-</ul>
-<?php
-$this->end();
-?>
-<div class="panel panel-default">
-    <!-- Panel header -->
-    <div class="panel-heading">
-        <h3 class="panel-title"><?= h($job->id) ?></h3>
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-solid">
+                <div class="box-header with-border">
+                    <i class="fa fa-info"></i>
+                    <h3 class="box-title"><?php echo __('Information'); ?></h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <dl class="dl-horizontal">
+                                                                                                <dt><?= __('Queue') ?></dt>
+                        <dd>
+                            <?= h($job->queue) ?>
+                        </dd>
+                                                                                                                        <dt><?= __('Attempts') ?></dt>
+                        <dd>
+                            <?= h($job->attempts) ?>
+                        </dd>
+                                                                                                
+                        
+                                                                                                                                                <dt><?= __('Priority') ?></dt>
+                        <dd>
+                            <?= $this->Number->format($job->priority) ?>
+                        </dd>
+                                                                                                <dt><?= __('Locked') ?></dt>
+                        <dd>
+                            <?= $this->Number->format($job->locked) ?>
+                        </dd>
+                                                                        
+                                                                                                <dt><?= __('Expires At') ?></dt>
+                        <dd>
+                            <?= h($job->expires_at) ?>
+                        </dd>
+                                                                                                <dt><?= __('Delay Until') ?></dt>
+                        <dd>
+                            <?= h($job->delay_until) ?>
+                        </dd>
+                                                                        
+                        
+                                                                        <dt><?= __('Data') ?></dt>
+                        <dd>
+                            <?= $this->Text->autoParagraph(h($job->data)); ?>
+                        </dd>
+                                                                    </dl>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- ./col -->
     </div>
-    <table class="table table-striped" cellpadding="0" cellspacing="0">
-        <tr>
-            <td><?= __('Queue') ?></td>
-            <td><?= h($job->queue) ?></td>
-        </tr>
-        <tr>
-            <td><?= __('Attempts') ?></td>
-            <td><?= h($job->attempts) ?></td>
-        </tr>
-        <tr>
-            <td><?= __('Id') ?></td>
-            <td><?= $this->Number->format($job->id) ?></td>
-        </tr>
-        <tr>
-            <td><?= __('Priority') ?></td>
-            <td><?= $this->Number->format($job->priority) ?></td>
-        </tr>
-        <tr>
-            <td><?= __('Locked') ?></td>
-            <td><?= $this->Number->format($job->locked) ?></td>
-        </tr>
-        <tr>
-            <td><?= __('Expires At') ?></td>
-            <td><?= h($job->expires_at) ?></td>
-        </tr>
-        <tr>
-            <td><?= __('Delay Until') ?></td>
-            <td><?= h($job->delay_until) ?></td>
-        </tr>
-        <tr>
-            <td><?= __('Data') ?></td>
-            <td><?= $this->Text->autoParagraph(h($job->data)); ?></td>
-        </tr>
-    </table>
-</div>
+    <!-- div -->
 
+    </section>
