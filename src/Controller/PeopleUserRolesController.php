@@ -62,7 +62,11 @@ class PeopleUserRolesController extends AppController
                 $this->Flash->error(__('The people user role could not be saved. Please, try again.'));
             }
         }
-        $people = $this->PeopleUserRoles->People->find('list', ['limit' => 200]);
+        $people = $this->PeopleUserRoles->People->find('list', [
+            'limit' => 200,
+            'keyField' => 'id',
+            'valueField' => 'full_name'
+        ]);
         $userRoles = $this->PeopleUserRoles->UserRoles->find('list', ['limit' => 200]);
         $this->set(compact('peopleUserRole', 'people', 'userRoles'));
         $this->set('_serialize', ['peopleUserRole']);
@@ -90,7 +94,11 @@ class PeopleUserRolesController extends AppController
                 $this->Flash->error(__('The people user role could not be saved. Please, try again.'));
             }
         }
-        $people = $this->PeopleUserRoles->People->find('list', ['limit' => 200]);
+        $people = $this->PeopleUserRoles->People->find('list', [
+            'limit' => 200,
+            'keyField' => 'id',
+            'valueField' => 'full_name'
+        ]);
         $userRoles = $this->PeopleUserRoles->UserRoles->find('list', ['limit' => 200]);
         $this->set(compact('peopleUserRole', 'people', 'userRoles'));
         $this->set('_serialize', ['peopleUserRole']);

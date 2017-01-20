@@ -62,7 +62,11 @@ class MacsController extends AppController
                 $this->Flash->error(__('The mac could not be saved. Please, try again.'));
             }
         }
-        $people = $this->Macs->People->find('list', ['limit' => 200]);
+        $people = $this->Macs->People->find('list', [
+            'limit' => 200,
+            'keyField' => 'id',
+            'valueField' => 'full_name'
+        ]);
         $this->set(compact('mac', 'people'));
         $this->set('_serialize', ['mac']);
     }
@@ -89,7 +93,11 @@ class MacsController extends AppController
                 $this->Flash->error(__('The mac could not be saved. Please, try again.'));
             }
         }
-        $people = $this->Macs->People->find('list', ['limit' => 200]);
+        $people = $this->Macs->People->find('list', [
+            'limit' => 200,
+            'keyField' => 'id',
+            'valueField' => 'full_name'
+        ]);
         $this->set(compact('mac', 'people'));
         $this->set('_serialize', ['mac']);
     }

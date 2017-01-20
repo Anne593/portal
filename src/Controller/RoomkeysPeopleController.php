@@ -63,7 +63,11 @@ class RoomkeysPeopleController extends AppController
             }
         }
         $roomkeys = $this->RoomkeysPeople->Roomkeys->find('list', ['limit' => 200]);
-        $people = $this->RoomkeysPeople->People->find('list', ['limit' => 200]);
+        $people = $this->RoomkeysPeople->People->find('list', [
+            'limit' => 200,
+            'keyField' => 'id',
+            'valueField' => 'full_name'
+        ]);
         $this->set(compact('roomkeysPerson', 'roomkeys', 'people'));
         $this->set('_serialize', ['roomkeysPerson']);
     }
@@ -91,7 +95,11 @@ class RoomkeysPeopleController extends AppController
             }
         }
         $roomkeys = $this->RoomkeysPeople->Roomkeys->find('list', ['limit' => 200]);
-        $people = $this->RoomkeysPeople->People->find('list', ['limit' => 200]);
+        $people = $this->RoomkeysPeople->People->find('list', [
+            'limit' => 200,
+            'keyField' => 'id',
+            'valueField' => 'full_name'
+        ]);
         $this->set(compact('roomkeysPerson', 'roomkeys', 'people'));
         $this->set('_serialize', ['roomkeysPerson']);
     }

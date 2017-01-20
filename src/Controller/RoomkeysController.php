@@ -59,7 +59,11 @@ class RoomkeysController extends AppController
                 $this->Flash->error(__('The roomkey could not be saved. Please, try again.'));
             }
         }
-        $people = $this->Roomkeys->People->find('list', ['limit' => 200]);
+        $people = $this->Roomkeys->People->find('list', [
+            'limit' => 200,
+            'keyField' => 'id',
+            'valueField' => 'full_name'
+        ]);
         $this->set(compact('roomkey', 'people'));
         $this->set('_serialize', ['roomkey']);
     }
@@ -86,7 +90,11 @@ class RoomkeysController extends AppController
                 $this->Flash->error(__('The roomkey could not be saved. Please, try again.'));
             }
         }
-        $people = $this->Roomkeys->People->find('list', ['limit' => 200]);
+        $people = $this->Roomkeys->People->find('list', [
+            'limit' => 200,
+            'keyField' => 'id',
+            'valueField' => 'full_name'
+        ]);
         $this->set(compact('roomkey', 'people'));
         $this->set('_serialize', ['roomkey']);
     }

@@ -62,7 +62,11 @@ class WorkingGroupsPeopleController extends AppController
                 $this->Flash->error(__('The working groups person could not be saved. Please, try again.'));
             }
         }
-        $people = $this->WorkingGroupsPeople->People->find('list', ['limit' => 200]);
+        $people = $this->WorkingGroupsPeople->People->find('list', [
+            'limit' => 200,
+            'keyField' => 'id',
+            'valueField' => 'full_name'
+        ]);
         $workshops = $this->WorkingGroupsPeople->Workshops->find('list', ['limit' => 200]);
         $workingGroups = $this->WorkingGroupsPeople->WorkingGroups->find('list', ['limit' => 200]);
         $this->set(compact('workingGroupsPerson', 'people', 'workshops', 'workingGroups'));
@@ -91,7 +95,11 @@ class WorkingGroupsPeopleController extends AppController
                 $this->Flash->error(__('The working groups person could not be saved. Please, try again.'));
             }
         }
-        $people = $this->WorkingGroupsPeople->People->find('list', ['limit' => 200]);
+        $people = $this->WorkingGroupsPeople->People->find('list', [
+            'limit' => 200,
+            'keyField' => 'id',
+            'valueField' => 'full_name'
+        ]);
         $workshops = $this->WorkingGroupsPeople->Workshops->find('list', ['limit' => 200]);
         $workingGroups = $this->WorkingGroupsPeople->WorkingGroups->find('list', ['limit' => 200]);
         $this->set(compact('workingGroupsPerson', 'people', 'workshops', 'workingGroups'));

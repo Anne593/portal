@@ -62,7 +62,11 @@ class FileserverUsersController extends AppController
                 $this->Flash->error(__('The fileserver user could not be saved. Please, try again.'));
             }
         }
-        $people = $this->FileserverUsers->People->find('list', ['limit' => 200]);
+        $people = $this->FileserverUsers->People->find('list', [
+            'limit' => 200,
+            'keyField' => 'id',
+            'valueField' => 'full_name'
+        ]);
         $this->set(compact('fileserverUser', 'people'));
         $this->set('_serialize', ['fileserverUser']);
     }
@@ -89,7 +93,11 @@ class FileserverUsersController extends AppController
                 $this->Flash->error(__('The fileserver user could not be saved. Please, try again.'));
             }
         }
-        $people = $this->FileserverUsers->People->find('list', ['limit' => 200]);
+        $people = $this->FileserverUsers->People->find('list', [
+            'limit' => 200,
+            'keyField' => 'id',
+            'valueField' => 'full_name'
+        ]);
         $this->set(compact('fileserverUser', 'people'));
         $this->set('_serialize', ['fileserverUser']);
     }

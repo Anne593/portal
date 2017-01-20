@@ -59,7 +59,11 @@ class WorkingGroupsController extends AppController
                 $this->Flash->error(__('The working group could not be saved. Please, try again.'));
             }
         }
-        $people = $this->WorkingGroups->People->find('list', ['limit' => 200]);
+        $people = $this->WorkingGroups->People->find('list', [
+            'limit' => 200,
+            'keyField' => 'id',
+            'valueField' => 'full_name'
+        ]);
         $this->set(compact('workingGroup', 'people'));
         $this->set('_serialize', ['workingGroup']);
     }
@@ -86,7 +90,11 @@ class WorkingGroupsController extends AppController
                 $this->Flash->error(__('The working group could not be saved. Please, try again.'));
             }
         }
-        $people = $this->WorkingGroups->People->find('list', ['limit' => 200]);
+        $people = $this->WorkingGroups->People->find('list', [
+            'limit' => 200,
+            'keyField' => 'id',
+            'valueField' => 'full_name'
+        ]);
         $this->set(compact('workingGroup', 'people'));
         $this->set('_serialize', ['workingGroup']);
     }

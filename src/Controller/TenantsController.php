@@ -62,7 +62,11 @@ class TenantsController extends AppController
                 $this->Flash->error(__('The tenant could not be saved. Please, try again.'));
             }
         }
-        $people = $this->Tenants->People->find('list', ['limit' => 200]);
+        $people = $this->Tenants->People->find('list', [
+            'limit' => 200,
+            'keyField' => 'id',
+            'valueField' => 'full_name'
+        ]);
         $rooms = $this->Tenants->Rooms->find('list', ['limit' => 200]);
         $this->set(compact('tenant', 'people', 'rooms'));
         $this->set('_serialize', ['tenant']);
@@ -90,7 +94,11 @@ class TenantsController extends AppController
                 $this->Flash->error(__('The tenant could not be saved. Please, try again.'));
             }
         }
-        $people = $this->Tenants->People->find('list', ['limit' => 200]);
+        $people = $this->Tenants->People->find('list', [
+            'limit' => 200,
+            'keyField' => 'id',
+            'valueField' => 'full_name'
+        ]);
         $rooms = $this->Tenants->Rooms->find('list', ['limit' => 200]);
         $this->set(compact('tenant', 'people', 'rooms'));
         $this->set('_serialize', ['tenant']);
