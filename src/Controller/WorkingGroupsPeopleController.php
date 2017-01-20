@@ -19,7 +19,7 @@ class WorkingGroupsPeopleController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['People', 'Workshops', 'WorkingGroups']
+            'contain' => ['People', 'WorkingGroups']
         ];
         $workingGroupsPeople = $this->paginate($this->WorkingGroupsPeople);
 
@@ -37,7 +37,7 @@ class WorkingGroupsPeopleController extends AppController
     public function view($id = null)
     {
         $workingGroupsPerson = $this->WorkingGroupsPeople->get($id, [
-            'contain' => ['People', 'Workshops', 'WorkingGroups']
+            'contain' => ['People', 'WorkingGroups']
         ]);
 
         $this->set('workingGroupsPerson', $workingGroupsPerson);
@@ -67,9 +67,8 @@ class WorkingGroupsPeopleController extends AppController
             'keyField' => 'id',
             'valueField' => 'full_name'
         ]);
-        $workshops = $this->WorkingGroupsPeople->Workshops->find('list', ['limit' => 200]);
         $workingGroups = $this->WorkingGroupsPeople->WorkingGroups->find('list', ['limit' => 200]);
-        $this->set(compact('workingGroupsPerson', 'people', 'workshops', 'workingGroups'));
+        $this->set(compact('workingGroupsPerson', 'people', 'workingGroups'));
         $this->set('_serialize', ['workingGroupsPerson']);
     }
 
@@ -100,9 +99,8 @@ class WorkingGroupsPeopleController extends AppController
             'keyField' => 'id',
             'valueField' => 'full_name'
         ]);
-        $workshops = $this->WorkingGroupsPeople->Workshops->find('list', ['limit' => 200]);
         $workingGroups = $this->WorkingGroupsPeople->WorkingGroups->find('list', ['limit' => 200]);
-        $this->set(compact('workingGroupsPerson', 'people', 'workshops', 'workingGroups'));
+        $this->set(compact('workingGroupsPerson', 'people', 'workingGroups'));
         $this->set('_serialize', ['workingGroupsPerson']);
     }
 
