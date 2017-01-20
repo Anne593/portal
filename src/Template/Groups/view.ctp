@@ -96,12 +96,12 @@
                             </td>
                             
                                                         <td class="actions">
-                                <?= $this->Html->link('', ['action' => 'view', $group->id], ['title' => __('View'), 'class' =>
+                                <?= $this->Html->link('', ['controller' => 'emailtextGroups', 'action' => 'view', $emailtextGroups->id], ['title' => __('View'), 'class' =>
                                 'btn btn-default glyphicon glyphicon-eye-open']) ?>
-                                <?= $this->Html->link('', ['action' => 'edit', $group->id], ['title' => __('Edit'), 'class' =>
+                                <?= $this->Html->link('', ['controller' => 'emailtextGroups', 'action' => 'edit', $emailtextGroups->id], ['title' => __('Edit'), 'class' =>
                                 'btn btn-default glyphicon glyphicon-pencil']) ?>
-                                <?= $this->Form->postLink('', ['action' => 'delete', $group->id], ['confirm' => __('Are you sure
-                                you want to delete # {0}?', $group->id), 'title' => __('Delete'), 'class' => 'btn btn-default
+                                <?= $this->Form->postLink('', ['controller' => 'emailtextGroups', 'action' => 'delete', $emailtextGroups->id], ['confirm' => __('Are you sure
+                                you want to delete # {0}?', $emailtextGroups->id), 'title' => __('Delete'), 'class' => 'btn btn-default
                                 glyphicon glyphicon-trash']) ?>
                             </td>
                         </tr>

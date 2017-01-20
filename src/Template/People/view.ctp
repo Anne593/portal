@@ -189,12 +189,12 @@
                             </td>
                             
                                                         <td class="actions">
-                                <?= $this->Html->link('', ['action' => 'view', $person->id], ['title' => __('View'), 'class' =>
+                                <?= $this->Html->link('', ['controller' => 'fileserverUsers', 'action' => 'view', $fileserverUsers->id], ['title' => __('View'), 'class' =>
                                 'btn btn-default glyphicon glyphicon-eye-open']) ?>
-                                <?= $this->Html->link('', ['action' => 'edit', $person->id], ['title' => __('Edit'), 'class' =>
+                                <?= $this->Html->link('', ['controller' => 'fileserverUsers', 'action' => 'edit', $fileserverUsers->id], ['title' => __('Edit'), 'class' =>
                                 'btn btn-default glyphicon glyphicon-pencil']) ?>
-                                <?= $this->Form->postLink('', ['action' => 'delete', $person->id], ['confirm' => __('Are you sure
-                                you want to delete # {0}?', $person->id), 'title' => __('Delete'), 'class' => 'btn btn-default
+                                <?= $this->Form->postLink('', ['controller' => 'fileserverUsers', 'action' => 'delete', $fileserverUsers->id], ['confirm' => __('Are you sure
+                                you want to delete # {0}?', $fileserverUsers->id), 'title' => __('Delete'), 'class' => 'btn btn-default
                                 glyphicon glyphicon-trash']) ?>
                             </td>
                         </tr>
@@ -272,12 +272,12 @@
                             </td>
                             
                                                         <td class="actions">
-                                <?= $this->Html->link('', ['action' => 'view', $person->id], ['title' => __('View'), 'class' =>
+                                <?= $this->Html->link('', ['controller' => 'macs', 'action' => 'view', $macs->id], ['title' => __('View'), 'class' =>
                                 'btn btn-default glyphicon glyphicon-eye-open']) ?>
-                                <?= $this->Html->link('', ['action' => 'edit', $person->id], ['title' => __('Edit'), 'class' =>
+                                <?= $this->Html->link('', ['controller' => 'macs', 'action' => 'edit', $macs->id], ['title' => __('Edit'), 'class' =>
                                 'btn btn-default glyphicon glyphicon-pencil']) ?>
-                                <?= $this->Form->postLink('', ['action' => 'delete', $person->id], ['confirm' => __('Are you sure
-                                you want to delete # {0}?', $person->id), 'title' => __('Delete'), 'class' => 'btn btn-default
+                                <?= $this->Form->postLink('', ['controller' => 'macs', 'action' => 'delete', $macs->id], ['confirm' => __('Are you sure
+                                you want to delete # {0}?', $macs->id), 'title' => __('Delete'), 'class' => 'btn btn-default
                                 glyphicon glyphicon-trash']) ?>
                             </td>
                         </tr>
@@ -382,12 +382,12 @@
                             </td>
                             
                                                         <td class="actions">
-                                <?= $this->Html->link('', ['action' => 'view', $person->id], ['title' => __('View'), 'class' =>
+                                <?= $this->Html->link('', ['controller' => 'tenants', 'action' => 'view', $tenants->id], ['title' => __('View'), 'class' =>
                                 'btn btn-default glyphicon glyphicon-eye-open']) ?>
-                                <?= $this->Html->link('', ['action' => 'edit', $person->id], ['title' => __('Edit'), 'class' =>
+                                <?= $this->Html->link('', ['controller' => 'tenants', 'action' => 'edit', $tenants->id], ['title' => __('Edit'), 'class' =>
                                 'btn btn-default glyphicon glyphicon-pencil']) ?>
-                                <?= $this->Form->postLink('', ['action' => 'delete', $person->id], ['confirm' => __('Are you sure
-                                you want to delete # {0}?', $person->id), 'title' => __('Delete'), 'class' => 'btn btn-default
+                                <?= $this->Form->postLink('', ['controller' => 'tenants', 'action' => 'delete', $tenants->id], ['confirm' => __('Are you sure
+                                you want to delete # {0}?', $tenants->id), 'title' => __('Delete'), 'class' => 'btn btn-default
                                 glyphicon glyphicon-trash']) ?>
                             </td>
                         </tr>
@@ -474,12 +474,12 @@
                             </td>
                             
                                                         <td class="actions">
-                                <?= $this->Html->link('', ['action' => 'view', $person->id], ['title' => __('View'), 'class' =>
+                                <?= $this->Html->link('', ['controller' => 'memberships', 'action' => 'view', $memberships->id], ['title' => __('View'), 'class' =>
                                 'btn btn-default glyphicon glyphicon-eye-open']) ?>
-                                <?= $this->Html->link('', ['action' => 'edit', $person->id], ['title' => __('Edit'), 'class' =>
+                                <?= $this->Html->link('', ['controller' => 'memberships', 'action' => 'edit', $memberships->id], ['title' => __('Edit'), 'class' =>
                                 'btn btn-default glyphicon glyphicon-pencil']) ?>
-                                <?= $this->Form->postLink('', ['action' => 'delete', $person->id], ['confirm' => __('Are you sure
-                                you want to delete # {0}?', $person->id), 'title' => __('Delete'), 'class' => 'btn btn-default
+                                <?= $this->Form->postLink('', ['controller' => 'memberships', 'action' => 'delete', $memberships->id], ['confirm' => __('Are you sure
+                                you want to delete # {0}?', $memberships->id), 'title' => __('Delete'), 'class' => 'btn btn-default
                                 glyphicon glyphicon-trash']) ?>
                             </td>
                         </tr>
@@ -539,12 +539,12 @@
                             </td>
                             
                                                         <td class="actions">
-                                <?= $this->Html->link('', ['action' => 'view', $person->id], ['title' => __('View'), 'class' =>
+                                <?= $this->Html->link('', ['controller' => 'userRoles', 'action' => 'view', $userRoles->id], ['title' => __('View'), 'class' =>
                                 'btn btn-default glyphicon glyphicon-eye-open']) ?>
-                                <?= $this->Html->link('', ['action' => 'edit', $person->id], ['title' => __('Edit'), 'class' =>
+                                <?= $this->Html->link('', ['controller' => 'userRoles', 'action' => 'edit', $userRoles->id], ['title' => __('Edit'), 'class' =>
                                 'btn btn-default glyphicon glyphicon-pencil']) ?>
-                                <?= $this->Form->postLink('', ['action' => 'delete', $person->id], ['confirm' => __('Are you sure
-                                you want to delete # {0}?', $person->id), 'title' => __('Delete'), 'class' => 'btn btn-default
+                                <?= $this->Form->postLink('', ['controller' => 'userRoles', 'action' => 'delete', $userRoles->id], ['confirm' => __('Are you sure
+                                you want to delete # {0}?', $userRoles->id), 'title' => __('Delete'), 'class' => 'btn btn-default
                                 glyphicon glyphicon-trash']) ?>
                             </td>
                         </tr>
@@ -622,12 +622,12 @@
                             </td>
                             
                                                         <td class="actions">
-                                <?= $this->Html->link('', ['action' => 'view', $person->id], ['title' => __('View'), 'class' =>
+                                <?= $this->Html->link('', ['controller' => 'roomkeys', 'action' => 'view', $roomkeys->id], ['title' => __('View'), 'class' =>
                                 'btn btn-default glyphicon glyphicon-eye-open']) ?>
-                                <?= $this->Html->link('', ['action' => 'edit', $person->id], ['title' => __('Edit'), 'class' =>
+                                <?= $this->Html->link('', ['controller' => 'roomkeys', 'action' => 'edit', $roomkeys->id], ['title' => __('Edit'), 'class' =>
                                 'btn btn-default glyphicon glyphicon-pencil']) ?>
-                                <?= $this->Form->postLink('', ['action' => 'delete', $person->id], ['confirm' => __('Are you sure
-                                you want to delete # {0}?', $person->id), 'title' => __('Delete'), 'class' => 'btn btn-default
+                                <?= $this->Form->postLink('', ['controller' => 'roomkeys', 'action' => 'delete', $roomkeys->id], ['confirm' => __('Are you sure
+                                you want to delete # {0}?', $roomkeys->id), 'title' => __('Delete'), 'class' => 'btn btn-default
                                 glyphicon glyphicon-trash']) ?>
                             </td>
                         </tr>
@@ -696,12 +696,12 @@
                             </td>
                             
                                                         <td class="actions">
-                                <?= $this->Html->link('', ['action' => 'view', $person->id], ['title' => __('View'), 'class' =>
+                                <?= $this->Html->link('', ['controller' => 'workingGroups', 'action' => 'view', $workingGroups->id], ['title' => __('View'), 'class' =>
                                 'btn btn-default glyphicon glyphicon-eye-open']) ?>
-                                <?= $this->Html->link('', ['action' => 'edit', $person->id], ['title' => __('Edit'), 'class' =>
+                                <?= $this->Html->link('', ['controller' => 'workingGroups', 'action' => 'edit', $workingGroups->id], ['title' => __('Edit'), 'class' =>
                                 'btn btn-default glyphicon glyphicon-pencil']) ?>
-                                <?= $this->Form->postLink('', ['action' => 'delete', $person->id], ['confirm' => __('Are you sure
-                                you want to delete # {0}?', $person->id), 'title' => __('Delete'), 'class' => 'btn btn-default
+                                <?= $this->Form->postLink('', ['controller' => 'workingGroups', 'action' => 'delete', $workingGroups->id], ['confirm' => __('Are you sure
+                                you want to delete # {0}?', $workingGroups->id), 'title' => __('Delete'), 'class' => 'btn btn-default
                                 glyphicon glyphicon-trash']) ?>
                             </td>
                         </tr>

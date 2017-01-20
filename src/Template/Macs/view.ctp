@@ -118,12 +118,12 @@
                             </td>
                             
                                                         <td class="actions">
-                                <?= $this->Html->link('', ['action' => 'view', $mac->id], ['title' => __('View'), 'class' =>
+                                <?= $this->Html->link('', ['controller' => 'ips', 'action' => 'view', $ips->id], ['title' => __('View'), 'class' =>
                                 'btn btn-default glyphicon glyphicon-eye-open']) ?>
-                                <?= $this->Html->link('', ['action' => 'edit', $mac->id], ['title' => __('Edit'), 'class' =>
+                                <?= $this->Html->link('', ['controller' => 'ips', 'action' => 'edit', $ips->id], ['title' => __('Edit'), 'class' =>
                                 'btn btn-default glyphicon glyphicon-pencil']) ?>
-                                <?= $this->Form->postLink('', ['action' => 'delete', $mac->id], ['confirm' => __('Are you sure
-                                you want to delete # {0}?', $mac->id), 'title' => __('Delete'), 'class' => 'btn btn-default
+                                <?= $this->Form->postLink('', ['controller' => 'ips', 'action' => 'delete', $ips->id], ['confirm' => __('Are you sure
+                                you want to delete # {0}?', $ips->id), 'title' => __('Delete'), 'class' => 'btn btn-default
                                 glyphicon glyphicon-trash']) ?>
                             </td>
                         </tr>

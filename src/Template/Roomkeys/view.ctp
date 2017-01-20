@@ -217,12 +217,12 @@
                             </td>
                             
                                                         <td class="actions">
-                                <?= $this->Html->link('', ['action' => 'view', $roomkey->id], ['title' => __('View'), 'class' =>
+                                <?= $this->Html->link('', ['controller' => 'people', 'action' => 'view', $people->id], ['title' => __('View'), 'class' =>
                                 'btn btn-default glyphicon glyphicon-eye-open']) ?>
-                                <?= $this->Html->link('', ['action' => 'edit', $roomkey->id], ['title' => __('Edit'), 'class' =>
+                                <?= $this->Html->link('', ['controller' => 'people', 'action' => 'edit', $people->id], ['title' => __('Edit'), 'class' =>
                                 'btn btn-default glyphicon glyphicon-pencil']) ?>
-                                <?= $this->Form->postLink('', ['action' => 'delete', $roomkey->id], ['confirm' => __('Are you sure
-                                you want to delete # {0}?', $roomkey->id), 'title' => __('Delete'), 'class' => 'btn btn-default
+                                <?= $this->Form->postLink('', ['controller' => 'people', 'action' => 'delete', $people->id], ['confirm' => __('Are you sure
+                                you want to delete # {0}?', $people->id), 'title' => __('Delete'), 'class' => 'btn btn-default
                                 glyphicon glyphicon-trash']) ?>
                             </td>
                         </tr>

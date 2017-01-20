@@ -136,12 +136,12 @@
                             </td>
                             
                                                         <td class="actions">
-                                <?= $this->Html->link('', ['action' => 'view', $room->id], ['title' => __('View'), 'class' =>
+                                <?= $this->Html->link('', ['controller' => 'tenants', 'action' => 'view', $tenants->id], ['title' => __('View'), 'class' =>
                                 'btn btn-default glyphicon glyphicon-eye-open']) ?>
-                                <?= $this->Html->link('', ['action' => 'edit', $room->id], ['title' => __('Edit'), 'class' =>
+                                <?= $this->Html->link('', ['controller' => 'tenants', 'action' => 'edit', $tenants->id], ['title' => __('Edit'), 'class' =>
                                 'btn btn-default glyphicon glyphicon-pencil']) ?>
-                                <?= $this->Form->postLink('', ['action' => 'delete', $room->id], ['confirm' => __('Are you sure
-                                you want to delete # {0}?', $room->id), 'title' => __('Delete'), 'class' => 'btn btn-default
+                                <?= $this->Form->postLink('', ['controller' => 'tenants', 'action' => 'delete', $tenants->id], ['confirm' => __('Are you sure
+                                you want to delete # {0}?', $tenants->id), 'title' => __('Delete'), 'class' => 'btn btn-default
                                 glyphicon glyphicon-trash']) ?>
                             </td>
                         </tr>
