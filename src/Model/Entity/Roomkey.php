@@ -12,7 +12,6 @@ use Cake\ORM\Entity;
  * @property int $amount
  *
  * @property \App\Model\Entity\Person[] $people
- * @property \App\Model\Entity\RoomkeysPerson[] $roomkeys_people
  */
 class Roomkey extends Entity
 {

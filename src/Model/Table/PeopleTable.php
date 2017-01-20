@@ -20,6 +20,7 @@ use App\Model\Entity\Person;
  *
  * @property \Cake\ORM\Association\HasMany $FileserverUsers
  * @property \Cake\ORM\Association\HasMany $Macs
+ * @property \Cake\ORM\Association\HasMany $ModelHistory
  * @property \Cake\ORM\Association\HasMany $Tenants
  * @property \Cake\ORM\Association\BelongsToMany $Memberships
  * @property \Cake\ORM\Association\BelongsToMany $UserRoles
@@ -49,6 +50,7 @@ class PeopleTable extends Table
     public function initialize(array $config)
     {
         parent::initialize($config);
+
         $this->table('people');
         $this->displayField('id');
         $this->primaryKey('id');
@@ -59,6 +61,9 @@ class PeopleTable extends Table
             'foreignKey' => 'person_id'
         ]);
         $this->hasMany('Macs', [
+            'foreignKey' => 'person_id'
+        ]);
+        $this->hasMany('ModelHistory', [
             'foreignKey' => 'person_id'
         ]);
         $this->hasMany('Tenants', [

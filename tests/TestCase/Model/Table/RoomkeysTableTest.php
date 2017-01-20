@@ -27,23 +27,19 @@ class RoomkeysTableTest extends TestCase
         'app.roomkeys',
         'app.people',
         'app.fileserver_users',
-        'app.house_contibution',
         'app.macs',
         'app.ips',
-        'app.people_network',
-        'app.memberships',
-        'app.people_network_memberships',
-        'app.networkinfos',
         'app.tenants',
         'app.rooms',
+        'app.memberships',
+        'app.people_memberships',
         'app.user_roles',
         'app.people_user_roles',
         'app.permissions',
         'app.user_roles_permissions',
         'app.roomkeys_people',
         'app.working_groups',
-        'app.working_groups_people',
-        'app.workshops'
+        'app.working_groups_people'
     ];
 
     /**

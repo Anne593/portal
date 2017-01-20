@@ -58,7 +58,7 @@ class PeopleFixture extends TestFixture
             'surname' => 'Lorem ipsum dolor sit amet',
             'forename' => 'Lorem ipsum dolor sit amet',
             'email' => 'Lorem ipsum dolor sit amet',
-            'birthday' => '2017-01-19',
+            'birthday' => '2017-01-20',
             'matriculation_number' => 'Lorem',
             'studentenwerk_identification' => 1,
             'nationality' => 'Lorem ipsum dolor ',
@@ -68,9 +68,9 @@ class PeopleFixture extends TestFixture
             'password_retrieval' => 1,
             'status' => 'Lorem ipsum dolor sit amet',
             'failed_login_count' => 1,
-            'failed_login_timestamp' => '2017-01-19 21:34:44',
-            'created' => '2017-01-19 21:34:44',
-            'modified' => '2017-01-19 21:34:44',
+            'failed_login_timestamp' => '2017-01-20 17:01:19',
+            'created' => '2017-01-20 17:01:19',
+            'modified' => '2017-01-20 17:01:19',
             'last_passwords' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.'
         ],
     ];
