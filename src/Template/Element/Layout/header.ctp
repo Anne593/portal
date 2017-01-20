@@ -4,7 +4,7 @@ use App\Model\Entity\User;
 ?>
 <header class="main-header">
     <a href="<?= $this->Url->build(['controller' => 'dashboard', 'action' => 'index']) ?>" class="logo">
-        <span class="logo-lg"><b>scherer</b>software</span>
+        <span class="logo-lg">hilton<b>portal</b></span>
     </a>
 
     <nav class="navbar navbar-static-top" role="navigation">
