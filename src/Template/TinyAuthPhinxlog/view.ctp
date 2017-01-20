@@ -1,6 +1,6 @@
 <section class="content-header">
     <h1>
-        <?php echo __('Tenant'); ?>
+        <?php echo __('Tiny Auth Phinxlog'); ?>
     </h1>
     <ol class="breadcrumb">
         <li>
@@ -21,36 +21,28 @@
                 <!-- /.box-header -->
                 <div class="box-body">
                     <dl class="dl-horizontal">
-                                                                                                <dt><?= __('Person') ?></dt>
+                                                                                                <dt><?= __('Migration Name') ?></dt>
                         <dd>
-                            <?= $tenant->has('person') ? $tenant->person->id : '' ?>
-                        </dd>
-                                                                                                <dt><?= __('Room') ?></dt>
-                        <dd>
-                            <?= $tenant->has('room') ? $tenant->room->id : '' ?>
-                        </dd>
-                                                                                                <dt><?= __('Comment') ?></dt>
-                        <dd>
-                            <?= h($tenant->comment) ?>
+                            <?= h($tinyAuthPhinxlog->migration_name) ?>
                         </dd>
                                                                                                 
                         
                                                                                                                         
-                                                                                                <dt><?= __('Date Move In') ?></dt>
+                                                                                                <dt><?= __('Start Time') ?></dt>
                         <dd>
-                            <?= h($tenant->date_move_in) ?>
+                            <?= h($tinyAuthPhinxlog->start_time) ?>
                         </dd>
-                                                                                                <dt><?= __('Date Move Out') ?></dt>
+                                                                                                <dt><?= __('End Time') ?></dt>
                         <dd>
-                            <?= h($tenant->date_move_out) ?>
+                            <?= h($tinyAuthPhinxlog->end_time) ?>
                         </dd>
                                                                         
-                        
-                                                                        <dt><?= __('Tenant Type') ?></dt>
+                                                                        <dt><?= __('Breakpoint') ?></dt>
                         <dd>
-                            <?= $this->Text->autoParagraph(h($tenant->tenant_type)); ?>
+                            <?= $tinyAuthPhinxlog->breakpoint ? __('Yes') : __('No'); ?>
                         </dd>
-                                                                    </dl>
+                                                
+                                            </dl>
                 </div>
                 <!-- /.box-body -->
             </div>

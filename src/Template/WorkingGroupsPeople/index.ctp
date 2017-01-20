@@ -1,53 +1,58 @@
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Working Groups Person'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List People'), ['controller' => 'People', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Person'), ['controller' => 'People', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Working Groups'), ['controller' => 'WorkingGroups', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Working Group'), ['controller' => 'WorkingGroups', 'action' => 'add']) ?></li>
-    </ul>
-</nav>
-<div class="workingGroupsPeople index large-9 medium-8 columns content">
-    <h3><?= __('Working Groups People') ?></h3>
-    <table cellpadding="0" cellspacing="0">
-        <thead>
-            <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('person_id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('working_group_id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('member_since') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('member_until') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('mailing_list_enabled') ?></th>
-                <th scope="col" class="actions"><?= __('Actions') ?></th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($workingGroupsPeople as $workingGroupsPerson): ?>
-            <tr>
-                <td><?= $this->Number->format($workingGroupsPerson->id) ?></td>
-                <td><?= $workingGroupsPerson->has('person') ? $this->Html->link($workingGroupsPerson->person->id, ['controller' => 'People', 'action' => 'view', $workingGroupsPerson->person->id]) : '' ?></td>
-                <td><?= $workingGroupsPerson->has('working_group') ? $this->Html->link($workingGroupsPerson->working_group->name, ['controller' => 'WorkingGroups', 'action' => 'view', $workingGroupsPerson->working_group->id]) : '' ?></td>
-                <td><?= h($workingGroupsPerson->member_since) ?></td>
-                <td><?= h($workingGroupsPerson->member_until) ?></td>
-                <td><?= h($workingGroupsPerson->mailing_list_enabled) ?></td>
-                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $workingGroupsPerson->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $workingGroupsPerson->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $workingGroupsPerson->id], ['confirm' => __('Are you sure you want to delete # {0}?', $workingGroupsPerson->id)]) ?>
-                </td>
-            </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
-    <div class="paginator">
-        <ul class="pagination">
-            <?= $this->Paginator->first('<< ' . __('first')) ?>
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
-            <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
-            <?= $this->Paginator->last(__('last') . ' >>') ?>
-        </ul>
-        <p><?= $this->Paginator->counter(['format' => __('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')]) ?></p>
+
+<div class="box">
+    <div class="box-header with-border">
+        <h3 class="box-title">
+            <?= __('users.index.title') ?>
+        </h3>
+        <div class="box-tools pull-right">
+            <?= $this->CkTools->addButton(__('users.add'), [
+            'class' => 'btn btn-default btn-add btn-xs'
+            ]) ?>
+        </div>
+    </div>
+    <div class="box-body">
+        <div class="table-responsive">
+                        <table class="table table-striped" cellpadding="0" cellspacing="0">
+                <thead>
+                <tr>
+                                            <th><?= $this->Paginator->sort('id'); ?></th>
+                                            <th><?= $this->Paginator->sort('person_id'); ?></th>
+                                            <th><?= $this->Paginator->sort('working_group_id'); ?></th>
+                                            <th><?= $this->Paginator->sort('member_since'); ?></th>
+                                            <th><?= $this->Paginator->sort('member_until'); ?></th>
+                                            <th><?= $this->Paginator->sort('mailing_list_enabled'); ?></th>
+                                        <th class="actions"><?= __('Actions'); ?></th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php foreach ($workingGroupsPeople as $workingGroupsPerson): ?>
+                <tr>
+                                        <td><?= $this->Number->format($workingGroupsPerson->id) ?></td>
+                                        <td>
+                        <?= $workingGroupsPerson->has('person') ? $this->Html->link($workingGroupsPerson->person->id, ['controller' =>
+                        'People', 'action' => 'view', $workingGroupsPerson->person->id]) : '' ?>
+                    </td>
+                                        <td>
+                        <?= $workingGroupsPerson->has('working_group') ? $this->Html->link($workingGroupsPerson->working_group->name, ['controller' =>
+                        'WorkingGroups', 'action' => 'view', $workingGroupsPerson->working_group->id]) : '' ?>
+                    </td>
+                                        <td><?= h($workingGroupsPerson->member_since) ?></td>
+                                        <td><?= h($workingGroupsPerson->member_until) ?></td>
+                                        <td><?= h($workingGroupsPerson->mailing_list_enabled) ?></td>
+                                        <td class="actions">
+                        <?= $this->Html->link('', ['action' => 'view', $workingGroupsPerson->id], ['title' => __('View'), 'class' =>
+                        'btn btn-default glyphicon glyphicon-eye-open']) ?>
+                        <?= $this->Html->link('', ['action' => 'edit', $workingGroupsPerson->id], ['title' => __('Edit'), 'class' =>
+                        'btn btn-default glyphicon glyphicon-pencil']) ?>
+                        <?= $this->Form->postLink('', ['action' => 'delete', $workingGroupsPerson->id], ['confirm' => __('Are you sure
+                        you want to delete # {0}?', $workingGroupsPerson->id), 'title' => __('Delete'), 'class' => 'btn btn-default
+                        glyphicon glyphicon-trash']) ?>
+                    </td>
+                </tr>
+                <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
+<?= $this->Paginator->numbers() ?>

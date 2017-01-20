@@ -1,19 +1,18 @@
-<?php
-$this->assign('title', __('users.add.title'));
-?>
-
-<div class="users form box">
-    <div class="box-header with-border">
-        <h3 class="box-title">
-            <?= __('users.add.title') ?>
-        </h3>
-        <div class="box-tools pull-right">
-            <div class="pull-right">
-                <?= $this->ListFilter->backToListButton() ?>
-            </div>
-        </div>
-    </div>
-
-    <?= $this->element('../Users/form') ?>
-
+<nav class="large-3 medium-4 columns" id="actions-sidebar">
+    <ul class="side-nav">
+        <li class="heading"><?= __('Actions') ?></li>
+        <li><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?></li>
+    </ul>
+</nav>
+<div class="users form large-9 medium-8 columns content">
+    <?= $this->Form->create($user) ?>
+    <fieldset>
+        <legend><?= __('Add User') ?></legend>
+        <?php
+            echo $this->Form->input('username');
+            echo $this->Form->input('password');
+        ?>
+    </fieldset>
+    <?= $this->Form->button(__('Submit')) ?>
+    <?= $this->Form->end() ?>
 </div>

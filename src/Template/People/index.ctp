@@ -15,13 +15,13 @@
                         <table class="table table-striped" cellpadding="0" cellspacing="0">
                 <thead>
                 <tr>
-                                        <th><?= $this->Paginator->sort('id'); ?></th>
-                                        <th><?= $this->Paginator->sort('surname'); ?></th>
-                                        <th><?= $this->Paginator->sort('forename'); ?></th>
-                                        <th><?= $this->Paginator->sort('email'); ?></th>
-                                        <th><?= $this->Paginator->sort('birthday'); ?></th>
-                                        <th><?= $this->Paginator->sort('matriculation_number'); ?></th>
-                                        <th><?= $this->Paginator->sort('studentenwerk_identification'); ?></th>
+                                            <th><?= $this->Paginator->sort('id'); ?></th>
+                                            <th><?= $this->Paginator->sort('surname'); ?></th>
+                                            <th><?= $this->Paginator->sort('forename'); ?></th>
+                                            <th><?= $this->Paginator->sort('email'); ?></th>
+                                            <th><?= $this->Paginator->sort('birthday'); ?></th>
+                                            <th><?= $this->Paginator->sort('matriculation_number'); ?></th>
+                                            <th><?= $this->Paginator->sort('studentenwerk_identification'); ?></th>
                                         <th class="actions"><?= __('Actions'); ?></th>
                 </tr>
                 </thead>

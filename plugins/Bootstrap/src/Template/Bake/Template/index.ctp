@@ -16,17 +16,17 @@ use Cake\Utility\Inflector;
     </div>
     <div class="box-body">
         <div class="table-responsive">
-            <?php $fields = collection($fields)
+            <% $fields = collection($fields)
                 ->filter(function($field) use ($schema) {
-                    return !in_array($schema->columnType($field), ['binary', 'text']);
-                })
-            ->take(7);
-            ?>
+                        return !in_array($schema->columnType($field), ['binary', 'text']);
+                    })
+                ->take(7);
+            %>
             <table class="table table-striped" cellpadding="0" cellspacing="0">
                 <thead>
                 <tr>
                     <% foreach ($fields as $field): %>
-                    <th><?= $this->Paginator->sort('<%= $field %>'); ?></th>
+                        <th><?= $this->Paginator->sort('<%= $field %>'); ?></th>
                     <% endforeach; %>
                     <th class="actions"><?= __('Actions'); ?></th>
                 </tr>
@@ -36,11 +36,11 @@ use Cake\Utility\Inflector;
                 <tr>
                     <%
                     foreach ($fields as $field) {
-                    $isKey = false;
-                    if (!empty($associations['BelongsTo'])) {
-                    foreach ($associations['BelongsTo'] as $alias => $details) {
-                    if ($field === $details['foreignKey']) {
-                    $isKey = true;
+                        $isKey = false;
+                        if (!empty($associations['BelongsTo'])) {
+                            foreach ($associations['BelongsTo'] as $alias => $details) {
+                                if ($field === $details['foreignKey']) {
+                                $isKey = true;
                     %>
                     <td>
                         <?= $<%= $singularVar %>->has('<%= $details['property'] %>') ? $this->Html->link($<%=
