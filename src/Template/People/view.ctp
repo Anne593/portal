@@ -114,7 +114,7 @@
 
                                                         
                             <th>
-                                Person Id
+                                Person
                             </th>
 
                                                         
@@ -161,7 +161,7 @@
                             </td>
                                                         
                             <td>
-                                <?= h($fileserverUsers->person_id) ?>
+                                <?= h($person->full_name) ?>
                             </td>
                                                         
                             <td>
@@ -233,7 +233,7 @@
 
                                                         
                             <th>
-                                Person Id
+                                Person
                             </th>
 
                                                         
@@ -260,7 +260,7 @@
                             </td>
                                                         
                             <td>
-                                <?= h($macs->person_id) ?>
+                                <?= h($person->full_name) ?>
                             </td>
                                                         
                             <td>
@@ -316,7 +316,7 @@
 
                                                         
                             <th>
-                                Person Id
+                                Person
                             </th>
 
                                                         
@@ -358,7 +358,7 @@
                             </td>
                                                         
                             <td>
-                                <?= h($tenants->person_id) ?>
+                                <?= h($person->full_name) ?>
                             </td>
                                                         
                             <td>

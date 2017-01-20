@@ -31,7 +31,7 @@
                                         <td><?= $this->Number->format($peopleMembership->id) ?></td>
                                         <td><?= $this->Number->format($peopleMembership->semester) ?></td>
                                         <td>
-                        <?= $peopleMembership->has('person') ? $this->Html->link($peopleMembership->person->id, ['controller' =>
+                        <?= $peopleMembership->has('person') ? $this->Html->link($peopleMembership->person->full_name, ['controller' =>
                         'People', 'action' => 'view', $peopleMembership->person->id]) : '' ?>
                     </td>
                                         <td>

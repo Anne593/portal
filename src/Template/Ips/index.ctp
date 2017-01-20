@@ -28,7 +28,7 @@
                 <tr>
                                         <td><?= $this->Number->format($ip->id) ?></td>
                                         <td>
-                        <?= $ip->has('mac') ? $this->Html->link($ip->mac->id, ['controller' =>
+                        <?= $ip->has('mac') ? $this->Html->link($ip->mac->mac, ['controller' =>
                         'Macs', 'action' => 'view', $ip->mac->id]) : '' ?>
                     </td>
                                         <td><?= h($ip->ip) ?></td>

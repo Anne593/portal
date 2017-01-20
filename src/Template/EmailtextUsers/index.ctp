@@ -26,7 +26,7 @@
                 <tr>
                                         <td><?= $this->Number->format($emailtextUser->id) ?></td>
                                         <td>
-                        <?= $emailtextUser->has('emailtext') ? $this->Html->link($emailtextUser->emailtext->id, ['controller' =>
+                        <?= $emailtextUser->has('emailtext') ? $this->Html->link($emailtextUser->emailtext->subject, ['controller' =>
                         'Emailtexts', 'action' => 'view', $emailtextUser->emailtext->id]) : '' ?>
                     </td>
                                         <td><?= $this->Number->format($emailtextUser->type_id) ?></td>

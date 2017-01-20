@@ -30,7 +30,7 @@
                 <tr>
                                         <td><?= $this->Number->format($fileserverUser->id) ?></td>
                                         <td>
-                        <?= $fileserverUser->has('person') ? $this->Html->link($fileserverUser->person->id, ['controller' =>
+                        <?= $fileserverUser->has('person') ? $this->Html->link($fileserverUser->person->full_name, ['controller' =>
                         'People', 'action' => 'view', $fileserverUser->person->id]) : '' ?>
                     </td>
                                         <td><?= h($fileserverUser->username) ?></td>

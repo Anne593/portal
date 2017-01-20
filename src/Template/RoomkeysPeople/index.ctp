@@ -31,7 +31,7 @@
                         'Roomkeys', 'action' => 'view', $roomkeysPerson->roomkey->id]) : '' ?>
                     </td>
                                         <td>
-                        <?= $roomkeysPerson->has('person') ? $this->Html->link($roomkeysPerson->person->id, ['controller' =>
+                        <?= $roomkeysPerson->has('person') ? $this->Html->link($roomkeysPerson->person->full_name, ['controller' =>
                         'People', 'action' => 'view', $roomkeysPerson->person->id]) : '' ?>
                     </td>
                                         <td><?= h($roomkeysPerson->comment) ?></td>

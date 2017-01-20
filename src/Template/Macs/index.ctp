@@ -27,7 +27,7 @@
                 <tr>
                                         <td><?= $this->Number->format($mac->id) ?></td>
                                         <td>
-                        <?= $mac->has('person') ? $this->Html->link($mac->person->id, ['controller' =>
+                        <?= $mac->has('person') ? $this->Html->link($mac->person->full_name, ['controller' =>
                         'People', 'action' => 'view', $mac->person->id]) : '' ?>
                     </td>
                                         <td><?= h($mac->mac) ?></td>

@@ -26,7 +26,7 @@
                 <tr>
                                         <td><?= $this->Number->format($peopleUserRole->id) ?></td>
                                         <td>
-                        <?= $peopleUserRole->has('person') ? $this->Html->link($peopleUserRole->person->id, ['controller' =>
+                        <?= $peopleUserRole->has('person') ? $this->Html->link($peopleUserRole->person->full_name, ['controller' =>
                         'People', 'action' => 'view', $peopleUserRole->person->id]) : '' ?>
                     </td>
                                         <td>

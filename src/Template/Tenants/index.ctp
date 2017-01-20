@@ -29,7 +29,7 @@
                 <tr>
                                         <td><?= $this->Number->format($tenant->id) ?></td>
                                         <td>
-                        <?= $tenant->has('person') ? $this->Html->link($tenant->person->id, ['controller' =>
+                        <?= $tenant->has('person') ? $this->Html->link($tenant->person->full_name, ['controller' =>
                         'People', 'action' => 'view', $tenant->person->id]) : '' ?>
                     </td>
                                         <td>
