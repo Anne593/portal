@@ -4,7 +4,8 @@
         <li><?= $this->Html->link(__('List Model History Phinxlog'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Phinxlog'), ['controller' => 'Phinxlog', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Phinxlog'), ['controller' => 'Phinxlog', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Model History'), ['controller' => 'ModelHistory', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Model History'), ['controller' => 'ModelHistory', 'action' => 'index']) ?>
+        </li>
         <li><?= $this->Html->link(__('New Model History'), ['controller' => 'ModelHistory', 'action' => 'add']) ?></li>
     </ul>
 </nav>
@@ -14,9 +15,9 @@
         <legend><?= __('Add Model History Phinxlog') ?></legend>
         <?php
             echo $this->Form->input('migration_name');
-            echo $this->Form->input('start_time');
-            echo $this->Form->input('end_time');
-            echo $this->Form->input('breakpoint');
+        echo $this->Form->input('start_time');
+        echo $this->Form->input('end_time');
+        echo $this->Form->input('breakpoint');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

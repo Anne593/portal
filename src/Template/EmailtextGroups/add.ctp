@@ -14,7 +14,7 @@
         <legend><?= __('Add Emailtext Group') ?></legend>
         <?php
             echo $this->Form->input('emailtext_id', ['options' => $emailtexts]);
-            echo $this->Form->input('group_id', ['options' => $groups]);
+        echo $this->Form->input('group_id', ['options' => $groups]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

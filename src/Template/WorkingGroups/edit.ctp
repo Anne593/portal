@@ -2,11 +2,12 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $workingGroup->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $workingGroup->id)]
+            __('Delete'),
+            ['action' => 'delete', $workingGroup->id],
+            ['confirm' => __('Are you sure you want to delete # {0}?', $workingGroup->id)]
             )
-        ?></li>
+            ?>
+        </li>
         <li><?= $this->Html->link(__('List Working Groups'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List People'), ['controller' => 'People', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Person'), ['controller' => 'People', 'action' => 'add']) ?></li>
@@ -18,8 +19,8 @@
         <legend><?= __('Edit Working Group') ?></legend>
         <?php
             echo $this->Form->input('name');
-            echo $this->Form->input('description');
-            echo $this->Form->input('people._ids', ['options' => $people]);
+        echo $this->Form->input('description');
+        echo $this->Form->input('people._ids', ['options' => $people]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

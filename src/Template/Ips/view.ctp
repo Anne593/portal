@@ -4,7 +4,8 @@
     </h1>
     <ol class="breadcrumb">
         <li>
-            <?= $this->Html->link('<i class="fa fa-chevron-left"></i> ' . __('Back'), ['action' => 'index'], ['escape' => false])?>
+            <?= $this->Html->link('<i class="fa fa-chevron-left"></i> ' . __('Back'), ['action' => 'index'], ['escape'
+            => false])?>
         </li>
     </ol>
 </section>
@@ -21,28 +22,27 @@
                 <!-- /.box-header -->
                 <div class="box-body">
                     <dl class="dl-horizontal">
-                                                                                                <dt><?= __('Mac') ?></dt>
+                        <dt><?= __('Mac') ?></dt>
                         <dd>
                             <?= $ip->has('mac') ? $ip->mac->id : '' ?>
                         </dd>
-                                                                                                <dt><?= __('Ip') ?></dt>
+                        <dt><?= __('Ip') ?></dt>
                         <dd>
                             <?= h($ip->ip) ?>
                         </dd>
-                                                                                                
-                        
-                                                                                                                        
-                                                                                                <dt><?= __('Lease Start') ?></dt>
+
+
+                        <dt><?= __('Lease Start') ?></dt>
                         <dd>
                             <?= h($ip->lease_start) ?>
                         </dd>
-                                                                                                <dt><?= __('Lease End') ?></dt>
+                        <dt><?= __('Lease End') ?></dt>
                         <dd>
                             <?= h($ip->lease_end) ?>
                         </dd>
-                                                                        
-                        
-                                            </dl>
+
+
+                    </dl>
                 </div>
                 <!-- /.box-body -->
             </div>
@@ -52,4 +52,4 @@
     </div>
     <!-- div -->
 
-    </section>
+</section>

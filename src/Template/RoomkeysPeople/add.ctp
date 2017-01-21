@@ -14,9 +14,9 @@
         <legend><?= __('Add Roomkeys Person') ?></legend>
         <?php
             echo $this->Form->input('roomkey_id', ['options' => $roomkeys]);
-            echo $this->Form->input('person_id', ['options' => $people]);
-            echo $this->Form->input('type');
-            echo $this->Form->input('comment');
+        echo $this->Form->input('person_id', ['options' => $people]);
+        echo $this->Form->input('type');
+        echo $this->Form->input('comment');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

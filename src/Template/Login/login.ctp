@@ -12,36 +12,37 @@ $this->assign('bodyClasses', 'login-page');
         <p class="login-box-msg"><?= __('login.please_login') ?></p>
         <?php
             echo $this->Form->create($person);
-            echo $this->Form->input('email', [
-                'placeholder' => __('user.email'),
-                'class' => 'form-control autofocus',
-                'label' => false,
-            ]);
-            echo $this->Form->input('password', [
-                'placeholder' => __('user.password'),
-                'label' => false,
-            ]);
-            echo $this->Form->input('cookie', [
-                'type' => 'checkbox',
-                'label' => __('login.login_for_two_weeks'),
-            ]);
-            echo $this->Form->submit(__('login.login'), [
-                'class' => 'btn btn-lg btn-primary btn-block'
-            ]);
-            echo $this->Form->end();
+        echo $this->Form->input('email', [
+        'placeholder' => __('user.email'),
+        'class' => 'form-control autofocus',
+        'label' => false,
+        ]);
+        echo $this->Form->input('password', [
+        'placeholder' => __('user.password'),
+        'label' => false,
+        ]);
+        echo $this->Form->input('cookie', [
+        'type' => 'checkbox',
+        'label' => __('login.login_for_two_weeks'),
+        ]);
+        echo $this->Form->submit(__('login.login'), [
+        'class' => 'btn btn-lg btn-primary btn-block'
+        ]);
+        echo $this->Form->end();
         ?>
         <div class="social-auth-links text-center">
             <p>- <?= __('login.or') ?> -</p>
-            <?= $this->Html->link(__('login.forgot_password'), ['plugin' => null, 'controller' => 'login', 'action' => 'forgot-password']) ?><br>
+            <?= $this->Html->link(__('login.forgot_password'), ['plugin' => null, 'controller' => 'login', 'action' =>
+            'forgot-password']) ?><br>
         </div>
         <?php if (ENVIRONMENT === Environment::DEVELOPMENT) : ?>
-            <hr>
-            <dl>
-                <dt><?= __('user.email') ?></dt>
-                <dd><code>lukas.stark@example.com, anne.snow@example.com</code></dd>
-                <dt><?= __('user.password') ?></dt>
-                <dd><code>password</code></dd>
-            </dl>
+        <hr>
+        <dl>
+            <dt><?= __('user.email') ?></dt>
+            <dd><code>lukas.stark@example.com, anne.snow@example.com</code></dd>
+            <dt><?= __('user.password') ?></dt>
+            <dd><code>password</code></dd>
+        </dl>
         <?php endif; ?>
     </div>
 </div>

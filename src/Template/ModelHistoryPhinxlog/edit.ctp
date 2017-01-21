@@ -2,15 +2,17 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $modelHistoryPhinxlog->version],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $modelHistoryPhinxlog->version)]
+            __('Delete'),
+            ['action' => 'delete', $modelHistoryPhinxlog->version],
+            ['confirm' => __('Are you sure you want to delete # {0}?', $modelHistoryPhinxlog->version)]
             )
-        ?></li>
+            ?>
+        </li>
         <li><?= $this->Html->link(__('List Model History Phinxlog'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Phinxlog'), ['controller' => 'Phinxlog', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Phinxlog'), ['controller' => 'Phinxlog', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Model History'), ['controller' => 'ModelHistory', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Model History'), ['controller' => 'ModelHistory', 'action' => 'index']) ?>
+        </li>
         <li><?= $this->Html->link(__('New Model History'), ['controller' => 'ModelHistory', 'action' => 'add']) ?></li>
     </ul>
 </nav>
@@ -20,9 +22,9 @@
         <legend><?= __('Edit Model History Phinxlog') ?></legend>
         <?php
             echo $this->Form->input('migration_name');
-            echo $this->Form->input('start_time');
-            echo $this->Form->input('end_time');
-            echo $this->Form->input('breakpoint');
+        echo $this->Form->input('start_time');
+        echo $this->Form->input('end_time');
+        echo $this->Form->input('breakpoint');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

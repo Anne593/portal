@@ -12,9 +12,9 @@
         <legend><?= __('Add Ip') ?></legend>
         <?php
             echo $this->Form->input('mac_id', ['options' => $macs]);
-            echo $this->Form->input('ip');
-            echo $this->Form->input('lease_start');
-            echo $this->Form->input('lease_end');
+        echo $this->Form->input('ip');
+        echo $this->Form->input('lease_start');
+        echo $this->Form->input('lease_end');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

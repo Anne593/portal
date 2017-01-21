@@ -2,11 +2,12 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $job->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $job->id)]
+            __('Delete'),
+            ['action' => 'delete', $job->id],
+            ['confirm' => __('Are you sure you want to delete # {0}?', $job->id)]
             )
-        ?></li>
+            ?>
+        </li>
         <li><?= $this->Html->link(__('List Jobs'), ['action' => 'index']) ?></li>
     </ul>
 </nav>
@@ -16,12 +17,12 @@
         <legend><?= __('Edit Job') ?></legend>
         <?php
             echo $this->Form->input('queue');
-            echo $this->Form->input('data');
-            echo $this->Form->input('priority');
-            echo $this->Form->input('expires_at', ['empty' => true]);
-            echo $this->Form->input('delay_until', ['empty' => true]);
-            echo $this->Form->input('locked');
-            echo $this->Form->input('attempts');
+        echo $this->Form->input('data');
+        echo $this->Form->input('priority');
+        echo $this->Form->input('expires_at', ['empty' => true]);
+        echo $this->Form->input('delay_until', ['empty' => true]);
+        echo $this->Form->input('locked');
+        echo $this->Form->input('attempts');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

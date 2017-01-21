@@ -2,11 +2,12 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $membership->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $membership->id)]
+            __('Delete'),
+            ['action' => 'delete', $membership->id],
+            ['confirm' => __('Are you sure you want to delete # {0}?', $membership->id)]
             )
-        ?></li>
+            ?>
+        </li>
         <li><?= $this->Html->link(__('List Memberships'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List People'), ['controller' => 'People', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Person'), ['controller' => 'People', 'action' => 'add']) ?></li>
@@ -18,10 +19,10 @@
         <legend><?= __('Edit Membership') ?></legend>
         <?php
             echo $this->Form->input('name');
-            echo $this->Form->input('type');
-            echo $this->Form->input('description');
-            echo $this->Form->input('membership_fee');
-            echo $this->Form->input('people._ids', ['options' => $people]);
+        echo $this->Form->input('type');
+        echo $this->Form->input('description');
+        echo $this->Form->input('membership_fee');
+        echo $this->Form->input('people._ids', ['options' => $people]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

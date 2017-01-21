@@ -4,7 +4,8 @@
     </h1>
     <ol class="breadcrumb">
         <li>
-            <?= $this->Html->link('<i class="fa fa-chevron-left"></i> ' . __('Back'), ['action' => 'index'], ['escape' => false])?>
+            <?= $this->Html->link('<i class="fa fa-chevron-left"></i> ' . __('Back'), ['action' => 'index'], ['escape'
+            => false])?>
         </li>
     </ol>
 </section>
@@ -21,24 +22,21 @@
                 <!-- /.box-header -->
                 <div class="box-body">
                     <dl class="dl-horizontal">
-                                                                                                <dt><?= __('Person') ?></dt>
+                        <dt><?= __('Person') ?></dt>
                         <dd>
                             <?= $mac->has('person') ? $mac->person->id : '' ?>
                         </dd>
-                                                                                                <dt><?= __('Mac') ?></dt>
+                        <dt><?= __('Mac') ?></dt>
                         <dd>
                             <?= h($mac->mac) ?>
                         </dd>
-                                                                                                                        <dt><?= __('Device Name') ?></dt>
+                        <dt><?= __('Device Name') ?></dt>
                         <dd>
                             <?= h($mac->device_name) ?>
                         </dd>
-                                                                                                
-                        
-                                                                                                                        
-                        
-                        
-                                            </dl>
+
+
+                    </dl>
                 </div>
                 <!-- /.box-body -->
             </div>
@@ -48,7 +46,7 @@
     </div>
     <!-- div -->
 
-        <div class="row">
+    <div class="row">
         <div class="col-xs-12">
             <div class="box">
                 <div class="box-header">
@@ -63,32 +61,32 @@
                     <table class="table table-hover">
                         <tbody>
                         <tr>
-                                                        
+
                             <th>
                                 Id
                             </th>
 
-                                                        
+
                             <th>
                                 Mac Id
                             </th>
 
-                                                        
+
                             <th>
                                 Ip
                             </th>
 
-                                                        
+
                             <th>
                                 Lease Start
                             </th>
 
-                                                        
+
                             <th>
                                 Lease End
                             </th>
 
-                            
+
                             <th>
                                 <?php echo __('Actions'); ?>
                             </th>
@@ -96,34 +94,38 @@
 
                         <?php foreach ($mac->ips as $ips): ?>
                         <tr>
-                                                        
+
                             <td>
                                 <?= h($ips->id) ?>
                             </td>
-                                                        
+
                             <td>
                                 <?= h($ips->mac_id) ?>
                             </td>
-                                                        
+
                             <td>
                                 <?= h($ips->ip) ?>
                             </td>
-                                                        
+
                             <td>
                                 <?= h($ips->lease_start) ?>
                             </td>
-                                                        
+
                             <td>
                                 <?= h($ips->lease_end) ?>
                             </td>
-                            
-                                                        <td class="actions">
-                                <?= $this->Html->link('', ['controller' => 'ips', 'action' => 'view', $ips->id], ['title' => __('View'), 'class' =>
+
+                            <td class="actions">
+                                <?= $this->Html->link('', ['controller' => 'ips', 'action' => 'view', $ips->id],
+                                ['title' => __('View'), 'class' =>
                                 'btn btn-default glyphicon glyphicon-eye-open']) ?>
-                                <?= $this->Html->link('', ['controller' => 'ips', 'action' => 'edit', $ips->id], ['title' => __('Edit'), 'class' =>
+                                <?= $this->Html->link('', ['controller' => 'ips', 'action' => 'edit', $ips->id],
+                                ['title' => __('Edit'), 'class' =>
                                 'btn btn-default glyphicon glyphicon-pencil']) ?>
-                                <?= $this->Form->postLink('', ['controller' => 'ips', 'action' => 'delete', $ips->id], ['confirm' => __('Are you sure
-                                you want to delete # {0}?', $ips->id), 'title' => __('Delete'), 'class' => 'btn btn-default
+                                <?= $this->Form->postLink('', ['controller' => 'ips', 'action' => 'delete', $ips->id],
+                                ['confirm' => __('Are you sure
+                                you want to delete # {0}?', $ips->id), 'title' => __('Delete'), 'class' => 'btn
+                                btn-default
                                 glyphicon glyphicon-trash']) ?>
                             </td>
                         </tr>
@@ -140,4 +142,4 @@
             <!-- /.box -->
         </div>
     </div>
-    </section>
+</section>

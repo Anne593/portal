@@ -12,9 +12,9 @@
         <legend><?= __('Add Permission') ?></legend>
         <?php
             echo $this->Form->input('type');
-            echo $this->Form->input('model');
-            echo $this->Form->input('field_name');
-            echo $this->Form->input('user_roles._ids', ['options' => $userRoles]);
+        echo $this->Form->input('model');
+        echo $this->Form->input('field_name');
+        echo $this->Form->input('user_roles._ids', ['options' => $userRoles]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

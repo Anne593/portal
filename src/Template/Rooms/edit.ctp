@@ -2,11 +2,12 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $room->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $room->id)]
+            __('Delete'),
+            ['action' => 'delete', $room->id],
+            ['confirm' => __('Are you sure you want to delete # {0}?', $room->id)]
             )
-        ?></li>
+            ?>
+        </li>
         <li><?= $this->Html->link(__('List Rooms'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Tenants'), ['controller' => 'Tenants', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Tenant'), ['controller' => 'Tenants', 'action' => 'add']) ?></li>
@@ -18,8 +19,8 @@
         <legend><?= __('Edit Room') ?></legend>
         <?php
             echo $this->Form->input('eth_port0');
-            echo $this->Form->input('eth_port1');
-            echo $this->Form->input('comment');
+        echo $this->Form->input('eth_port1');
+        echo $this->Form->input('comment');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

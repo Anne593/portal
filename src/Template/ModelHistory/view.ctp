@@ -4,7 +4,8 @@
     </h1>
     <ol class="breadcrumb">
         <li>
-            <?= $this->Html->link('<i class="fa fa-chevron-left"></i> ' . __('Back'), ['action' => 'index'], ['escape' => false])?>
+            <?= $this->Html->link('<i class="fa fa-chevron-left"></i> ' . __('Back'), ['action' => 'index'], ['escape'
+            => false])?>
         </li>
     </ol>
 </section>
@@ -21,52 +22,51 @@
                 <!-- /.box-header -->
                 <div class="box-body">
                     <dl class="dl-horizontal">
-                                                                                                <dt><?= __('Id') ?></dt>
+                        <dt><?= __('Id') ?></dt>
                         <dd>
                             <?= h($modelHistory->id) ?>
                         </dd>
-                                                                                                                        <dt><?= __('Model') ?></dt>
+                        <dt><?= __('Model') ?></dt>
                         <dd>
                             <?= h($modelHistory->model) ?>
                         </dd>
-                                                                                                                        <dt><?= __('Foreign Key') ?></dt>
+                        <dt><?= __('Foreign Key') ?></dt>
                         <dd>
                             <?= h($modelHistory->foreign_key) ?>
                         </dd>
-                                                                                                                        <dt><?= __('User Id') ?></dt>
+                        <dt><?= __('User Id') ?></dt>
                         <dd>
                             <?= h($modelHistory->user_id) ?>
                         </dd>
-                                                                                                                        <dt><?= __('Action') ?></dt>
+                        <dt><?= __('Action') ?></dt>
                         <dd>
                             <?= h($modelHistory->action) ?>
                         </dd>
-                                                                                                                        <dt><?= __('Context Type') ?></dt>
+                        <dt><?= __('Context Type') ?></dt>
                         <dd>
                             <?= h($modelHistory->context_type) ?>
                         </dd>
-                                                                                                                        <dt><?= __('Context Slug') ?></dt>
+                        <dt><?= __('Context Slug') ?></dt>
                         <dd>
                             <?= h($modelHistory->context_slug) ?>
                         </dd>
-                                                                                                
-                        
-                                                                                                <dt><?= __('Revision') ?></dt>
+
+
+                        <dt><?= __('Revision') ?></dt>
                         <dd>
                             <?= $this->Number->format($modelHistory->revision) ?>
                         </dd>
-                                                                        
-                                                                                                                        
-                        
-                                                                        <dt><?= __('Data') ?></dt>
+
+
+                        <dt><?= __('Data') ?></dt>
                         <dd>
                             <?= $this->Text->autoParagraph(h($modelHistory->data)); ?>
                         </dd>
-                                                <dt><?= __('Context') ?></dt>
+                        <dt><?= __('Context') ?></dt>
                         <dd>
                             <?= $this->Text->autoParagraph(h($modelHistory->context)); ?>
                         </dd>
-                                                                    </dl>
+                    </dl>
                 </div>
                 <!-- /.box-body -->
             </div>
@@ -76,4 +76,4 @@
     </div>
     <!-- div -->
 
-    </section>
+</section>

@@ -10,9 +10,9 @@
         <legend><?= __('Add Tiny Auth Phinxlog') ?></legend>
         <?php
             echo $this->Form->input('migration_name');
-            echo $this->Form->input('start_time');
-            echo $this->Form->input('end_time');
-            echo $this->Form->input('breakpoint');
+        echo $this->Form->input('start_time');
+        echo $this->Form->input('end_time');
+        echo $this->Form->input('breakpoint');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

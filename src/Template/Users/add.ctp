@@ -10,7 +10,7 @@
         <legend><?= __('Add User') ?></legend>
         <?php
             echo $this->Form->input('username');
-            echo $this->Form->input('password');
+        echo $this->Form->input('password');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

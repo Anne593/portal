@@ -12,9 +12,9 @@
         <legend><?= __('Add Roomkey') ?></legend>
         <?php
             echo $this->Form->input('name');
-            echo $this->Form->input('discription');
-            echo $this->Form->input('amount');
-            echo $this->Form->input('people._ids', ['options' => $people]);
+        echo $this->Form->input('discription');
+        echo $this->Form->input('amount');
+        echo $this->Form->input('people._ids', ['options' => $people]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

@@ -4,7 +4,8 @@
     </h1>
     <ol class="breadcrumb">
         <li>
-            <?= $this->Html->link('<i class="fa fa-chevron-left"></i> ' . __('Back'), ['action' => 'index'], ['escape' => false])?>
+            <?= $this->Html->link('<i class="fa fa-chevron-left"></i> ' . __('Back'), ['action' => 'index'], ['escape'
+            => false])?>
         </li>
     </ol>
 </section>
@@ -21,28 +22,27 @@
                 <!-- /.box-header -->
                 <div class="box-body">
                     <dl class="dl-horizontal">
-                                                                                                <dt><?= __('Migration Name') ?></dt>
+                        <dt><?= __('Migration Name') ?></dt>
                         <dd>
                             <?= h($tinyAuthPhinxlog->migration_name) ?>
                         </dd>
-                                                                                                
-                        
-                                                                                                                        
-                                                                                                <dt><?= __('Start Time') ?></dt>
+
+
+                        <dt><?= __('Start Time') ?></dt>
                         <dd>
                             <?= h($tinyAuthPhinxlog->start_time) ?>
                         </dd>
-                                                                                                <dt><?= __('End Time') ?></dt>
+                        <dt><?= __('End Time') ?></dt>
                         <dd>
                             <?= h($tinyAuthPhinxlog->end_time) ?>
                         </dd>
-                                                                        
-                                                                        <dt><?= __('Breakpoint') ?></dt>
+
+                        <dt><?= __('Breakpoint') ?></dt>
                         <dd>
                             <?= $tinyAuthPhinxlog->breakpoint ? __('Yes') : __('No'); ?>
                         </dd>
-                                                
-                                            </dl>
+
+                    </dl>
                 </div>
                 <!-- /.box-body -->
             </div>
@@ -52,4 +52,4 @@
     </div>
     <!-- div -->
 
-    </section>
+</section>

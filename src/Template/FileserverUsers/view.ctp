@@ -4,7 +4,8 @@
     </h1>
     <ol class="breadcrumb">
         <li>
-            <?= $this->Html->link('<i class="fa fa-chevron-left"></i> ' . __('Back'), ['action' => 'index'], ['escape' => false])?>
+            <?= $this->Html->link('<i class="fa fa-chevron-left"></i> ' . __('Back'), ['action' => 'index'], ['escape'
+            => false])?>
         </li>
     </ol>
 </section>
@@ -21,36 +22,36 @@
                 <!-- /.box-header -->
                 <div class="box-body">
                     <dl class="dl-horizontal">
-                                                                                                <dt><?= __('Person') ?></dt>
+                        <dt><?= __('Person') ?></dt>
                         <dd>
                             <?= $fileserverUser->has('person') ? $fileserverUser->person->id : '' ?>
                         </dd>
-                                                                                                <dt><?= __('Username') ?></dt>
+                        <dt><?= __('Username') ?></dt>
                         <dd>
                             <?= h($fileserverUser->username) ?>
                         </dd>
-                                                                                                                                                                        
-                        
-                                                                                                                                                <dt><?= __('Password Retrieval') ?></dt>
+
+
+                        <dt><?= __('Password Retrieval') ?></dt>
                         <dd>
                             <?= $this->Number->format($fileserverUser->password_retrieval) ?>
                         </dd>
-                                                                        
-                                                                                                                        
-                                                                        <dt><?= __('Vip') ?></dt>
+
+
+                        <dt><?= __('Vip') ?></dt>
                         <dd>
                             <?= $fileserverUser->vip ? __('Yes') : __('No'); ?>
                         </dd>
-                                                <dt><?= __('Accepted') ?></dt>
+                        <dt><?= __('Accepted') ?></dt>
                         <dd>
                             <?= $fileserverUser->accepted ? __('Yes') : __('No'); ?>
                         </dd>
-                                                <dt><?= __('Active') ?></dt>
+                        <dt><?= __('Active') ?></dt>
                         <dd>
                             <?= $fileserverUser->active ? __('Yes') : __('No'); ?>
                         </dd>
-                                                
-                                            </dl>
+
+                    </dl>
                 </div>
                 <!-- /.box-body -->
             </div>
@@ -60,4 +61,4 @@
     </div>
     <!-- div -->
 
-    </section>
+</section>

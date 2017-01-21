@@ -4,7 +4,8 @@
     </h1>
     <ol class="breadcrumb">
         <li>
-            <?= $this->Html->link('<i class="fa fa-chevron-left"></i> ' . __('Back'), ['action' => 'index'], ['escape' => false])?>
+            <?= $this->Html->link('<i class="fa fa-chevron-left"></i> ' . __('Back'), ['action' => 'index'], ['escape'
+            => false])?>
         </li>
     </ol>
 </section>
@@ -21,36 +22,35 @@
                 <!-- /.box-header -->
                 <div class="box-body">
                     <dl class="dl-horizontal">
-                                                                                                <dt><?= __('Person') ?></dt>
+                        <dt><?= __('Person') ?></dt>
                         <dd>
                             <?= $tenant->has('person') ? $tenant->person->id : '' ?>
                         </dd>
-                                                                                                <dt><?= __('Room') ?></dt>
+                        <dt><?= __('Room') ?></dt>
                         <dd>
                             <?= $tenant->has('room') ? $tenant->room->id : '' ?>
                         </dd>
-                                                                                                <dt><?= __('Comment') ?></dt>
+                        <dt><?= __('Comment') ?></dt>
                         <dd>
                             <?= h($tenant->comment) ?>
                         </dd>
-                                                                                                
-                        
-                                                                                                                        
-                                                                                                <dt><?= __('Date Move In') ?></dt>
+
+
+                        <dt><?= __('Date Move In') ?></dt>
                         <dd>
                             <?= h($tenant->date_move_in) ?>
                         </dd>
-                                                                                                <dt><?= __('Date Move Out') ?></dt>
+                        <dt><?= __('Date Move Out') ?></dt>
                         <dd>
                             <?= h($tenant->date_move_out) ?>
                         </dd>
-                                                                        
-                        
-                                                                        <dt><?= __('Tenant Type') ?></dt>
+
+
+                        <dt><?= __('Tenant Type') ?></dt>
                         <dd>
                             <?= $this->Text->autoParagraph(h($tenant->tenant_type)); ?>
                         </dd>
-                                                                    </dl>
+                    </dl>
                 </div>
                 <!-- /.box-body -->
             </div>
@@ -60,4 +60,4 @@
     </div>
     <!-- div -->
 
-    </section>
+</section>

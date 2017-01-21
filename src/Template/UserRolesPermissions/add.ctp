@@ -14,9 +14,9 @@
         <legend><?= __('Add User Roles Permission') ?></legend>
         <?php
             echo $this->Form->input('user_role_id', ['options' => $userRoles]);
-            echo $this->Form->input('permission_id', ['options' => $permissions]);
-            echo $this->Form->input('can_view');
-            echo $this->Form->input('can_edit');
+        echo $this->Form->input('permission_id', ['options' => $permissions]);
+        echo $this->Form->input('can_view');
+        echo $this->Form->input('can_edit');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

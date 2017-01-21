@@ -2,11 +2,12 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $josegonzalezCakeQueuesadillaPhinxlog->version],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $josegonzalezCakeQueuesadillaPhinxlog->version)]
+            __('Delete'),
+            ['action' => 'delete', $josegonzalezCakeQueuesadillaPhinxlog->version],
+            ['confirm' => __('Are you sure you want to delete # {0}?', $josegonzalezCakeQueuesadillaPhinxlog->version)]
             )
-        ?></li>
+            ?>
+        </li>
         <li><?= $this->Html->link(__('List Josegonzalez Cake Queuesadilla Phinxlog'), ['action' => 'index']) ?></li>
     </ul>
 </nav>
@@ -16,9 +17,9 @@
         <legend><?= __('Edit Josegonzalez Cake Queuesadilla Phinxlog') ?></legend>
         <?php
             echo $this->Form->input('migration_name');
-            echo $this->Form->input('start_time');
-            echo $this->Form->input('end_time');
-            echo $this->Form->input('breakpoint');
+        echo $this->Form->input('start_time');
+        echo $this->Form->input('end_time');
+        echo $this->Form->input('breakpoint');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

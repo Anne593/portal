@@ -12,8 +12,8 @@
         <legend><?= __('Add Working Group') ?></legend>
         <?php
             echo $this->Form->input('name');
-            echo $this->Form->input('description');
-            echo $this->Form->input('people._ids', ['options' => $people]);
+        echo $this->Form->input('description');
+        echo $this->Form->input('people._ids', ['options' => $people]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

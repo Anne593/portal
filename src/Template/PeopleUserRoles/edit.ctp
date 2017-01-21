@@ -2,11 +2,12 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $peopleUserRole->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $peopleUserRole->id)]
+            __('Delete'),
+            ['action' => 'delete', $peopleUserRole->id],
+            ['confirm' => __('Are you sure you want to delete # {0}?', $peopleUserRole->id)]
             )
-        ?></li>
+            ?>
+        </li>
         <li><?= $this->Html->link(__('List People User Roles'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List People'), ['controller' => 'People', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Person'), ['controller' => 'People', 'action' => 'add']) ?></li>
@@ -20,7 +21,7 @@
         <legend><?= __('Edit People User Role') ?></legend>
         <?php
             echo $this->Form->input('person_id', ['options' => $people]);
-            echo $this->Form->input('user_role_id', ['options' => $userRoles]);
+        echo $this->Form->input('user_role_id', ['options' => $userRoles]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

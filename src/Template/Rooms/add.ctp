@@ -12,8 +12,8 @@
         <legend><?= __('Add Room') ?></legend>
         <?php
             echo $this->Form->input('eth_port0');
-            echo $this->Form->input('eth_port1');
-            echo $this->Form->input('comment');
+        echo $this->Form->input('eth_port1');
+        echo $this->Form->input('comment');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

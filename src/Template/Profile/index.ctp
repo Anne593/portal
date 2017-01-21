@@ -25,7 +25,7 @@
                 <dt><?= __('user.role') ?></dt>
                 <dd>
                     <?php foreach($user->roles as $role) {
-                        echo $this->Utils->roleLabel($role) . "&nbsp;";
+                    echo $this->Utils->roleLabel($role) . "&nbsp;";
                     }?>
                 </dd>
 
@@ -38,26 +38,26 @@
             <legend><?= __('profile.change_password') ?></legend>
 
             <?php echo $this->Form->create($user, [
-                'align' =>
-                    ['md' => [
-                        'left' => 2,
-                        'middle' => 4,
-                        'right' => 6,
-                    ]],
+            'align' =>
+            ['md' => [
+            'left' => 2,
+            'middle' => 4,
+            'right' => 6,
+            ]],
             ]) ?>
 
             <?php echo $this->Form->input('current_password', [
-                'label' => __('profile.current_password'),
-                'type' => 'password'
+            'label' => __('profile.current_password'),
+            'type' => 'password'
             ]) ?>
             <hr>
             <?php echo $this->Form->input('password', [
-                'label' => __('profile.new_password'),
-                'type' => 'password'
+            'label' => __('profile.new_password'),
+            'type' => 'password'
             ]) ?>
             <?php echo $this->Form->input('password_confirm', [
-                'label' => __('profile.repeat_password'),
-                'type' => 'password'
+            'label' => __('profile.repeat_password'),
+            'type' => 'password'
             ]) ?>
 
             <?php echo $this->Form->button(__('profile.save'), ['class' => 'btn btn-success']) ?>

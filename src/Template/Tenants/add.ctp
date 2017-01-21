@@ -14,11 +14,11 @@
         <legend><?= __('Add Tenant') ?></legend>
         <?php
             echo $this->Form->input('person_id', ['options' => $people]);
-            echo $this->Form->input('room_id', ['options' => $rooms]);
-            echo $this->Form->input('date_move_in');
-            echo $this->Form->input('date_move_out', ['empty' => true]);
-            echo $this->Form->input('tenant_type');
-            echo $this->Form->input('comment');
+        echo $this->Form->input('room_id', ['options' => $rooms]);
+        echo $this->Form->input('date_move_in');
+        echo $this->Form->input('date_move_out', ['empty' => true]);
+        echo $this->Form->input('tenant_type');
+        echo $this->Form->input('comment');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

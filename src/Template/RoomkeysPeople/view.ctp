@@ -4,7 +4,8 @@
     </h1>
     <ol class="breadcrumb">
         <li>
-            <?= $this->Html->link('<i class="fa fa-chevron-left"></i> ' . __('Back'), ['action' => 'index'], ['escape' => false])?>
+            <?= $this->Html->link('<i class="fa fa-chevron-left"></i> ' . __('Back'), ['action' => 'index'], ['escape'
+            => false])?>
         </li>
     </ol>
 </section>
@@ -21,28 +22,25 @@
                 <!-- /.box-header -->
                 <div class="box-body">
                     <dl class="dl-horizontal">
-                                                                                                <dt><?= __('Roomkey') ?></dt>
+                        <dt><?= __('Roomkey') ?></dt>
                         <dd>
                             <?= $roomkeysPerson->has('roomkey') ? $roomkeysPerson->roomkey->name : '' ?>
                         </dd>
-                                                                                                <dt><?= __('Person') ?></dt>
+                        <dt><?= __('Person') ?></dt>
                         <dd>
                             <?= $roomkeysPerson->has('person') ? $roomkeysPerson->person->id : '' ?>
                         </dd>
-                                                                                                <dt><?= __('Comment') ?></dt>
+                        <dt><?= __('Comment') ?></dt>
                         <dd>
                             <?= h($roomkeysPerson->comment) ?>
                         </dd>
-                                                                                                
-                        
-                                                                                                                        
-                        
-                        
-                                                                        <dt><?= __('Type') ?></dt>
+
+
+                        <dt><?= __('Type') ?></dt>
                         <dd>
                             <?= $this->Text->autoParagraph(h($roomkeysPerson->type)); ?>
                         </dd>
-                                                                    </dl>
+                    </dl>
                 </div>
                 <!-- /.box-body -->
             </div>
@@ -52,4 +50,4 @@
     </div>
     <!-- div -->
 
-    </section>
+</section>

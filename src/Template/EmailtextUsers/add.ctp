@@ -12,8 +12,8 @@
         <legend><?= __('Add Emailtext User') ?></legend>
         <?php
             echo $this->Form->input('emailtext_id', ['options' => $emailtexts]);
-            echo $this->Form->input('type');
-            echo $this->Form->input('type_id');
+        echo $this->Form->input('type');
+        echo $this->Form->input('type_id');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

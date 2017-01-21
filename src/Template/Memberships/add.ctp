@@ -12,10 +12,10 @@
         <legend><?= __('Add Membership') ?></legend>
         <?php
             echo $this->Form->input('name');
-            echo $this->Form->input('type');
-            echo $this->Form->input('description');
-            echo $this->Form->input('membership_fee');
-            echo $this->Form->input('people._ids', ['options' => $people]);
+        echo $this->Form->input('type');
+        echo $this->Form->input('description');
+        echo $this->Form->input('membership_fee');
+        echo $this->Form->input('people._ids', ['options' => $people]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

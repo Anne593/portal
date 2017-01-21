@@ -2,14 +2,19 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $group->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $group->id)]
+            __('Delete'),
+            ['action' => 'delete', $group->id],
+            ['confirm' => __('Are you sure you want to delete # {0}?', $group->id)]
             )
-        ?></li>
+            ?>
+        </li>
         <li><?= $this->Html->link(__('List Groups'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Emailtext Groups'), ['controller' => 'EmailtextGroups', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Emailtext Group'), ['controller' => 'EmailtextGroups', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Emailtext Groups'), ['controller' => 'EmailtextGroups', 'action' => 'index'])
+            ?>
+        </li>
+        <li><?= $this->Html->link(__('New Emailtext Group'), ['controller' => 'EmailtextGroups', 'action' => 'add'])
+            ?>
+        </li>
     </ul>
 </nav>
 <div class="groups form large-9 medium-8 columns content">
@@ -18,7 +23,7 @@
         <legend><?= __('Edit Group') ?></legend>
         <?php
             echo $this->Form->input('name');
-            echo $this->Form->input('conditions');
+        echo $this->Form->input('conditions');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

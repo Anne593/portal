@@ -2,11 +2,12 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $fileserverUser->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $fileserverUser->id)]
+            __('Delete'),
+            ['action' => 'delete', $fileserverUser->id],
+            ['confirm' => __('Are you sure you want to delete # {0}?', $fileserverUser->id)]
             )
-        ?></li>
+            ?>
+        </li>
         <li><?= $this->Html->link(__('List Fileserver Users'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List People'), ['controller' => 'People', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Person'), ['controller' => 'People', 'action' => 'add']) ?></li>
@@ -18,12 +19,12 @@
         <legend><?= __('Edit Fileserver User') ?></legend>
         <?php
             echo $this->Form->input('person_id', ['options' => $people]);
-            echo $this->Form->input('username');
-            echo $this->Form->input('password');
-            echo $this->Form->input('vip');
-            echo $this->Form->input('accepted');
-            echo $this->Form->input('active');
-            echo $this->Form->input('password_retrieval');
+        echo $this->Form->input('username');
+        echo $this->Form->input('password');
+        echo $this->Form->input('vip');
+        echo $this->Form->input('accepted');
+        echo $this->Form->input('active');
+        echo $this->Form->input('password_retrieval');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

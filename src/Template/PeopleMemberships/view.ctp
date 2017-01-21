@@ -4,7 +4,8 @@
     </h1>
     <ol class="breadcrumb">
         <li>
-            <?= $this->Html->link('<i class="fa fa-chevron-left"></i> ' . __('Back'), ['action' => 'index'], ['escape' => false])?>
+            <?= $this->Html->link('<i class="fa fa-chevron-left"></i> ' . __('Back'), ['action' => 'index'], ['escape'
+            => false])?>
         </li>
     </ol>
 </section>
@@ -21,40 +22,40 @@
                 <!-- /.box-header -->
                 <div class="box-body">
                     <dl class="dl-horizontal">
-                                                                                                <dt><?= __('Person') ?></dt>
+                        <dt><?= __('Person') ?></dt>
                         <dd>
                             <?= $peopleMembership->has('person') ? $peopleMembership->person->id : '' ?>
                         </dd>
-                                                                                                <dt><?= __('Membership') ?></dt>
+                        <dt><?= __('Membership') ?></dt>
                         <dd>
                             <?= $peopleMembership->has('membership') ? $peopleMembership->membership->name : '' ?>
                         </dd>
-                                                                                                <dt><?= __('Social Service Comment') ?></dt>
+                        <dt><?= __('Social Service Comment') ?></dt>
                         <dd>
                             <?= h($peopleMembership->social_service_comment) ?>
                         </dd>
-                                                                                                                        <dt><?= __('Comment') ?></dt>
+                        <dt><?= __('Comment') ?></dt>
                         <dd>
                             <?= h($peopleMembership->comment) ?>
                         </dd>
-                                                                                                
-                        
-                                                                                                                                                <dt><?= __('Semester') ?></dt>
+
+
+                        <dt><?= __('Semester') ?></dt>
                         <dd>
                             <?= $this->Number->format($peopleMembership->semester) ?>
                         </dd>
-                                                                                                <dt><?= __('Social Service') ?></dt>
+                        <dt><?= __('Social Service') ?></dt>
                         <dd>
                             <?= $this->Number->format($peopleMembership->social_service) ?>
                         </dd>
-                                                                        
-                        
-                                                                        <dt><?= __('Payment') ?></dt>
+
+
+                        <dt><?= __('Payment') ?></dt>
                         <dd>
                             <?= $peopleMembership->payment ? __('Yes') : __('No'); ?>
                         </dd>
-                                                
-                                            </dl>
+
+                    </dl>
                 </div>
                 <!-- /.box-body -->
             </div>
@@ -64,4 +65,4 @@
     </div>
     <!-- div -->
 
-    </section>
+</section>

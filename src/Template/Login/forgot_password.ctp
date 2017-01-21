@@ -14,22 +14,23 @@ $this->assign('bodyClasses', 'login-page');
         </p>
         <?php
             echo $this->Form->create(null, [
-                'role' => 'form',
-                'novalidate'
-            ]);
-            echo $this->Form->input('email', [
-                'placeholder' => __('login.email'),
-                'class' => 'form-control autofocus',
-                'label' => false
-            ]);
-            echo $this->Form->submit(__('login.restore_password'), [
-                'class' => 'btn btn-lg btn-primary btn-block'
-            ]);
-            echo $this->Form->end();
+        'role' => 'form',
+        'novalidate'
+        ]);
+        echo $this->Form->input('email', [
+        'placeholder' => __('login.email'),
+        'class' => 'form-control autofocus',
+        'label' => false
+        ]);
+        echo $this->Form->submit(__('login.restore_password'), [
+        'class' => 'btn btn-lg btn-primary btn-block'
+        ]);
+        echo $this->Form->end();
         ?>
         <div class="social-auth-links text-center">
             <p>- <?= __('login.or') ?> -</p>
-            <?= $this->Html->link(__('login.login'), ['plugin' => null, 'controller' => 'login', 'action' => 'login']) ?><br>
+            <?= $this->Html->link(__('login.login'), ['plugin' => null, 'controller' => 'login', 'action' => 'login'])
+            ?><br>
         </div>
     </div>
 </div>

@@ -4,7 +4,8 @@
     </h1>
     <ol class="breadcrumb">
         <li>
-            <?= $this->Html->link('<i class="fa fa-chevron-left"></i> ' . __('Back'), ['action' => 'index'], ['escape' => false])?>
+            <?= $this->Html->link('<i class="fa fa-chevron-left"></i> ' . __('Back'), ['action' => 'index'], ['escape'
+            => false])?>
         </li>
     </ol>
 </section>
@@ -21,32 +22,31 @@
                 <!-- /.box-header -->
                 <div class="box-body">
                     <dl class="dl-horizontal">
-                                                                                                <dt><?= __('Topic') ?></dt>
+                        <dt><?= __('Topic') ?></dt>
                         <dd>
                             <?= h($emailtext->topic) ?>
                         </dd>
-                                                                                                                        <dt><?= __('Subject') ?></dt>
+                        <dt><?= __('Subject') ?></dt>
                         <dd>
                             <?= h($emailtext->subject) ?>
                         </dd>
-                                                                                                                        <dt><?= __('Resume Email') ?></dt>
+                        <dt><?= __('Resume Email') ?></dt>
                         <dd>
                             <?= h($emailtext->resume_email) ?>
                         </dd>
-                                                                                                
-                        
-                                                                                                                                                <dt><?= __('Deadline') ?></dt>
+
+
+                        <dt><?= __('Deadline') ?></dt>
                         <dd>
                             <?= $this->Number->format($emailtext->deadline) ?>
                         </dd>
-                                                                        
-                        
-                        
-                                                                        <dt><?= __('Text') ?></dt>
+
+
+                        <dt><?= __('Text') ?></dt>
                         <dd>
                             <?= $this->Text->autoParagraph(h($emailtext->text)); ?>
                         </dd>
-                                                                    </dl>
+                    </dl>
                 </div>
                 <!-- /.box-body -->
             </div>
@@ -56,7 +56,7 @@
     </div>
     <!-- div -->
 
-        <div class="row">
+    <div class="row">
         <div class="col-xs-12">
             <div class="box">
                 <div class="box-header">
@@ -71,22 +71,22 @@
                     <table class="table table-hover">
                         <tbody>
                         <tr>
-                                                        
+
                             <th>
                                 Id
                             </th>
 
-                                                        
+
                             <th>
                                 Emailtext Id
                             </th>
 
-                                                        
+
                             <th>
                                 Group Id
                             </th>
 
-                            
+
                             <th>
                                 <?php echo __('Actions'); ?>
                             </th>
@@ -94,26 +94,30 @@
 
                         <?php foreach ($emailtext->emailtext_groups as $emailtextGroups): ?>
                         <tr>
-                                                        
+
                             <td>
                                 <?= h($emailtextGroups->id) ?>
                             </td>
-                                                        
+
                             <td>
                                 <?= h($emailtextGroups->emailtext_id) ?>
                             </td>
-                                                        
+
                             <td>
                                 <?= h($emailtextGroups->group_id) ?>
                             </td>
-                            
-                                                        <td class="actions">
-                                <?= $this->Html->link('', ['controller' => 'emailtextGroups', 'action' => 'view', $emailtextGroups->id], ['title' => __('View'), 'class' =>
+
+                            <td class="actions">
+                                <?= $this->Html->link('', ['controller' => 'emailtextGroups', 'action' => 'view',
+                                $emailtextGroups->id], ['title' => __('View'), 'class' =>
                                 'btn btn-default glyphicon glyphicon-eye-open']) ?>
-                                <?= $this->Html->link('', ['controller' => 'emailtextGroups', 'action' => 'edit', $emailtextGroups->id], ['title' => __('Edit'), 'class' =>
+                                <?= $this->Html->link('', ['controller' => 'emailtextGroups', 'action' => 'edit',
+                                $emailtextGroups->id], ['title' => __('Edit'), 'class' =>
                                 'btn btn-default glyphicon glyphicon-pencil']) ?>
-                                <?= $this->Form->postLink('', ['controller' => 'emailtextGroups', 'action' => 'delete', $emailtextGroups->id], ['confirm' => __('Are you sure
-                                you want to delete # {0}?', $emailtextGroups->id), 'title' => __('Delete'), 'class' => 'btn btn-default
+                                <?= $this->Form->postLink('', ['controller' => 'emailtextGroups', 'action' => 'delete',
+                                $emailtextGroups->id], ['confirm' => __('Are you sure
+                                you want to delete # {0}?', $emailtextGroups->id), 'title' => __('Delete'), 'class' =>
+                                'btn btn-default
                                 glyphicon glyphicon-trash']) ?>
                             </td>
                         </tr>
@@ -130,7 +134,7 @@
             <!-- /.box -->
         </div>
     </div>
-        <div class="row">
+    <div class="row">
         <div class="col-xs-12">
             <div class="box">
                 <div class="box-header">
@@ -145,27 +149,27 @@
                     <table class="table table-hover">
                         <tbody>
                         <tr>
-                                                        
+
                             <th>
                                 Id
                             </th>
 
-                                                        
+
                             <th>
                                 Emailtext Id
                             </th>
 
-                                                        
+
                             <th>
                                 Type
                             </th>
 
-                                                        
+
                             <th>
                                 Type Id
                             </th>
 
-                            
+
                             <th>
                                 <?php echo __('Actions'); ?>
                             </th>
@@ -173,30 +177,34 @@
 
                         <?php foreach ($emailtext->emailtext_users as $emailtextUsers): ?>
                         <tr>
-                                                        
+
                             <td>
                                 <?= h($emailtextUsers->id) ?>
                             </td>
-                                                        
+
                             <td>
                                 <?= h($emailtextUsers->emailtext_id) ?>
                             </td>
-                                                        
+
                             <td>
                                 <?= h($emailtextUsers->type) ?>
                             </td>
-                                                        
+
                             <td>
                                 <?= h($emailtextUsers->type_id) ?>
                             </td>
-                            
-                                                        <td class="actions">
-                                <?= $this->Html->link('', ['controller' => 'emailtextUsers', 'action' => 'view', $emailtextUsers->id], ['title' => __('View'), 'class' =>
+
+                            <td class="actions">
+                                <?= $this->Html->link('', ['controller' => 'emailtextUsers', 'action' => 'view',
+                                $emailtextUsers->id], ['title' => __('View'), 'class' =>
                                 'btn btn-default glyphicon glyphicon-eye-open']) ?>
-                                <?= $this->Html->link('', ['controller' => 'emailtextUsers', 'action' => 'edit', $emailtextUsers->id], ['title' => __('Edit'), 'class' =>
+                                <?= $this->Html->link('', ['controller' => 'emailtextUsers', 'action' => 'edit',
+                                $emailtextUsers->id], ['title' => __('Edit'), 'class' =>
                                 'btn btn-default glyphicon glyphicon-pencil']) ?>
-                                <?= $this->Form->postLink('', ['controller' => 'emailtextUsers', 'action' => 'delete', $emailtextUsers->id], ['confirm' => __('Are you sure
-                                you want to delete # {0}?', $emailtextUsers->id), 'title' => __('Delete'), 'class' => 'btn btn-default
+                                <?= $this->Form->postLink('', ['controller' => 'emailtextUsers', 'action' => 'delete',
+                                $emailtextUsers->id], ['confirm' => __('Are you sure
+                                you want to delete # {0}?', $emailtextUsers->id), 'title' => __('Delete'), 'class' =>
+                                'btn btn-default
                                 glyphicon glyphicon-trash']) ?>
                             </td>
                         </tr>
@@ -213,4 +221,4 @@
             <!-- /.box -->
         </div>
     </div>
-    </section>
+</section>

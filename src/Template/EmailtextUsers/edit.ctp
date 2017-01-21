@@ -2,11 +2,12 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $emailtextUser->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $emailtextUser->id)]
+            __('Delete'),
+            ['action' => 'delete', $emailtextUser->id],
+            ['confirm' => __('Are you sure you want to delete # {0}?', $emailtextUser->id)]
             )
-        ?></li>
+            ?>
+        </li>
         <li><?= $this->Html->link(__('List Emailtext Users'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Emailtexts'), ['controller' => 'Emailtexts', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Emailtext'), ['controller' => 'Emailtexts', 'action' => 'add']) ?></li>
@@ -18,8 +19,8 @@
         <legend><?= __('Edit Emailtext User') ?></legend>
         <?php
             echo $this->Form->input('emailtext_id', ['options' => $emailtexts]);
-            echo $this->Form->input('type');
-            echo $this->Form->input('type_id');
+        echo $this->Form->input('type');
+        echo $this->Form->input('type_id');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

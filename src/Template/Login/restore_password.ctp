@@ -14,25 +14,25 @@ $this->assign('bodyClasses', 'login-page');
         </p>
         <?php
             echo $this->Form->create($user, [
-                'role' => 'form',
-                'novalidate'
-            ]);
-            echo $this->Form->input('password', [
-                'placeholder' => __('login.new_password'),
-                'class' => 'form-control autofocus',
-                'label' => false,
-                'type' => 'password',
-                'value' => ''
-            ]);
-            echo $this->Form->input('password_confirm', [
-                'placeholder' => __('login.confirm_new_password'),
-                'label' => false,
-                'type' => 'password'
-            ]);
-            echo $this->Form->submit(__('login.set_password'), [
-                'class' => 'btn btn-lg btn-primary btn-block'
-            ]);
-            echo $this->Form->end();
+        'role' => 'form',
+        'novalidate'
+        ]);
+        echo $this->Form->input('password', [
+        'placeholder' => __('login.new_password'),
+        'class' => 'form-control autofocus',
+        'label' => false,
+        'type' => 'password',
+        'value' => ''
+        ]);
+        echo $this->Form->input('password_confirm', [
+        'placeholder' => __('login.confirm_new_password'),
+        'label' => false,
+        'type' => 'password'
+        ]);
+        echo $this->Form->submit(__('login.set_password'), [
+        'class' => 'btn btn-lg btn-primary btn-block'
+        ]);
+        echo $this->Form->end();
         ?>
     </div>
 </div>

@@ -12,14 +12,14 @@
         <legend><?= __('Add Model History') ?></legend>
         <?php
             echo $this->Form->input('model');
-            echo $this->Form->input('foreign_key');
-            echo $this->Form->input('user_id');
-            echo $this->Form->input('action');
-            echo $this->Form->input('data');
-            echo $this->Form->input('context');
-            echo $this->Form->input('context_type');
-            echo $this->Form->input('context_slug');
-            echo $this->Form->input('revision');
+        echo $this->Form->input('foreign_key');
+        echo $this->Form->input('user_id');
+        echo $this->Form->input('action');
+        echo $this->Form->input('data');
+        echo $this->Form->input('context');
+        echo $this->Form->input('context_type');
+        echo $this->Form->input('context_slug');
+        echo $this->Form->input('revision');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

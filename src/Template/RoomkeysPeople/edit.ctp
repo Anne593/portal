@@ -2,11 +2,12 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $roomkeysPerson->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $roomkeysPerson->id)]
+            __('Delete'),
+            ['action' => 'delete', $roomkeysPerson->id],
+            ['confirm' => __('Are you sure you want to delete # {0}?', $roomkeysPerson->id)]
             )
-        ?></li>
+            ?>
+        </li>
         <li><?= $this->Html->link(__('List Roomkeys People'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Roomkeys'), ['controller' => 'Roomkeys', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Roomkey'), ['controller' => 'Roomkeys', 'action' => 'add']) ?></li>
@@ -20,9 +21,9 @@
         <legend><?= __('Edit Roomkeys Person') ?></legend>
         <?php
             echo $this->Form->input('roomkey_id', ['options' => $roomkeys]);
-            echo $this->Form->input('person_id', ['options' => $people]);
-            echo $this->Form->input('type');
-            echo $this->Form->input('comment');
+        echo $this->Form->input('person_id', ['options' => $people]);
+        echo $this->Form->input('type');
+        echo $this->Form->input('comment');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

@@ -4,7 +4,8 @@
     </h1>
     <ol class="breadcrumb">
         <li>
-            <?= $this->Html->link('<i class="fa fa-chevron-left"></i> ' . __('Back'), ['action' => 'index'], ['escape' => false])?>
+            <?= $this->Html->link('<i class="fa fa-chevron-left"></i> ' . __('Back'), ['action' => 'index'], ['escape'
+            => false])?>
         </li>
     </ol>
 </section>
@@ -21,40 +22,40 @@
                 <!-- /.box-header -->
                 <div class="box-body">
                     <dl class="dl-horizontal">
-                                                                                                <dt><?= __('Queue') ?></dt>
+                        <dt><?= __('Queue') ?></dt>
                         <dd>
                             <?= h($job->queue) ?>
                         </dd>
-                                                                                                                        <dt><?= __('Attempts') ?></dt>
+                        <dt><?= __('Attempts') ?></dt>
                         <dd>
                             <?= h($job->attempts) ?>
                         </dd>
-                                                                                                
-                        
-                                                                                                                                                <dt><?= __('Priority') ?></dt>
+
+
+                        <dt><?= __('Priority') ?></dt>
                         <dd>
                             <?= $this->Number->format($job->priority) ?>
                         </dd>
-                                                                                                <dt><?= __('Locked') ?></dt>
+                        <dt><?= __('Locked') ?></dt>
                         <dd>
                             <?= $this->Number->format($job->locked) ?>
                         </dd>
-                                                                        
-                                                                                                <dt><?= __('Expires At') ?></dt>
+
+                        <dt><?= __('Expires At') ?></dt>
                         <dd>
                             <?= h($job->expires_at) ?>
                         </dd>
-                                                                                                <dt><?= __('Delay Until') ?></dt>
+                        <dt><?= __('Delay Until') ?></dt>
                         <dd>
                             <?= h($job->delay_until) ?>
                         </dd>
-                                                                        
-                        
-                                                                        <dt><?= __('Data') ?></dt>
+
+
+                        <dt><?= __('Data') ?></dt>
                         <dd>
                             <?= $this->Text->autoParagraph(h($job->data)); ?>
                         </dd>
-                                                                    </dl>
+                    </dl>
                 </div>
                 <!-- /.box-body -->
             </div>
@@ -64,4 +65,4 @@
     </div>
     <!-- div -->
 
-    </section>
+</section>

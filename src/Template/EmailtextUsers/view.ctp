@@ -4,7 +4,8 @@
     </h1>
     <ol class="breadcrumb">
         <li>
-            <?= $this->Html->link('<i class="fa fa-chevron-left"></i> ' . __('Back'), ['action' => 'index'], ['escape' => false])?>
+            <?= $this->Html->link('<i class="fa fa-chevron-left"></i> ' . __('Back'), ['action' => 'index'], ['escape'
+            => false])?>
         </li>
     </ol>
 </section>
@@ -21,24 +22,23 @@
                 <!-- /.box-header -->
                 <div class="box-body">
                     <dl class="dl-horizontal">
-                                                                                                <dt><?= __('Emailtext') ?></dt>
+                        <dt><?= __('Emailtext') ?></dt>
                         <dd>
                             <?= $emailtextUser->has('emailtext') ? $emailtextUser->emailtext->id : '' ?>
                         </dd>
-                                                                        
-                        
-                                                                                                                                                <dt><?= __('Type Id') ?></dt>
+
+
+                        <dt><?= __('Type Id') ?></dt>
                         <dd>
                             <?= $this->Number->format($emailtextUser->type_id) ?>
                         </dd>
-                                                                        
-                        
-                        
-                                                                        <dt><?= __('Type') ?></dt>
+
+
+                        <dt><?= __('Type') ?></dt>
                         <dd>
                             <?= $this->Text->autoParagraph(h($emailtextUser->type)); ?>
                         </dd>
-                                                                    </dl>
+                    </dl>
                 </div>
                 <!-- /.box-body -->
             </div>
@@ -48,4 +48,4 @@
     </div>
     <!-- div -->
 
-    </section>
+</section>

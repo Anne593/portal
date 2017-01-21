@@ -15,29 +15,29 @@ use App\Model\Entity\User;
             <ul class="nav navbar-nav">
                 <?= $this->LanguageSwitcher->renderLanguageSwitcher(); ?>
                 <?php if ($this->AuthUser->user()): ?>
-                    <li class="dropdown user user-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="/img/avatar5.png" class="user-image" alt="User Image">
-                            <span class="hidden-xs"><?= h($this->AuthUser->user('full_name')) ?></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="user-header">
-                                <img src="/img/avatar5.png" class="img-circle" alt="User Image">
-                                <p>
-                                    <?= h($this->AuthUser->user('full_name')) ?>
-                                    <small>Placeholder <?= User::getTypeDescription(1) ?></small>
-                                </p>
-                            </li>
-                            <li class="user-footer">
-                                <div class="pull-left">
-                                    <a href="/profile/index" class="btn btn-default btn-flat"><?= __('my_profile'); ?></a>
-                                </div>
-                                <div class="pull-right">
-                                    <a href="/login/logout" class="btn btn-default btn-flat"><?= __('logout'); ?></a>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
+                <li class="dropdown user user-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <img src="/img/avatar5.png" class="user-image" alt="User Image">
+                        <span class="hidden-xs"><?= h($this->AuthUser->user('full_name')) ?></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="user-header">
+                            <img src="/img/avatar5.png" class="img-circle" alt="User Image">
+                            <p>
+                                <?= h($this->AuthUser->user('full_name')) ?>
+                                <small>Placeholder <?= User::getTypeDescription(1) ?></small>
+                            </p>
+                        </li>
+                        <li class="user-footer">
+                            <div class="pull-left">
+                                <a href="/profile/index" class="btn btn-default btn-flat"><?= __('my_profile'); ?></a>
+                            </div>
+                            <div class="pull-right">
+                                <a href="/login/logout" class="btn btn-default btn-flat"><?= __('logout'); ?></a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
                 <?php endif; ?>
             </ul>
         </div>

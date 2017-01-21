@@ -2,11 +2,12 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $modelHistory->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $modelHistory->id)]
+            __('Delete'),
+            ['action' => 'delete', $modelHistory->id],
+            ['confirm' => __('Are you sure you want to delete # {0}?', $modelHistory->id)]
             )
-        ?></li>
+            ?>
+        </li>
         <li><?= $this->Html->link(__('List Model History'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List People'), ['controller' => 'People', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Person'), ['controller' => 'People', 'action' => 'add']) ?></li>
@@ -18,14 +19,14 @@
         <legend><?= __('Edit Model History') ?></legend>
         <?php
             echo $this->Form->input('model');
-            echo $this->Form->input('foreign_key');
-            echo $this->Form->input('user_id');
-            echo $this->Form->input('action');
-            echo $this->Form->input('data');
-            echo $this->Form->input('context');
-            echo $this->Form->input('context_type');
-            echo $this->Form->input('context_slug');
-            echo $this->Form->input('revision');
+        echo $this->Form->input('foreign_key');
+        echo $this->Form->input('user_id');
+        echo $this->Form->input('action');
+        echo $this->Form->input('data');
+        echo $this->Form->input('context');
+        echo $this->Form->input('context_type');
+        echo $this->Form->input('context_slug');
+        echo $this->Form->input('revision');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

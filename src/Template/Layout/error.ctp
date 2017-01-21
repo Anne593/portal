@@ -8,8 +8,8 @@ $this->assign('adminLTETheme', 'skin-blue-light');
     <?php echo $this->element('Layout/head') ?>
 </head>
 <body class="<?php echo $this->FrontendBridge->getMainContentClasses() ?> <?= $this->fetch('bodyClasses') ?>">
-    <?= $this->Flash->render() ?>
-    <?= $this->Flash->render('auth') ?>
-    <?= $this->fetch('content') ?>
+<?= $this->Flash->render() ?>
+<?= $this->Flash->render('auth') ?>
+<?= $this->fetch('content') ?>
 </body>
 </html>

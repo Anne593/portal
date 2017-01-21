@@ -4,7 +4,8 @@
     </h1>
     <ol class="breadcrumb">
         <li>
-            <?= $this->Html->link('<i class="fa fa-chevron-left"></i> ' . __('Back'), ['action' => 'index'], ['escape' => false])?>
+            <?= $this->Html->link('<i class="fa fa-chevron-left"></i> ' . __('Back'), ['action' => 'index'], ['escape'
+            => false])?>
         </li>
     </ol>
 </section>
@@ -21,20 +22,17 @@
                 <!-- /.box-header -->
                 <div class="box-body">
                     <dl class="dl-horizontal">
-                                                                                                <dt><?= __('Emailtext') ?></dt>
+                        <dt><?= __('Emailtext') ?></dt>
                         <dd>
                             <?= $emailtextGroup->has('emailtext') ? $emailtextGroup->emailtext->id : '' ?>
                         </dd>
-                                                                                                <dt><?= __('Group') ?></dt>
+                        <dt><?= __('Group') ?></dt>
                         <dd>
                             <?= $emailtextGroup->has('group') ? $emailtextGroup->group->name : '' ?>
                         </dd>
-                                                                        
-                        
-                                                                                                                        
-                        
-                        
-                                            </dl>
+
+
+                    </dl>
                 </div>
                 <!-- /.box-body -->
             </div>
@@ -44,4 +42,4 @@
     </div>
     <!-- div -->
 
-    </section>
+</section>

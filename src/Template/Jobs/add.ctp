@@ -10,12 +10,12 @@
         <legend><?= __('Add Job') ?></legend>
         <?php
             echo $this->Form->input('queue');
-            echo $this->Form->input('data');
-            echo $this->Form->input('priority');
-            echo $this->Form->input('expires_at', ['empty' => true]);
-            echo $this->Form->input('delay_until', ['empty' => true]);
-            echo $this->Form->input('locked');
-            echo $this->Form->input('attempts');
+        echo $this->Form->input('data');
+        echo $this->Form->input('priority');
+        echo $this->Form->input('expires_at', ['empty' => true]);
+        echo $this->Form->input('delay_until', ['empty' => true]);
+        echo $this->Form->input('locked');
+        echo $this->Form->input('attempts');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

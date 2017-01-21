@@ -14,8 +14,8 @@
         <legend><?= __('Add Mac') ?></legend>
         <?php
             echo $this->Form->input('person_id', ['options' => $people]);
-            echo $this->Form->input('mac');
-            echo $this->Form->input('device_name');
+        echo $this->Form->input('mac');
+        echo $this->Form->input('device_name');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

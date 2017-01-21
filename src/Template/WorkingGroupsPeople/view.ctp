@@ -4,7 +4,8 @@
     </h1>
     <ol class="breadcrumb">
         <li>
-            <?= $this->Html->link('<i class="fa fa-chevron-left"></i> ' . __('Back'), ['action' => 'index'], ['escape' => false])?>
+            <?= $this->Html->link('<i class="fa fa-chevron-left"></i> ' . __('Back'), ['action' => 'index'], ['escape'
+            => false])?>
         </li>
     </ol>
 </section>
@@ -21,40 +22,40 @@
                 <!-- /.box-header -->
                 <div class="box-body">
                     <dl class="dl-horizontal">
-                                                                                                <dt><?= __('Person') ?></dt>
+                        <dt><?= __('Person') ?></dt>
                         <dd>
                             <?= $workingGroupsPerson->has('person') ? $workingGroupsPerson->person->id : '' ?>
                         </dd>
-                                                                                                <dt><?= __('Working Group') ?></dt>
+                        <dt><?= __('Working Group') ?></dt>
                         <dd>
-                            <?= $workingGroupsPerson->has('working_group') ? $workingGroupsPerson->working_group->name : '' ?>
+                            <?= $workingGroupsPerson->has('working_group') ? $workingGroupsPerson->working_group->name :
+                            '' ?>
                         </dd>
-                                                                        
-                        
-                                                                                                                        
-                                                                                                <dt><?= __('Member Since') ?></dt>
+
+
+                        <dt><?= __('Member Since') ?></dt>
                         <dd>
                             <?= h($workingGroupsPerson->member_since) ?>
                         </dd>
-                                                                                                <dt><?= __('Member Until') ?></dt>
+                        <dt><?= __('Member Until') ?></dt>
                         <dd>
                             <?= h($workingGroupsPerson->member_until) ?>
                         </dd>
-                                                                        
-                                                                        <dt><?= __('Mailing List Enabled') ?></dt>
+
+                        <dt><?= __('Mailing List Enabled') ?></dt>
                         <dd>
                             <?= $workingGroupsPerson->mailing_list_enabled ? __('Yes') : __('No'); ?>
                         </dd>
-                                                
-                                                                        <dt><?= __('Type') ?></dt>
+
+                        <dt><?= __('Type') ?></dt>
                         <dd>
                             <?= $this->Text->autoParagraph(h($workingGroupsPerson->type)); ?>
                         </dd>
-                                                <dt><?= __('Comment') ?></dt>
+                        <dt><?= __('Comment') ?></dt>
                         <dd>
                             <?= $this->Text->autoParagraph(h($workingGroupsPerson->comment)); ?>
                         </dd>
-                                                                    </dl>
+                    </dl>
                 </div>
                 <!-- /.box-body -->
             </div>
@@ -64,4 +65,4 @@
     </div>
     <!-- div -->
 
-    </section>
+</section>

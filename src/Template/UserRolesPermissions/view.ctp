@@ -4,7 +4,8 @@
     </h1>
     <ol class="breadcrumb">
         <li>
-            <?= $this->Html->link('<i class="fa fa-chevron-left"></i> ' . __('Back'), ['action' => 'index'], ['escape' => false])?>
+            <?= $this->Html->link('<i class="fa fa-chevron-left"></i> ' . __('Back'), ['action' => 'index'], ['escape'
+            => false])?>
         </li>
     </ol>
 </section>
@@ -21,28 +22,26 @@
                 <!-- /.box-header -->
                 <div class="box-body">
                     <dl class="dl-horizontal">
-                                                                                                <dt><?= __('User Role') ?></dt>
+                        <dt><?= __('User Role') ?></dt>
                         <dd>
                             <?= $userRolesPermission->has('user_role') ? $userRolesPermission->user_role->title : '' ?>
                         </dd>
-                                                                                                <dt><?= __('Permission') ?></dt>
+                        <dt><?= __('Permission') ?></dt>
                         <dd>
                             <?= $userRolesPermission->has('permission') ? $userRolesPermission->permission->id : '' ?>
                         </dd>
-                                                                        
-                        
-                                                                                                                        
-                        
-                                                                        <dt><?= __('Can View') ?></dt>
+
+
+                        <dt><?= __('Can View') ?></dt>
                         <dd>
                             <?= $userRolesPermission->can_view ? __('Yes') : __('No'); ?>
                         </dd>
-                                                <dt><?= __('Can Edit') ?></dt>
+                        <dt><?= __('Can Edit') ?></dt>
                         <dd>
                             <?= $userRolesPermission->can_edit ? __('Yes') : __('No'); ?>
                         </dd>
-                                                
-                                            </dl>
+
+                    </dl>
                 </div>
                 <!-- /.box-body -->
             </div>
@@ -52,4 +51,4 @@
     </div>
     <!-- div -->
 
-    </section>
+</section>

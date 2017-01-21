@@ -4,7 +4,8 @@
     </h1>
     <ol class="breadcrumb">
         <li>
-            <?= $this->Html->link('<i class="fa fa-chevron-left"></i> ' . __('Back'), ['action' => 'index'], ['escape' => false])?>
+            <?= $this->Html->link('<i class="fa fa-chevron-left"></i> ' . __('Back'), ['action' => 'index'], ['escape'
+            => false])?>
         </li>
     </ol>
 </section>
@@ -21,20 +22,17 @@
                 <!-- /.box-header -->
                 <div class="box-body">
                     <dl class="dl-horizontal">
-                                                                                                <dt><?= __('Person') ?></dt>
+                        <dt><?= __('Person') ?></dt>
                         <dd>
                             <?= $peopleUserRole->has('person') ? $peopleUserRole->person->id : '' ?>
                         </dd>
-                                                                                                <dt><?= __('User Role') ?></dt>
+                        <dt><?= __('User Role') ?></dt>
                         <dd>
                             <?= $peopleUserRole->has('user_role') ? $peopleUserRole->user_role->title : '' ?>
                         </dd>
-                                                                        
-                        
-                                                                                                                        
-                        
-                        
-                                            </dl>
+
+
+                    </dl>
                 </div>
                 <!-- /.box-body -->
             </div>
@@ -44,4 +42,4 @@
     </div>
     <!-- div -->
 
-    </section>
+</section>

@@ -1,14 +1,20 @@
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('Edit Model History Phinxlog'), ['action' => 'edit', $modelHistoryPhinxlog->version]) ?> </li>
-        <li><?= $this->Form->postLink(__('Delete Model History Phinxlog'), ['action' => 'delete', $modelHistoryPhinxlog->version], ['confirm' => __('Are you sure you want to delete # {0}?', $modelHistoryPhinxlog->version)]) ?> </li>
-        <li><?= $this->Html->link(__('List Model History Phinxlog'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Model History Phinxlog'), ['action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Phinxlog'), ['controller' => 'Phinxlog', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Phinxlog'), ['controller' => 'Phinxlog', 'action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Model History'), ['controller' => 'ModelHistory', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Model History'), ['controller' => 'ModelHistory', 'action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('Edit Model History Phinxlog'), ['action' => 'edit',
+            $modelHistoryPhinxlog->version]) ?>
+        </li>
+        <li><?= $this->Form->postLink(__('Delete Model History Phinxlog'), ['action' => 'delete',
+            $modelHistoryPhinxlog->version], ['confirm' => __('Are you sure you want to delete # {0}?',
+            $modelHistoryPhinxlog->version)]) ?>
+        </li>
+        <li><?= $this->Html->link(__('List Model History Phinxlog'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Model History Phinxlog'), ['action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Phinxlog'), ['controller' => 'Phinxlog', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Phinxlog'), ['controller' => 'Phinxlog', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Model History'), ['controller' => 'ModelHistory', 'action' => 'index']) ?>
+        </li>
+        <li><?= $this->Html->link(__('New Model History'), ['controller' => 'ModelHistory', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="modelHistoryPhinxlog view large-9 medium-8 columns content">
