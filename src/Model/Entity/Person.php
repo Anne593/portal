@@ -157,8 +157,8 @@ class Person extends Entity
             'api_token' => $this->api_token,
             'status' => $this->status,
             'role' => $this->role,
-            'firstname' => $this->firstname,
-            'lastname' => $this->lastname,
+            'firstname' => $this->forename,
+            'lastname' => $this->surname,
             'email' => $this->email,
         ];
     }

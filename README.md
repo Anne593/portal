@@ -29,6 +29,23 @@ Now seed the database with a default user
 
 `$ bin/cake migrations seed`
 
+Start at least one worker that handels all email jobs:
+`$ bin/cake queuesadilla -Q notification`
+
+
+### Development
+In order to test the email functions properly you should set up a hook like [MailHog](https://github.com/mailhog/MailHog).
+Install `MailHog` and modify `.env`:
+```
+export EMAIL_HOST=127.0.0.1
+export EMAIL_PORT=1025
+export EMAIL_FROM=hiltonportal@localhost
+```
+
+Set the sendmail path in the `php.ini` config file to `/usr/local/bin/mailhog sendmail
+`. You can view all outgoing mails at [localhost:8025](http://localhost:8025/).
+
+
 ## Credits
 
 This template is based on the [CakePHP Application Skeleton](https://github.com/cakephp/app) and the [scherersoftware/cake-app-template](https://github.com/scherersoftware/cake-app-template) pre-configured template.
