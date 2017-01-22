@@ -5,6 +5,9 @@ use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
+use Cake\Event\Event;
+use ArrayObject;
+use App\Utility\Utility;
 
 /**
  * PeopleMemberships Model
@@ -45,6 +48,7 @@ class PeopleMembershipsTable extends Table
             'foreignKey' => 'membership_id',
             'joinType' => 'INNER'
         ]);
+
     }
 
     /**
@@ -76,11 +80,11 @@ class PeopleMembershipsTable extends Table
 
         $validator
             ->requirePresence('social_service_comment', 'create')
-            ->notEmpty('social_service_comment');
+            ->allowEmpty('social_service_comment');
 
         $validator
             ->requirePresence('comment', 'create')
-            ->notEmpty('comment');
+            ->allowEmpty('comment');
 
         return $validator;
     }
@@ -98,5 +102,43 @@ class PeopleMembershipsTable extends Table
         $rules->add($rules->existsIn(['membership_id'], 'Memberships'));
 
         return $rules;
+    }
+
+    /**
+     * Wird aufgerufen, bevor daten in die db geschrieben werden.
+     *  - löscht social_service_comment, wenn social_service nicht gesetzt ist.
+     * @param Event $event
+     * @param ArrayObject $data
+     * @param ArrayObject $options
+     */
+    public function beforeMarshal(Event $event, ArrayObject $data, ArrayObject $options)
+    {
+        $utilitys = new Utility();
+
+        if (empty($data['id'])) {
+            //INSERT Ein neues Element wurde erstellt
+
+            // Setzt das Semester auf das aktuelle
+            $now = new \DateTime('now');
+            if ($utilitys->isSummerSemester($now)) {
+                $data['semester'] = $now->format('Y') . '01';
+            } else {
+                $data['semester'] = $now->format('Y') . '02';
+            }
+
+            // setzt payment, social service und comment auf default
+            $data['payment'] = false;
+            $data['social_service'] = false;
+            $data['social_service_comment'] = "";
+
+
+        } else {
+            //UPDATE Ein Element wurde geändert
+
+            // löscht social Service comment, wenn social service nicht gesetzt ist.
+            if (!$data['social_service']) {
+                $data['social_service_comment'] = "";
+            }
+        }
     }
 }
