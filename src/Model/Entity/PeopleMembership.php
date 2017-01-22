@@ -34,4 +34,29 @@ class PeopleMembership extends Entity
         '*' => true,
         'id' => false
     ];
+
+    /**
+     * Gibt den Sozialen Dienst in einem Satz aus
+     * @return string z.B. Ja, blabla im SS16. oder Nein.
+     */
+    protected function _getSocialServiceString()
+    {
+        if ($this->social_service) {
+            return "Ja, " . $this->social_service_comment . " im " . $this->semester_string;
+        } else {
+            return "Nein.";
+        }
+    }
+
+    /**
+     * Gibt das Semester in Kurzform an
+     * @return string z.B. WS16
+     */
+    protected function _getSemesterString()
+    {
+        $year = substr($this->semester, 2, 2);
+        $semester = substr($this->semester, 4, 2);
+        $stringSem = ['01' => "SS", '02' => "WS"];
+        return $stringSem[$semester] . $year;
+    }
 }
