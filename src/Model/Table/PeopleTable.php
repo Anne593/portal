@@ -14,6 +14,7 @@ use Cake\Event\Event;
 use Cake\I18n\Time;
 use Notifications\Notification\EmailNotification;
 use App\Model\Entity\Person;
+use Cake\Routing\Router;
 
 /**
  * People Model
@@ -480,7 +481,7 @@ class PeopleTable extends Table
             ->subject(__('email.subject.forgot_password'))
             ->viewVars([
                 'resetPasswordUrl' => $restoreLink,
-                'fullName' => $person->full_name
+                'fullName' => $person->forename . ' ' . $person->surname
             ])
             ->push();
     }

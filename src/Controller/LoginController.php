@@ -2,7 +2,7 @@
 namespace App\Controller;
 
 use App\Lib\Status;
-use App\Model\Entity\User;
+use App\Model\Table\PeopleTable;
 use Cake\Event\Event;
 use Cake\Event\EventManager;
 use Cake\Routing\Router;
@@ -84,10 +84,10 @@ class LoginController extends AppController
         $this->viewBuilder()->layout('plain');
         if ($this->request->is('post')) {
             if (!empty($this->request->data['email']) && Validation::email($this->request->data['email'])) {
-                $user = $this->Users->getUserByEmail($this->request->data['email']);
+                $user = $this->People->getPersonByEmail($this->request->data['email']);
 
                 if (!empty($user)) {
-                    $this->Users->sendForgotPasswordEmail($user);
+                    $this->People->sendForgotPasswordEmail($user);
                 }
                 $this->Flash->default(__('login.restore_password_email_sent'), true);
 
@@ -113,9 +113,9 @@ class LoginController extends AppController
     {
         $this->viewBuilder()->layout('plain');
         if (!empty($userId) && !empty($token)) {
-            $user = $this->Users->get($userId);
+            $user = $this->People->get($userId);
             if (!empty($user)) {
-                $userHash = $this->Users->getHash($user);
+                $userHash = $this->People->getHash($user);
 
                 $timestamp = substr($token, -10);
                 $hash = substr($token, 0, -10);
@@ -130,9 +130,9 @@ class LoginController extends AppController
             }
             // Save new Password
             if ($this->request->is(['patch', 'post', 'put'])) {
-                $user = $this->Users->resetPassword($user, $this->request->data);
+                $user = $this->People->resetPassword($user, $this->request->data);
                 if (empty($user->errors())) {
-                    $this->Users->resetLoginRetries($user);
+                    $this->People->resetLoginRetries($user);
                     $this->Flash->success(__('login.new_password_saved'));
 
                     return $this->redirect(['action' => 'login']);
