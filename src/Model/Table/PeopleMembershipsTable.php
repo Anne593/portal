@@ -76,11 +76,11 @@ class PeopleMembershipsTable extends Table
 
         $validator
             ->requirePresence('social_service_comment', 'create')
-            ->allowEmpty('social_service_comment');
+            ->notEmpty('social_service_comment');
 
         $validator
             ->requirePresence('comment', 'create')
-            ->allowEmpty('comment');
+            ->notEmpty('comment');
 
         return $validator;
     }

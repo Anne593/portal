@@ -62,11 +62,7 @@ class PeopleMembershipsController extends AppController
                 $this->Flash->error(__('The people membership could not be saved. Please, try again.'));
             }
         }
-        $people = $this->PeopleMemberships->People->find('list', [
-            'limit' => 200,
-            'keyField' => 'id',
-            'valueField' => 'full_name'
-        ]);
+        $people = $this->PeopleMemberships->People->find('list', ['limit' => 200]);
         $memberships = $this->PeopleMemberships->Memberships->find('list', ['limit' => 200]);
         $this->set(compact('peopleMembership', 'people', 'memberships'));
         $this->set('_serialize', ['peopleMembership']);
@@ -94,11 +90,7 @@ class PeopleMembershipsController extends AppController
                 $this->Flash->error(__('The people membership could not be saved. Please, try again.'));
             }
         }
-        $people = $this->PeopleMemberships->People->find('list', [
-            'limit' => 200,
-            'keyField' => 'id',
-            'valueField' => 'full_name'
-        ]);
+        $people = $this->PeopleMemberships->People->find('list', ['limit' => 200]);
         $memberships = $this->PeopleMemberships->Memberships->find('list', ['limit' => 200]);
         $this->set(compact('peopleMembership', 'people', 'memberships'));
         $this->set('_serialize', ['peopleMembership']);
