@@ -29,6 +29,7 @@ class PeopleMembershipsTableTest extends TestCase
         'app.fileserver_users',
         'app.macs',
         'app.ips',
+        'app.model_history',
         'app.tenants',
         'app.rooms',
         'app.memberships',

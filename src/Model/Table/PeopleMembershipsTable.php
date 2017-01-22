@@ -70,17 +70,17 @@ class PeopleMembershipsTable extends Table
             ->notEmpty('payment');
 
         $validator
-            ->integer('social_service')
+            ->boolean('social_service')
             ->requirePresence('social_service', 'create')
             ->notEmpty('social_service');
 
         $validator
             ->requirePresence('social_service_comment', 'create')
-            ->notEmpty('social_service_comment');
+            ->allowEmpty('social_service_comment');
 
         $validator
             ->requirePresence('comment', 'create')
-            ->notEmpty('comment');
+            ->allowEmpty('comment');
 
         return $validator;
     }

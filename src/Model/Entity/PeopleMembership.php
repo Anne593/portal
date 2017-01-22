@@ -11,7 +11,7 @@ use Cake\ORM\Entity;
  * @property int $person_id
  * @property int $membership_id
  * @property bool $payment
- * @property int $social_service
+ * @property bool $social_service
  * @property string $social_service_comment
  * @property string $comment
  *

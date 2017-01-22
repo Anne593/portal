@@ -63,7 +63,7 @@ class RoomsTable extends Table
 
         $validator
             ->requirePresence('comment', 'create')
-            ->notEmpty('comment');
+            ->allowEmpty('comment');
 
         return $validator;
     }
