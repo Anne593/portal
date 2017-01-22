@@ -19,7 +19,7 @@ class Utility
      */
     public function isSummerSemester($date = null)
     {
-        if($date == NULL){
+        if ($date == NULL) {
             $date = new \DateTime('now');
         }
         $month = $date->format('m');
@@ -39,7 +39,7 @@ class Utility
      * 10 Stellen: bei Haus person_id, bei netz: Vereinsnummer
      *
      */
-    public function refCode($date, $id)
+    public function refCode($date = NULL, $id)
     {
         return $this->SemesterCode($date) . str_pad($id, 10, '0', STR_PAD_LEFT);
     }
@@ -52,7 +52,7 @@ class Utility
      */
     public function SemesterCode($date = NULL)
     {
-        if ($date == NULL){
+        if ($date == NULL) {
             $date = new \DateTime('now');
         }
         if ($this->isSummerSemester($date)) {
