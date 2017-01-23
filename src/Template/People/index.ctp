@@ -16,7 +16,6 @@
                 <tr>
                     <th><?= $this->Paginator->sort('id'); ?></th>
                     <th><?= $this->Paginator->sort('surname'); ?></th>
-                    <th><?= $this->Paginator->sort('forename'); ?></th>
                     <th><?= $this->Paginator->sort('email'); ?></th>
                     <th><?= $this->Paginator->sort('birthday'); ?></th>
                     <th><?= $this->Paginator->sort('matriculation_number'); ?></th>
@@ -28,8 +27,7 @@
                 <?php foreach ($people as $person): ?>
                 <tr>
                     <td><?= $this->Number->format($person->id) ?></td>
-                    <td><?= h($person->surname) ?></td>
-                    <td><?= h($person->forename) ?></td>
+                    <td><?= h($person->full_name) ?></td>
                     <td><?= h($person->email) ?></td>
                     <td><?= h($person->birthday) ?></td>
                     <td><?= h($person->matriculation_number) ?></td>

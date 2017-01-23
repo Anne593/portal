@@ -68,12 +68,6 @@
                                 Id
                             </th>
 
-
-                            <th>
-                                Surname
-                            </th>
-
-
                             <th>
                                 Forename
                             </th>
@@ -115,32 +109,7 @@
 
 
                             <th>
-                                Password
-                            </th>
-
-
-                            <th>
-                                Password Retrieval
-                            </th>
-
-
-                            <th>
                                 Status
-                            </th>
-
-
-                            <th>
-                                Failed Login Count
-                            </th>
-
-
-                            <th>
-                                Failed Login Timestamp
-                            </th>
-
-
-                            <th>
-                                Last Passwords
                             </th>
 
 
@@ -157,11 +126,7 @@
                             </td>
 
                             <td>
-                                <?= h($people->surname) ?>
-                            </td>
-
-                            <td>
-                                <?= h($people->forename) ?>
+                                <?= h($people->full_name) ?>
                             </td>
 
                             <td>
@@ -193,27 +158,7 @@
                             </td>
 
                             <td>
-                                <?= h($people->password) ?>
-                            </td>
-
-                            <td>
-                                <?= h($people->password_retrieval) ?>
-                            </td>
-
-                            <td>
                                 <?= h($people->status) ?>
-                            </td>
-
-                            <td>
-                                <?= h($people->failed_login_count) ?>
-                            </td>
-
-                            <td>
-                                <?= h($people->failed_login_timestamp) ?>
-                            </td>
-
-                            <td>
-                                <?= h($people->last_passwords) ?>
                             </td>
 
                             <td class="actions">

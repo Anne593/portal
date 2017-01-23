@@ -24,11 +24,7 @@
                     <dl class="dl-horizontal">
                         <dt><?= __('Surname') ?></dt>
                         <dd>
-                            <?= h($person->surname) ?>
-                        </dd>
-                        <dt><?= __('Forename') ?></dt>
-                        <dd>
-                            <?= h($person->forename) ?>
+                            <?= h($person->full_name) ?>
                         </dd>
                         <dt><?= __('Email') ?></dt>
                         <dd>
@@ -54,7 +50,7 @@
                         </dd>
                         <dt><?= __('Eth Unlocked Primary') ?></dt>
                         <dd>
-                            <?= $this->Number->format($person->eth_unlocked_primary) ?>
+                            <?= h($person->eth) ?>
                         </dd>
                         <dt><?= __('Password Retrieval') ?></dt>
                         <dd>
