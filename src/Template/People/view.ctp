@@ -50,7 +50,7 @@
                         </dd>
                         <dt><?= __('Eth Unlocked Primary') ?></dt>
                         <dd>
-                            <?= $this->Number->format($person->eth_unlocked_primary) ?>
+                            <?= h($person->eth) ?>
                         </dd>
                         <dt><?= __('Password Retrieval') ?></dt>
                         <dd>

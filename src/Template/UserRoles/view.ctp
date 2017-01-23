@@ -99,32 +99,7 @@
 
 
                             <th>
-                                Password
-                            </th>
-
-
-                            <th>
-                                Password Retrieval
-                            </th>
-
-
-                            <th>
                                 Status
-                            </th>
-
-
-                            <th>
-                                Failed Login Count
-                            </th>
-
-
-                            <th>
-                                Failed Login Timestamp
-                            </th>
-
-
-                            <th>
-                                Last Passwords
                             </th>
 
 
