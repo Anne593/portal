@@ -16,7 +16,6 @@ use Cake\ORM\Entity;
  * @property bool $mailing_list_enabled
  *
  * @property \App\Model\Entity\Person $person
- * @property \App\Model\Entity\Workshop $workshop
  * @property \App\Model\Entity\WorkingGroup $working_group
  */
 class WorkingGroupsPerson extends Entity

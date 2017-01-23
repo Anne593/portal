@@ -52,8 +52,8 @@ class WorkingGroupsPeopleFixture extends TestFixture
             'id' => 1,
             'person_id' => 1,
             'working_group_id' => 1,
-            'member_since' => '2017-01-19 01:18:11',
-            'member_until' => '2017-01-19 01:18:11',
+            'member_since' => '2017-01-23 23:38:45',
+            'member_until' => '2017-01-23 23:38:45',
             'type' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
             'comment' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
             'mailing_list_enabled' => 1
