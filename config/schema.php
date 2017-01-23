@@ -24,19 +24,19 @@ return [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             ],
             '_options' => [
-                'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'emailtext_users' => [
             'id' => ['type' => 'integer', 'length' => 10, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
             'emailtext_id' => ['type' => 'integer', 'length' => 10, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
             'type' => ['type' => 'text', 'length' => null, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null],
-            'type_id' => ['type' => 'integer', 'length' => 10, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+            'typeId' => ['type' => 'integer', 'length' => 10, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
             '_constraints' => [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             ],
             '_options' => [
-                'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'emailtexts' => [
@@ -50,7 +50,7 @@ return [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             ],
             '_options' => [
-                'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'fileserver_users' => [
@@ -68,7 +68,7 @@ return [
                 'person_id' => ['type' => 'unique', 'columns' => ['person_id'], 'length' => []],
             ],
             '_options' => [
-                'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'groups' => [
@@ -79,7 +79,7 @@ return [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             ],
             '_options' => [
-                'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'ips' => [
@@ -92,7 +92,7 @@ return [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             ],
             '_options' => [
-                'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'jobs' => [
@@ -111,7 +111,7 @@ return [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             ],
             '_options' => [
-                'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'macs' => [
@@ -127,27 +127,26 @@ return [
                 'mac' => ['type' => 'unique', 'columns' => ['mac'], 'length' => []],
             ],
             '_options' => [
-                'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'memberships' => [
             'id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
             'name' => ['type' => 'string', 'length' => 30, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-            'type' => ['type' => 'text', 'length' => null, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null],
             'description' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
             'membership_fee' => ['type' => 'integer', 'length' => 32, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
             '_constraints' => [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             ],
             '_options' => [
-                'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'model_history' => [
             'id' => ['type' => 'uuid', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
             'model' => ['type' => 'string', 'length' => 255, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => 'e.g. \\\\\\"Installation\\\\\\"', 'precision' => null, 'fixed' => null],
             'foreign_key' => ['type' => 'uuid', 'length' => null, 'null' => true, 'default' => null, 'comment' => 'uuid', 'precision' => null],
-            'user_id' => ['type' => 'uuid', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
+            'person_id' => ['type' => 'uuid', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
             'action' => ['type' => 'string', 'length' => 45, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => 'e.g. \\\\\\"create\\\\\\", \\\\\\"update\\\\\\", \\\\\\"delete\\\\\\"', 'precision' => null, 'fixed' => null],
             'data' => ['type' => 'text', 'length' => 16777215, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => 'JSON text, schema per action', 'precision' => null],
             'context' => ['type' => 'text', 'length' => 16777215, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => 'JSON text, schema per action', 'precision' => null],
@@ -159,7 +158,7 @@ return [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             ],
             '_options' => [
-                'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'people' => [
@@ -187,7 +186,7 @@ return [
                 'studentenwerk_identification' => ['type' => 'unique', 'columns' => ['studentenwerk_identification'], 'length' => []],
             ],
             '_options' => [
-                'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'people_memberships' => [
@@ -196,14 +195,14 @@ return [
             'person_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
             'membership_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
             'payment' => ['type' => 'boolean', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
-            'social_service' => ['type' => 'integer', 'length' => 4, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+            'social_service' => ['type' => 'boolean', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
             'social_service_comment' => ['type' => 'string', 'length' => 25, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
             'comment' => ['type' => 'string', 'length' => 25, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
             '_constraints' => [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             ],
             '_options' => [
-                'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'people_user_roles' => [
@@ -214,7 +213,7 @@ return [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             ],
             '_options' => [
-                'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'permissions' => [
@@ -226,7 +225,7 @@ return [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             ],
             '_options' => [
-                'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'phinxlog' => [
@@ -239,32 +238,7 @@ return [
                 'primary' => ['type' => 'primary', 'columns' => ['version'], 'length' => []],
             ],
             '_options' => [
-                'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
-            ],
-        ],
-        'roles' => [
-            'id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
-            'name' => ['type' => 'string', 'length' => 64, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-            'description' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-            'alias' => ['type' => 'string', 'length' => 20, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-            'created' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
-            'modified' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
-            '_constraints' => [
-                'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
-            ],
-            '_options' => [
-                'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
-            ],
-        ],
-        'roles_users' => [
-            'id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
-            'user_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
-            'role_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
-            '_constraints' => [
-                'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
-            ],
-            '_options' => [
-                'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'roomkeys' => [
@@ -276,7 +250,7 @@ return [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             ],
             '_options' => [
-                'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'roomkeys_people' => [
@@ -289,7 +263,7 @@ return [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             ],
             '_options' => [
-                'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'rooms' => [
@@ -301,7 +275,7 @@ return [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             ],
             '_options' => [
-                'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'tenants' => [
@@ -320,20 +294,7 @@ return [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             ],
             '_options' => [
-                'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
-            ],
-        ],
-        'tiny_auth_phinxlog' => [
-            'version' => ['type' => 'biginteger', 'length' => 20, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
-            'migration_name' => ['type' => 'string', 'length' => 100, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-            'start_time' => ['type' => 'timestamp', 'length' => null, 'null' => false, 'default' => 'CURRENT_TIMESTAMP', 'comment' => '', 'precision' => null],
-            'end_time' => ['type' => 'timestamp', 'length' => null, 'null' => false, 'default' => '0000-00-00 00:00:00', 'comment' => '', 'precision' => null],
-            'breakpoint' => ['type' => 'boolean', 'length' => null, 'null' => false, 'default' => '0', 'comment' => '', 'precision' => null],
-            '_constraints' => [
-                'primary' => ['type' => 'primary', 'columns' => ['version'], 'length' => []],
-            ],
-            '_options' => [
-                'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'user_roles' => [
@@ -343,7 +304,7 @@ return [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             ],
             '_options' => [
-                'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'user_roles_permissions' => [
@@ -356,20 +317,7 @@ return [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             ],
             '_options' => [
-                'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
-            ],
-        ],
-        'users' => [
-            'id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
-            'username' => ['type' => 'string', 'length' => 255, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-            'password' => ['type' => 'string', 'length' => 255, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-            'created' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
-            'modified' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
-            '_constraints' => [
-                'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
-            ],
-            '_options' => [
-                'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'working_groups' => [
@@ -381,7 +329,7 @@ return [
                 'name' => ['type' => 'unique', 'columns' => ['name'], 'length' => []],
             ],
             '_options' => [
-                'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
         'working_groups_people' => [
@@ -397,7 +345,7 @@ return [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             ],
             '_options' => [
-                'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
 

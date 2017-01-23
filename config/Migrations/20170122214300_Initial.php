@@ -624,7 +624,7 @@ class Initial extends AbstractMigration
                 'null' => false,
             ])
             ->addColumn('type', 'text', [
-                'default' => 'user',
+                'default' => null,
                 'limit' => null,
                 'null' => false,
             ])
