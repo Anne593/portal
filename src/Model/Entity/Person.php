@@ -163,4 +163,17 @@ class Person extends Entity
         ];
     }
 
+    /**
+     * @return string Primäre Internet Status als Text
+     */
+    protected function _getEth(){
+        if($this->eth_unlocked_primary == 0) {
+            return "standartmäßig gesperrt";
+        } elseif($this->eth_unlocked_primary == 1) {
+            return "standartmäßig freigeschaltet";
+        } else {
+            return "egal";
+        }
+    }
+
 }
