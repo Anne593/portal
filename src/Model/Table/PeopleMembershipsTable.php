@@ -131,7 +131,6 @@ class PeopleMembershipsTable extends Table
             $data['social_service'] = false;
             $data['social_service_comment'] = "";
 
-
         } else {
             //UPDATE Ein Element wurde geändert
 

@@ -61,7 +61,7 @@ class MembershipsTable extends Table
 
         $validator
             ->requirePresence('type', 'create')
-            ->notEmpty('type');
+            ->allowEmpty('type');
 
         $validator
             ->requirePresence('description', 'create')

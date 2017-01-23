@@ -13,12 +13,8 @@
     <fieldset>
         <legend><?= __('Add People Membership') ?></legend>
         <?php
-            echo $this->Form->input('semester');
         echo $this->Form->input('person_id', ['options' => $people]);
         echo $this->Form->input('membership_id', ['options' => $memberships]);
-        echo $this->Form->input('payment');
-        echo $this->Form->input('social_service');
-        echo $this->Form->input('social_service_comment');
         echo $this->Form->input('comment');
         ?>
     </fieldset>

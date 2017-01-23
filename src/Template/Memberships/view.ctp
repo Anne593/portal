@@ -74,12 +74,7 @@
 
 
                             <th>
-                                Surname
-                            </th>
-
-
-                            <th>
-                                Forename
+                                Name
                             </th>
 
 
@@ -161,11 +156,7 @@
                             </td>
 
                             <td>
-                                <?= h($people->surname) ?>
-                            </td>
-
-                            <td>
-                                <?= h($people->forename) ?>
+                                <?= h($people->full_name) ?>
                             </td>
 
                             <td>
