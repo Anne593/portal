@@ -7,20 +7,20 @@ use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
- * Tenants Model
+ * PeopleRooms Model
  *
  * @property \Cake\ORM\Association\BelongsTo $People
  * @property \Cake\ORM\Association\BelongsTo $Rooms
  *
- * @method \App\Model\Entity\Tenant get($primaryKey, $options = [])
- * @method \App\Model\Entity\Tenant newEntity($data = null, array $options = [])
- * @method \App\Model\Entity\Tenant[] newEntities(array $data, array $options = [])
- * @method \App\Model\Entity\Tenant|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
- * @method \App\Model\Entity\Tenant patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
- * @method \App\Model\Entity\Tenant[] patchEntities($entities, array $data, array $options = [])
- * @method \App\Model\Entity\Tenant findOrCreate($search, callable $callback = null, $options = [])
+ * @method \App\Model\Entity\PeopleRoom get($primaryKey, $options = [])
+ * @method \App\Model\Entity\PeopleRoom newEntity($data = null, array $options = [])
+ * @method \App\Model\Entity\PeopleRoom[] newEntities(array $data, array $options = [])
+ * @method \App\Model\Entity\PeopleRoom|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
+ * @method \App\Model\Entity\PeopleRoom patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
+ * @method \App\Model\Entity\PeopleRoom[] patchEntities($entities, array $data, array $options = [])
+ * @method \App\Model\Entity\PeopleRoom findOrCreate($search, callable $callback = null, $options = [])
  */
-class TenantsTable extends Table
+class PeopleRoomsTable extends Table
 {
 
     /**
@@ -33,7 +33,7 @@ class TenantsTable extends Table
     {
         parent::initialize($config);
 
-        $this->table('tenants');
+        $this->table('people_rooms');
         $this->displayField('id');
         $this->primaryKey('id');
 
@@ -74,7 +74,7 @@ class TenantsTable extends Table
 
         $validator
             ->requirePresence('comment', 'create')
-            ->allowEmpty('comment');
+            ->notEmpty('comment');
 
         return $validator;
     }

@@ -11,7 +11,7 @@ use Cake\ORM\Entity;
  * @property int $eth_port1
  * @property string $comment
  *
- * @property \App\Model\Entity\Tenant[] $tenants
+ * @property \App\Model\Entity\PeopleRoom[] $people_rooms
  */
 class Room extends Entity
 {

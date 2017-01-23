@@ -205,6 +205,25 @@ return [
 'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
             ],
         ],
+        'people_rooms' => [
+            'id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
+            'person_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => true, 'null' => false, 'default' => null, 'comment' => 'foreign key persons', 'precision' => null, 'autoIncrement' => null],
+            'room_id' => ['type' => 'integer', 'length' => 4, 'unsigned' => true, 'null' => false, 'default' => null, 'comment' => 'foreign key rooms', 'precision' => null, 'autoIncrement' => null],
+            'date_move_in' => ['type' => 'date', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
+            'date_move_out' => ['type' => 'date', 'length' => null, 'null' => true, 'default' => null, 'comment' => 'pflicht fuer untermieter!', 'precision' => null],
+            'tenant_type' => ['type' => 'text', 'length' => null, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null],
+            'comment' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+            '_indexes' => [
+                'room_id' => ['type' => 'index', 'columns' => ['room_id'], 'length' => []],
+                'person_id' => ['type' => 'index', 'columns' => ['person_id'], 'length' => []],
+            ],
+            '_constraints' => [
+                'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
+            ],
+            '_options' => [
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
+            ],
+        ],
         'people_user_roles' => [
             'id' => ['type' => 'integer', 'length' => 10, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
             'person_id' => ['type' => 'integer', 'length' => 10, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
@@ -271,25 +290,6 @@ return [
             'eth_port0' => ['type' => 'integer', 'length' => 2, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
             'eth_port1' => ['type' => 'integer', 'length' => 2, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
             'comment' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-            '_constraints' => [
-                'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
-            ],
-            '_options' => [
-'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
-            ],
-        ],
-        'tenants' => [
-            'id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
-            'person_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => true, 'null' => false, 'default' => null, 'comment' => 'foreign key persons', 'precision' => null, 'autoIncrement' => null],
-            'room_id' => ['type' => 'integer', 'length' => 4, 'unsigned' => true, 'null' => false, 'default' => null, 'comment' => 'foreign key rooms', 'precision' => null, 'autoIncrement' => null],
-            'date_move_in' => ['type' => 'date', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
-            'date_move_out' => ['type' => 'date', 'length' => null, 'null' => true, 'default' => null, 'comment' => 'pflicht fuer untermieter!', 'precision' => null],
-            'tenant_type' => ['type' => 'text', 'length' => null, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null],
-            'comment' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-            '_indexes' => [
-                'room_id' => ['type' => 'index', 'columns' => ['room_id'], 'length' => []],
-                'person_id' => ['type' => 'index', 'columns' => ['person_id'], 'length' => []],
-            ],
             '_constraints' => [
                 'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             ],

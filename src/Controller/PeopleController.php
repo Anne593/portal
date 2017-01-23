@@ -92,7 +92,7 @@ class PeopleController extends AppController
     public function view($id = null)
     {
         $person = $this->People->get($id, [
-            'contain' => ['Memberships', 'UserRoles', 'Roomkeys', 'WorkingGroups', 'FileserverUsers', 'Macs', 'Tenants']
+            'contain' => ['Memberships', 'UserRoles', 'Roomkeys', 'WorkingGroups', 'FileserverUsers', 'Macs', 'PeopleRooms']
         ]);
 
         $this->set('person', $person);

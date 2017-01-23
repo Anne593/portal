@@ -36,7 +36,7 @@ class RoomsTable extends Table
         $this->displayField('id');
         $this->primaryKey('id');
 
-        $this->hasMany('Tenants', [
+        $this->hasMany('PeopleRooms', [
             'foreignKey' => 'room_id'
         ]);
     }

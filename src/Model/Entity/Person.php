@@ -32,7 +32,7 @@ use JeremyHarris\LazyLoad\ORM\LazyLoadEntityTrait;
  *
  * @property \App\Model\Entity\FileserverUser[] $fileserver_users
  * @property \App\Model\Entity\Mac[] $macs
- * @property \App\Model\Entity\Tenant[] $tenants
+ * @property \App\Model\Entity\PeopleRoom[] $people_rooms
  * @property \App\Model\Entity\Membership[] $memberships
  * @property \App\Model\Entity\UserRole[] $user_roles
  * @property \App\Model\Entity\Roomkey[] $roomkeys

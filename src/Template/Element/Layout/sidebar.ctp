@@ -33,7 +33,7 @@ use App\Model\Entity\Person;
             <li><?= $this->Html->link('Roomkeys', array('controller' => 'Roomkeys')); ?></li>
             <li><?= $this->Html->link('RoomkeysPeople', array('controller' => 'RoomkeysPeople')); ?></li>
             <li><?= $this->Html->link('Rooms', array('controller' => 'Rooms')); ?></li>
-            <li><?= $this->Html->link('Tenants', array('controller' => 'Tenants')); ?></li>
+            <li><?= $this->Html->link('PeopleRooms', array('controller' => 'PeopleRooms')); ?></li>
             <li><?= $this->Html->link('UserRoles', array('controller' => 'UserRoles')); ?></li>
             <li><?= $this->Html->link('UserRolesPermissions', array('controller' => 'UserRolesPermissions')); ?></li>
             <li><?= $this->Html->link('WorkingGroups', array('controller' => 'WorkingGroups')); ?></li>

@@ -9,8 +9,8 @@
             ?>
         </li>
         <li><?= $this->Html->link(__('List Rooms'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Tenants'), ['controller' => 'Tenants', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Tenant'), ['controller' => 'Tenants', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List PeopleRooms'), ['controller' => 'PeopleRooms', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New PeopleRoom'), ['controller' => 'PeopleRooms', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="rooms form large-9 medium-8 columns content">

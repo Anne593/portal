@@ -58,7 +58,7 @@
                 <!-- /.box-header -->
                 <div class="box-body table-responsive no-padding">
 
-                    <?php if (!empty($room->tenants)): ?>
+                    <?php if (!empty($room->people_rooms)): ?>
 
                     <table class="table table-hover">
                         <tbody>
@@ -104,47 +104,47 @@
                             </th>
                         </tr>
 
-                        <?php foreach ($room->tenants as $tenants): ?>
+                        <?php foreach ($room->people_rooms as $room): ?>
                         <tr>
 
                             <td>
-                                <?= h($tenants->id) ?>
+                                <?= h($room->id) ?>
                             </td>
 
                             <td>
-                                <?= h($tenants->person_id) ?>
+                                <?= h($room->person_id) ?>
                             </td>
 
                             <td>
-                                <?= h($tenants->room_id) ?>
+                                <?= h($room->room_id) ?>
                             </td>
 
                             <td>
-                                <?= h($tenants->date_move_in) ?>
+                                <?= h($room->date_move_in) ?>
                             </td>
 
                             <td>
-                                <?= h($tenants->date_move_out) ?>
+                                <?= h($room->date_move_out) ?>
                             </td>
 
                             <td>
-                                <?= h($tenants->tenant_type) ?>
+                                <?= h($room->tenant_type) ?>
                             </td>
 
                             <td>
-                                <?= h($tenants->comment) ?>
+                                <?= h($room->comment) ?>
                             </td>
 
                             <td class="actions">
-                                <?= $this->Html->link('', ['controller' => 'tenants', 'action' => 'view', $tenants->id],
+                                <?= $this->Html->link('', ['controller' => 'Rooms', 'action' => 'view', $room->room_id],
                                 ['title' => __('View'), 'class' =>
                                 'btn btn-default glyphicon glyphicon-eye-open']) ?>
-                                <?= $this->Html->link('', ['controller' => 'tenants', 'action' => 'edit', $tenants->id],
+                                <?= $this->Html->link('', ['controller' => 'Rooms', 'action' => 'edit', $room->room_id],
                                 ['title' => __('Edit'), 'class' =>
                                 'btn btn-default glyphicon glyphicon-pencil']) ?>
-                                <?= $this->Form->postLink('', ['controller' => 'tenants', 'action' => 'delete',
-                                $tenants->id], ['confirm' => __('Are you sure
-                                you want to delete # {0}?', $tenants->id), 'title' => __('Delete'), 'class' => 'btn
+                                <?= $this->Form->postLink('', ['controller' => 'Rooms', 'action' => 'delete',
+                                $room->room_id], ['confirm' => __('Are you sure
+                                you want to delete # {0}?', $room->id), 'title' => __('Delete'), 'class' => 'btn
                                 btn-default
                                 glyphicon glyphicon-trash']) ?>
                             </td>

@@ -67,7 +67,7 @@ class PeopleTable extends Table
         $this->hasMany('ModelHistory', [
             'foreignKey' => 'person_id'
         ]);
-        $this->hasMany('Tenants', [
+        $this->hasMany('PeopleRooms', [
             'foreignKey' => 'person_id'
         ]);
         $this->belongsToMany('Memberships', [
