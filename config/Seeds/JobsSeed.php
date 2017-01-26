@@ -22,6 +22,6 @@ class JobsSeed extends AbstractSeed
         ];
 
         $table = $this->table('jobs');
-        $table->insert($data)->save();
+       // $table->insert($data)->save();
     }
 }
